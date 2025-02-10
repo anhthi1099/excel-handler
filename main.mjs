@@ -170,17 +170,17 @@ const processExcelFile = async (filePath) => {
         }
     }
 
-    for (const {row, slug} of rowsToValidate) {
-        const errorMessage = await checkCVExists(slug, row.getCell(cvsIdCol).value, workbook, row.number);
-        row.getCell(statusCol).value = errorMessage;
-        if (errorMessage) {
-            unUpdatedWorkSheet.addRow(row.values);
-            unUpdatedWorkSheet.getRow(unUpdatedWorkSheet.actualRowCount).getCell(statusCol).font = {
-                bold: true,
-                color: {argb: 'FF0000'}
-            };
-        }
-    }
+    // for (const {row, slug} of rowsToValidate) {
+    //     const errorMessage = await checkCVExists(slug, row.getCell(cvsIdCol).value, workbook, row.number);
+    //     row.getCell(statusCol).value = errorMessage;
+    //     if (errorMessage) {
+    //         unUpdatedWorkSheet.addRow(row.values);
+    //         unUpdatedWorkSheet.getRow(unUpdatedWorkSheet.actualRowCount).getCell(statusCol).font = {
+    //             bold: true,
+    //             color: {argb: 'FF0000'}
+    //         };
+    //     }
+    // }
 
     const outputFilePath = path.join(__dirname, "Validated_" + path.basename(filePath));
     await workbook.xlsx.writeFile(outputFilePath);
