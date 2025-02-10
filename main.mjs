@@ -4,10 +4,13 @@ import axios from 'axios';
 import path from 'path';
 import {fileURLToPath} from 'url';
 import fs from 'fs/promises';
+import {FORBIDDEN} from "./constant.mjs";
 
 // Resolve __dirname in ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const uploadedFilePath = "./migration_merged4.xlsx";
+
 
 // Function to validate email(s)
 const isValidEmails = (emailString) => {
@@ -37,22 +40,44 @@ const extractSlug = (slugString) => {
     return slugString.split('/').pop();
 };
 
+function login() {
+    const username = ''
+}
+
 // Function to check if the profile CV exists
-const checkCVExists = async (slug, {cvId, email, phone}) => {
+const checkCVExists = async (slug, {cvId, email, phone}, excelFileObject, rowNumber) => {
     console.log('calling api')
     try {
         let errorMessage = '';
         const url = `https://dev-recruiter.brightsource.com/api/profiles/${slug}/cv-for-edit`;
-        const response = await axios.post(url, {cvId});
-        const responseData = response.data.data;
-        if (!response.data.data.includes(email)) {
+        const response = await axios.post(url, null, {
+            headers: {
+                Authorization: 'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjhkMjUwZDIyYTkzODVmYzQ4NDJhYTU2YWJhZjUzZmU5NDcxNmVjNTQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiRXlhbCBTb2xvbW9uIiwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL2JyaWdodHNvdXJjZS1wcm9kIiwiYXVkIjoiYnJpZ2h0c291cmNlLXByb2QiLCJhdXRoX3RpbWUiOjE3Mzg4MzkwMjMsInVzZXJfaWQiOiJsYm01bkFiNWJEVnB3b25pczFGc1BZY0p2a3gyIiwic3ViIjoibGJtNW5BYjViRFZwd29uaXMxRnNQWWNKdmt4MiIsImlhdCI6MTczOTE1NzI1MCwiZXhwIjoxNzM5MTYwODUwLCJlbWFpbCI6ImV5YWxAZXRob3NpYS5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJleWFsQGV0aG9zaWEuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.o2hhMlOpT69D1RWWvgszljl-a3iUFWgYwGYPCT9pEI1C8wnNky8EAQ-5--g4-0npDATyJ2c55IuxeZp-kyfWQq2qVCuuKLSuN3AibnLzPPFUhDoV0sbNxLMH7FNacCYD5It4w6yUqW6SktAlUOhKntLrYt5Gy-yuZsipuhACTR8yl5SuGel4LSWNBWlXLaBryvoMuUvxGMar0UjqMQBSc_7ZnRlhTvAiTIjfQ1e1mPl1HB3OEi7-XxkotywkQqLporQqzbVOYSIquemLC2BQiGweQ_2efIjxxmq8-uAQysHjso3sS_uj_2HjMq0oxtG5mV1vdFJsWmPbj-EBU4-COg'
+            }
+        });
+        const responseData = response.data.data.data;
+        console.log('response')
+        console.dir(responseData, {depth: null, colors: true})
+        if (responseData.includes('File Is Corrupted')) {
+            return 'File Is Corrupted';
+        }
+        if (!responseData.includes(email)) {
             errorMessage = 'Wrong Email ';
         }
         if (!responseData.includes(phone.slice(-6))) {
             errorMessage += 'Wrong Phone';
         }
+        // await new Promise(resolve => setTimeout(resolve, delay));
         return errorMessage;
     } catch (error) {
+        if (error.status === FORBIDDEN) {
+            const outputFilePath = path.join(__dirname, "Validated_" + path.basename(uploadedFilePath));
+            await excelFileObject.xlsx.writeFile(outputFilePath);
+            console.log('Processing Row: ', rowNumber)
+            console.log('terminating the process')
+            process.exit();
+        }
+        console.error('ERROR bug', error.status)
         console.error(`Error fetching CV exist status for slug: ${slug}`, error);
         return `Error fetching CV exist status for slug: ${slug}`;
     }
@@ -145,18 +170,17 @@ const processExcelFile = async (filePath) => {
         }
     }
 
-    // for (const {row, slug} of rowsToValidate) {
-    //     console.log('data', row.getCell(cvsIdCol).value)
-    //     const errorMessage = await checkCVExists(slug, row.getCell(cvsIdCol).value);
-    //     row.getCell(statusCol).value = errorMessage;
-    //     if (errorMessage) {
-    //         unUpdatedWorkSheet.addRow(row.values);
-    //         unUpdatedWorkSheet.getRow(unUpdatedWorkSheet.actualRowCount).getCell(statusCol).font = {
-    //             bold: true,
-    //             color: {argb: 'FF0000'}
-    //         };
-    //     }
-    // }
+    for (const {row, slug} of rowsToValidate) {
+        const errorMessage = await checkCVExists(slug, row.getCell(cvsIdCol).value, workbook, row.number);
+        row.getCell(statusCol).value = errorMessage;
+        if (errorMessage) {
+            unUpdatedWorkSheet.addRow(row.values);
+            unUpdatedWorkSheet.getRow(unUpdatedWorkSheet.actualRowCount).getCell(statusCol).font = {
+                bold: true,
+                color: {argb: 'FF0000'}
+            };
+        }
+    }
 
     const outputFilePath = path.join(__dirname, "Validated_" + path.basename(filePath));
     await workbook.xlsx.writeFile(outputFilePath);
@@ -164,5 +188,4 @@ const processExcelFile = async (filePath) => {
 };
 
 // Run the function with the uploaded file
-const uploadedFilePath = "./migration_merged4.xlsx";
 processExcelFile(uploadedFilePath);
