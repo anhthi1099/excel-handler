@@ -11,22 +11,31 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const uploadedFilePath = "./migration_merged4.xlsx";
 const credential = 'testrec@brightsource.com/12qwaszx'
-const authToken = 'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjhkMjUwZDIyYTkzODVmYzQ4NDJhYTU2YWJhZjUzZmU5NDcxNmVjNTQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcmVjLXRlc3QxIiwiYXVkIjoicmVjLXRlc3QxIiwiYXV0aF90aW1lIjoxNzM5MTgwMjc1LCJ1c2VyX2lkIjoicmNBbU1BcTJYbE5xYUFOeFRJSWFuNXhVRWtKMiIsInN1YiI6InJjQW1NQXEyWGxOcWFBTnhUSUlhbjV4VUVrSjIiLCJpYXQiOjE3MzkyNDk4OTEsImV4cCI6MTczOTI1MzQ5MSwiZW1haWwiOiJ0ZXN0cmVjQGJyaWdodHNvdXJjZS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidGVzdHJlY0BicmlnaHRzb3VyY2UuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.UTo-6Iy5ljOLz_VZXLtUxpVG04iKaFeFNj_i8U3GiGRTsLk593EcmAKR11kNauoeQ4CadLa6TZAdzdJh9rIZegGg1Ug-9P-_HT98yYIWD2bWLvyzdi-PGcxT764RazBWpwn1c12U4cRhaup6xLDNneU7-FawZ0pED2Q_uzGtsfmdc8AYpkU8y_UxDzcUHlTlBPW7sw8-rO0ahTaAH9vTJVUJ1CLH1zuGG7-4lnpBC1IAtjTvb4apUVsziSyzojxnr9h3Yg0pl0wORUcJ5m34YNFrgG_ogXfd49OrMO7xQ76y7kU9y2YTu_IZGxbNoxRJAOU1GIB-0wCFbLLMAvnkCA'
-const beginRecord = 10;
-const endRecord = 20;
+const authToken = 'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjhkMjUwZDIyYTkzODVmYzQ4NDJhYTU2YWJhZjUzZmU5NDcxNmVjNTQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiRXlhbCBTb2xvbW9uIiwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL2JyaWdodHNvdXJjZS1wcm9kIiwiYXVkIjoiYnJpZ2h0c291cmNlLXByb2QiLCJhdXRoX3RpbWUiOjE3MzkxNzk2MDEsInVzZXJfaWQiOiJsYm01bkFiNWJEVnB3b25pczFGc1BZY0p2a3gyIiwic3ViIjoibGJtNW5BYjViRFZwd29uaXMxRnNQWWNKdmt4MiIsImlhdCI6MTczOTI5NTM5NCwiZXhwIjoxNzM5Mjk4OTk0LCJlbWFpbCI6ImV5YWxAZXRob3NpYS5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJleWFsQGV0aG9zaWEuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.klXkEaULLK2oS3I7CfssiWj1OH1lL8Japfl4_IdyN4UE-QkirAanVgOn0dJK9x0VdDMIFHsLX1Vw_ZpY5Z5gI7at931WcgCd_1K44D-5K8NXhSIR_tf93QseItTeMErEwt_NFzsDMq9KIYEI8sCimtb4CxB9vawbPlgSMjyn8N8owVCsSAO0vWU2zSXQRcboolQxP7Mn4Vn5h4sNpVq8MLk8lpQO0UVL31C7wvjzRIK6OaWFL6wYSTTjYzPrhCiz-CzRzVGiGb5GwAfCPCpPfje2yuElWJLqv-wfrtUMQHue6MlWQbPGBMEPX9yHgUwsR19P38gILWs-L2Jl6mH-9w'
+const beginRecord = 0;
+const endRecord = 0;
+const numberOfProcesses = 50;
 
+const getEmailsAndPhone = (stringValue) => {
+    if (!stringValue || stringValue === '[]') return null;
+    return stringValue.replace(/[\[\]']/g, '').split(',').map(email => email.trim());
+}
 
 // Function to validate email(s)
 const isValidEmails = (emailString) => {
-    if (!emailString || emailString === '[]') return null;
-    const emails = emailString.replace(/[\[\]']/g, '').split(',').map(email => email.trim());
+    const emails = getEmailsAndPhone(emailString);
+    if (emails === null) {
+        return null;
+    }
     return emails.every(email => validator.isEmail(email));
 };
 
 // Function to validate phone numbers
 const isValidPhones = (phoneString) => {
-    if (!phoneString || phoneString === '[]') return null;
-    const phones = phoneString.replace(/[\[\]']/g, '').split(',').map(phone => phone.trim());
+    const phones = getEmailsAndPhone(phoneString);
+    if (phones === null) {
+        return null;
+    }
     const last9DigitsSet = new Set();
 
     for (let phone of phones) {
@@ -49,29 +58,31 @@ function login() {
 }
 
 // Function to check if the profile CV exists
-const checkCVExists = async (slug, {cvId, email, phone}, excelFileObject, rowNumber) => {
+const checkCVExists = async (slug, {emails, phones}, excelFileObject, rowNumber) => {
+    console.log('emails', emails)
+    console.log('phones', phones)
     console.log('calling api')
     try {
         let errorMessage = '';
-        const url = `https://dev-recruiter.brightsource.com/api/profiles/${slug}/cv-for-edit`;
+        const url = `https://employer.brightsource.com/api/profiles/${slug}/cv-for-edit`;
         const response = await axios.post(url, null, {
             headers: {
                 Authorization: authToken,
             }
         });
         const responseData = response.data.data.data;
-        console.log('response')
-        console.dir(responseData, {depth: null, colors: true})
+        // console.log('response')
+        // console.dir(responseData, {depth: null, colors: true})
         if (!responseData) {
             return ResponseType.EMPTY_RESPONSE;
         }
         if (responseData.includes('File Is Corrupted')) {
             return ResponseType.FILE_IS_CORRUPTED;
         }
-        if (!responseData.includes(email)) {
+        if (emails && emails.some(email => !responseData.includes(email))) {
             errorMessage = ResponseType.WRONG_EMAIL;
         }
-        if (!responseData.includes(phone.slice(-6))) {
+        if (phones && phones.some(phone => !responseData.includes(phone.slice(-6)))) {
             errorMessage += ResponseType.WRONG_PHONE;
         }
         // await new Promise(resolve => setTimeout(resolve, delay));
@@ -190,8 +201,43 @@ const processExcelFile = async (filePath) => {
         }
     }
 
+    const promiseList = [];
+
+    const [even, odd] = [Math.floor(rowsToValidate.length / numberOfProcesses), rowsToValidate.length % numberOfProcesses];
+
+// Divide work among processes
+    for (let i = 0; i < numberOfProcesses; i++) {
+        const startIdx = i * even + Math.min(i, odd);
+        const endIdx = startIdx + even + (i < odd ? 1 : 0);
+
+        const processRows = rowsToValidate.slice(startIdx, endIdx);
+
+        // Create a promise for each chunk
+        const processPromise = checkCV({
+            rowsToValidate: processRows,
+            statusCol,
+            emailCol,
+            phoneCol,
+            workbook,
+            unUpdatedWorkSheet
+        });
+
+        promiseList.push(processPromise);
+    }
+
+    await Promise.all(promiseList);
+
+    const outputFilePath = path.join(__dirname, "Validated_" + path.basename(filePath));
+    await workbook.xlsx.writeFile(outputFilePath);
+    console.log(`Validation completed. Processed file saved as: ${outputFilePath}`);
+};
+
+async function checkCV({rowsToValidate, statusCol, emailCol, phoneCol, workbook, unUpdatedWorkSheet}) {
     for (const {row, slug} of rowsToValidate) {
-        const errorMessage = await checkCVExists(slug, row.getCell(cvsIdCol).value, workbook, row.number);
+        const errorMessage = await checkCVExists(slug, {
+            emails: getEmailsAndPhone(row.getCell(emailCol).value),
+            phones: getEmailsAndPhone(row.getCell(phoneCol).value)
+        }, workbook, row.number);
         row.getCell(statusCol).value = errorMessage;
         if (errorMessage) {
             unUpdatedWorkSheet.addRow(row.values);
@@ -201,11 +247,7 @@ const processExcelFile = async (filePath) => {
             };
         }
     }
-
-    const outputFilePath = path.join(__dirname, "Validated_" + path.basename(filePath));
-    await workbook.xlsx.writeFile(outputFilePath);
-    console.log(`Validation completed. Processed file saved as: ${outputFilePath}`);
-};
+}
 
 // Run the function with the uploaded file
 processExcelFile(uploadedFilePath);
