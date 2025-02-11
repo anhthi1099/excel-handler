@@ -11,7 +11,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const uploadedFilePath = "./migration_merged4.xlsx";
 const credential = 'testrec@brightsource.com/12qwaszx'
-const authToken = 'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjhkMjUwZDIyYTkzODVmYzQ4NDJhYTU2YWJhZjUzZmU5NDcxNmVjNTQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcmVjLXRlc3QxIiwiYXVkIjoicmVjLXRlc3QxIiwiYXV0aF90aW1lIjoxNzM5MTgwMjc1LCJ1c2VyX2lkIjoicmNBbU1BcTJYbE5xYUFOeFRJSWFuNXhVRWtKMiIsInN1YiI6InJjQW1NQXEyWGxOcWFBTnhUSUlhbjV4VUVrSjIiLCJpYXQiOjE3MzkyMTExOTUsImV4cCI6MTczOTIxNDc5NSwiZW1haWwiOiJ0ZXN0cmVjQGJyaWdodHNvdXJjZS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidGVzdHJlY0BicmlnaHRzb3VyY2UuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.dIaYiugNSd1JNIu25GT_FEESkwzhfPFAX6bLGyNlQvE5wNRBs15t1TDoTKjDcfTeOi7w1KeUXDf0imuZk6p64j7V7pbgJu-QAyGsKm0nIhhNSp1DYv6mWODYlWVEok4LuU7CKtf_c7yk5T0No_mpJeoA8dIJCkrFltyLFqgo4OALaWPqE4xpx2mJ2c_Jdeo-j23wODXySZndz9Pk2eBVRKdkOfpDx5gRNRCh5SgEdzJD7xCumLsOTua42v0tKyUfxD2xcupxMN9rbv6_NTjotQEmMyIERjYn1PeuvA_b66TU0rSUXlG4HA6yekoaLtDvoN7v8krZxmbvmBvmCgQOOQ'
+const authToken = 'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjhkMjUwZDIyYTkzODVmYzQ4NDJhYTU2YWJhZjUzZmU5NDcxNmVjNTQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcmVjLXRlc3QxIiwiYXVkIjoicmVjLXRlc3QxIiwiYXV0aF90aW1lIjoxNzM5MTgwMjc1LCJ1c2VyX2lkIjoicmNBbU1BcTJYbE5xYUFOeFRJSWFuNXhVRWtKMiIsInN1YiI6InJjQW1NQXEyWGxOcWFBTnhUSUlhbjV4VUVrSjIiLCJpYXQiOjE3MzkyNDk4OTEsImV4cCI6MTczOTI1MzQ5MSwiZW1haWwiOiJ0ZXN0cmVjQGJyaWdodHNvdXJjZS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidGVzdHJlY0BicmlnaHRzb3VyY2UuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.UTo-6Iy5ljOLz_VZXLtUxpVG04iKaFeFNj_i8U3GiGRTsLk593EcmAKR11kNauoeQ4CadLa6TZAdzdJh9rIZegGg1Ug-9P-_HT98yYIWD2bWLvyzdi-PGcxT764RazBWpwn1c12U4cRhaup6xLDNneU7-FawZ0pED2Q_uzGtsfmdc8AYpkU8y_UxDzcUHlTlBPW7sw8-rO0ahTaAH9vTJVUJ1CLH1zuGG7-4lnpBC1IAtjTvb4apUVsziSyzojxnr9h3Yg0pl0wORUcJ5m34YNFrgG_ogXfd49OrMO7xQ76y7kU9y2YTu_IZGxbNoxRJAOU1GIB-0wCFbLLMAvnkCA'
+const beginRecord = 10;
+const endRecord = 20;
 
 
 // Function to validate email(s)
@@ -148,9 +150,12 @@ const processExcelFile = async (filePath) => {
 
     const rowsToValidate = [];
 
+    const begin = beginRecord || 2;
+    const end = endRecord || worksheet.actualRowCount
+
     //Change the row number here to restrict the number of rows to be processed
     // For example for (let rowNumber = 100; rowNumber <= 200; rowNumber++) this will run the row 100 to 200 in excel file
-    for (let rowNumber = 2; rowNumber <= 15; rowNumber++) {
+    for (let rowNumber = begin; rowNumber <= end; rowNumber++) {
         const row = worksheet.getRow(rowNumber);
 
         const emailValue = row.getCell(emailCol).value ? row.getCell(emailCol).value.toString() : '';
