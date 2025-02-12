@@ -5,6 +5,7 @@ export const ResponseType = {
     FORBIDDEN: 'Request Forbidden',
     SERVER_ERROR: 'Server Error',
     EMPTY_RESPONSE: 'Empty Response',
+    SERVER_TIMEOUT: 'Server Timeout',
     FILE_IS_CORRUPTED: 'File Is Corrupted',
     WRONG_EMAIL: 'Wrong Email',
     WRONG_PHONE: 'Wrong Phone',

@@ -11,10 +11,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const uploadedFilePath = "./migration_merged4.xlsx";
 const credential = 'testrec@brightsource.com/12qwaszx'
-const authToken = 'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjhkMjUwZDIyYTkzODVmYzQ4NDJhYTU2YWJhZjUzZmU5NDcxNmVjNTQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiRXlhbCBTb2xvbW9uIiwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL2JyaWdodHNvdXJjZS1wcm9kIiwiYXVkIjoiYnJpZ2h0c291cmNlLXByb2QiLCJhdXRoX3RpbWUiOjE3MzkyOTg0OTcsInVzZXJfaWQiOiJsYm01bkFiNWJEVnB3b25pczFGc1BZY0p2a3gyIiwic3ViIjoibGJtNW5BYjViRFZwd29uaXMxRnNQWWNKdmt4MiIsImlhdCI6MTczOTMwMjA2OCwiZXhwIjoxNzM5MzA1NjY4LCJlbWFpbCI6ImV5YWxAZXRob3NpYS5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJleWFsQGV0aG9zaWEuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.fYyAlHr5dJjYzNPgsObROLcLIlixpD5EUQE3TGKWh-B2zXCiO5jVoea2Ti-D7FOq7Of6lpvlM2BGLXirn2LkBdAtxEsJcFw9oWKmY7s8t-K4MeQcuRSmvAL2BBDjsl3HWg0Rb-pPpAuliDAn6m-YXRATAZ2dTtOXbrO2zeARmCNEdn1CKJROoHcN6fl1uTgPEIBV4O7KwDYGl5gGW6m-z3ZjWsLIOblxNTm5gMvRxWcL2T3DK7IzmLVcOMjsOMnc2TzOtaL4X77kZccRhqP1YIDgxArjOe6c_B0Jf1U4Z_T5GodsmZo0hzkLh9HhxAs3glKR8NfaLlTGb6QxnZ-sjQ'
-const beginRecord = 10001;
+const authToken = 'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjhkMjUwZDIyYTkzODVmYzQ4NDJhYTU2YWJhZjUzZmU5NDcxNmVjNTQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiRXlhbCBTb2xvbW9uIiwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL2JyaWdodHNvdXJjZS1wcm9kIiwiYXVkIjoiYnJpZ2h0c291cmNlLXByb2QiLCJhdXRoX3RpbWUiOjE3MzkyOTg0OTcsInVzZXJfaWQiOiJsYm01bkFiNWJEVnB3b25pczFGc1BZY0p2a3gyIiwic3ViIjoibGJtNW5BYjViRFZwd29uaXMxRnNQWWNKdmt4MiIsImlhdCI6MTczOTM0NDMwMiwiZXhwIjoxNzM5MzQ3OTAyLCJlbWFpbCI6ImV5YWxAZXRob3NpYS5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJleWFsQGV0aG9zaWEuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.AfqCWcTSnEMgM47Yu__l-nsi1_1i911OUTqj1YJi09aJ3i1ThYChCZQH0j0AVAp1bG1iP7-ElS2GtGoKGuormmi5jQnC0vsetbohk3ywodg3OGoUrIuKhSD1q77-opBjugMykygsLQtTG5IF5X9m8xmQNgKITXJ2jC3tsF6Vl27CLs_mr03di7N0XvZPy9X6_TPzXMgYw_ueDieN_4zuudHXYwRVETMNwp338dVIQhH55PHuDlFMpe_4ekkBWYwhtAWofDxQe54qv9Q17rMr3QlVIyjlbpgSQB9wNWZPG3iwKP8bVed0TP3P6uKOqrWEuR-2141bNxNtIcVwVv1qXg'
+const beginRecord = 0;
 const endRecord = 0;
-const numberOfProcesses = 50;
+const numberOfProcesses = 500;
 
 const getEmailsAndPhone = (stringValue) => {
     if (!stringValue || stringValue === '[]') return null;
@@ -70,9 +70,12 @@ const checkCVExists = async (slug, {emails, phones}, excelFileObject, rowNumber)
                 Authorization: authToken,
             }
         });
-        const responseData = response.data.data.data;
-        // console.log('response')
-        // console.dir(responseData, {depth: null, colors: true})
+        let responseData = response.data.data.data;
+
+        if (response.status === 524) {
+            return ResponseType.SERVER_TIMEOUT
+        }
+
         if (!responseData) {
             return ResponseType.EMPTY_RESPONSE;
         }
@@ -85,6 +88,9 @@ const checkCVExists = async (slug, {emails, phones}, excelFileObject, rowNumber)
         if (phones && phones.some(phone => !responseData.includes(phone.slice(-4)))) {
             errorMessage += ResponseType.WRONG_PHONE;
         }
+        console.log('Successful checked CV for slug: ', slug)
+        console.log('Processing row: ', rowNumber)
+
         // await new Promise(resolve => setTimeout(resolve, delay));
         return errorMessage;
     } catch (error) {
@@ -105,7 +111,7 @@ const checkCVExists = async (slug, {emails, phones}, excelFileObject, rowNumber)
         }
         console.error('ERROR bug', error.status)
         console.error(`Error fetching CV exist status for slug: ${slug}`, error);
-        return `Error fetching CV exist status for slug: ${slug}`;
+        return `Error fetching CV exist status for slug: ${slug} with error response: ${JSON.stringify(error)}`;
     }
 };
 
