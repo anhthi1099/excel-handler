@@ -20,6 +20,9 @@ importers:
       linkedom:
         specifier: ^0.18.9
         version: 0.18.9
+      prettier:
+        specifier: 3.3.3
+        version: 3.3.3
       validator:
         specifier: ^13.12.0
         version: 13.12.0
@@ -387,6 +390,11 @@ packages:
   path-is-absolute@1.0.1:
     resolution: {integrity: sha512-AVbw3UJ2e9bq64vSaS9Am0fje1Pa8pbGqTTsmXfaIiMpnr5DlDhfJOuLj9Sf95ZPVDAUerDfEk88MPmPe7UCQg==}
     engines: {node: '>=0.10.0'}
+
+  prettier@3.3.3:
+    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
+    engines: {node: '>=14'}
+    hasBin: true
 
   printj@1.1.2:
     resolution: {integrity: sha512-zA2SmoLaxZyArQTOPj5LXecR+RagfPSU5Kw1qP+jkWeNlrq+eJZyY2oS68SU1Z/7/myXM4lo9716laOFAVStCQ==}
@@ -919,6 +927,8 @@ snapshots:
       entities: 4.5.0
 
   path-is-absolute@1.0.1: {}
+
+  prettier@3.3.3: {}
 
   printj@1.1.2: {}
 
