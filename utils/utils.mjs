@@ -12,7 +12,15 @@ export async function extractTextFromImage(base64ImageData) {
 }
 
 export function extractUrlProfile(textContent) {
+  if (!textContent) return null;
+
   const match = textContent.match(/https?:\/\/(www\.)?linkedin\.com\/in\/[^\/\s"<>]+\/?/g);
-  return match ? match[0] : null;
+  if (match) {
+    if (match[0].length > 2048) {
+      return null;
+    }
+    return match[0];
+  }
+  return null;
   // create a better match regex of above
 }
