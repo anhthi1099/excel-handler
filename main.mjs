@@ -6,12 +6,17 @@ import { fileURLToPath } from 'url';
 import * as cheerio from 'cheerio'; // ✅ Replace linkedom with cheerio
 import fs from 'fs/promises';
 import { FORBIDDEN, SERVER_ERROR, ResponseType, RETRY_CV } from './constant.mjs';
+import { refreshAuthToken } from './utils/utils.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const credential = 'testrec@brightsource.com/12qwaszx';
-const authToken =
-  'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjhkMjUwZDIyYTkzODVmYzQ4NDJhYTU2YWJhZjUzZmU5NDcxNmVjNTQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiRXlhbCBTb2xvbW9uIiwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL2JyaWdodHNvdXJjZS1wcm9kIiwiYXVkIjoiYnJpZ2h0c291cmNlLXByb2QiLCJhdXRoX3RpbWUiOjE3Mzk1NTI0ODYsInVzZXJfaWQiOiJsYm01bkFiNWJEVnB3b25pczFGc1BZY0p2a3gyIiwic3ViIjoibGJtNW5BYjViRFZwd29uaXMxRnNQWWNKdmt4MiIsImlhdCI6MTczOTU1MjQ4NiwiZXhwIjoxNzM5NTU2MDg2LCJlbWFpbCI6ImV5YWxAZXRob3NpYS5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJleWFsQGV0aG9zaWEuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.EjiS9eUkWkmlwb19O84XvCMeGRRnWOTWF3MP-rdgjqgLYvwJiGxkEVHWRdIqd-X-KCYvp8ROil7HMmf1h-bSug259kdU6GFDOnaOD1-l7nzOofPiGRQ0qEDJovQttyuFkwZiJlClxH_QwW2uIeBVT5VvYy2oDWWt2DTxhpM3tVgeFV7H7yMD90qTN6Eak7qSTG5aq168RrP2iNu2BNBnXqu0PhJKVYmLlsV_QHgG7is2t0Ym-sU5pdyBiWDGoUpxoeN6f1nuE3n9yHoF8pDtjFFEuTC-Ned6ll62E7JkPN-deXni4T_3lew1AhZg1DrWqCvuXii0uFyd7USO07gd_Q';
+const authToken = {
+  token:
+    'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjhkMjUwZDIyYTkzODVmYzQ4NDJhYTU2YWJhZjUzZmU5NDcxNmVjNTQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiRXlhbCBTb2xvbW9uIiwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL2JyaWdodHNvdXJjZS1wcm9kIiwiYXVkIjoiYnJpZ2h0c291cmNlLXByb2QiLCJhdXRoX3RpbWUiOjE3Mzk1NTI0ODYsInVzZXJfaWQiOiJsYm01bkFiNWJEVnB3b25pczFGc1BZY0p2a3gyIiwic3ViIjoibGJtNW5BYjViRFZwd29uaXMxRnNQWWNKdmt4MiIsImlhdCI6MTczOTU1MjQ4NiwiZXhwIjoxNzM5NTU2MDg2LCJlbWFpbCI6ImV5YWxAZXRob3NpYS5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJleWFsQGV0aG9zaWEuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.EjiS9eUkWkmlwb19O84XvCMeGRRnWOTWF3MP-rdgjqgLYvwJiGxkEVHWRdIqd-X-KCYvp8ROil7HMmf1h-bSug259kdU6GFDOnaOD1-l7nzOofPiGRQ0qEDJovQttyuFkwZiJlClxH_QwW2uIeBVT5VvYy2oDWWt2DTxhpM3tVgeFV7H7yMD90qTN6Eak7qSTG5aq168RrP2iNu2BNBnXqu0PhJKVYmLlsV_QHgG7is2t0Ym-sU5pdyBiWDGoUpxoeN6f1nuE3n9yHoF8pDtjFFEuTC-Ned6ll62E7JkPN-deXni4T_3lew1AhZg1DrWqCvuXii0uFyd7USO07gd_Q',
+  refreshing: false,
+};
+
 const beginRecord = 0;
 const endRecord = 0;
 const numberOfProcesses = 65;
@@ -76,7 +81,7 @@ const checkCVExists = async (slug, { emails, phones }, excelFileObject, rowNumbe
     const url = `https://employer.brightsource.com/api/profiles/${slug}/cv-for-edit`;
     const response = await axios.post(url, null, {
       headers: {
-        Authorization: authToken,
+        Authorization: authToken.token,
       },
     });
     let responseData = response.data.data.data;
@@ -117,11 +122,10 @@ const checkCVExists = async (slug, { emails, phones }, excelFileObject, rowNumbe
     return errorMessage;
   } catch (error) {
     if (error.status === FORBIDDEN) {
-      const outputFilePath = path.join(__dirname, 'Validated_' + path.basename(uploadedFilePath));
-      await excelFileObject.xlsx.writeFile(outputFilePath);
+      await refreshAuthToken(authToken);
       console.log('Processing Row: ', rowNumber);
       console.log(ResponseType.FORBIDDEN);
-      process.exit();
+      return RETRY_CV;
     }
     if (error.status === SERVER_ERROR) {
       // const outputFilePath = path.join(__dirname, "Validated_" + path.basename(uploadedFilePath));

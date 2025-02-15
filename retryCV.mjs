@@ -6,13 +6,13 @@ import { fileURLToPath } from 'url';
 import * as cheerio from 'cheerio'; // ✅ Replace linkedom with cheerio
 import fs from 'fs/promises';
 import { FORBIDDEN, SERVER_ERROR, ResponseType, RETRY_CV } from './constant.mjs';
+import { refreshAuthToken } from './utils/utils.mjs';
 
 // Resolve __dirname in ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const credential = 'testrec@brightsource.com/12qwaszx';
-const authToken =
-  'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjhkMjUwZDIyYTkzODVmYzQ4NDJhYTU2YWJhZjUzZmU5NDcxNmVjNTQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiRXlhbCBTb2xvbW9uIiwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL2JyaWdodHNvdXJjZS1wcm9kIiwiYXVkIjoiYnJpZ2h0c291cmNlLXByb2QiLCJhdXRoX3RpbWUiOjE3Mzk1NTU4MjksInVzZXJfaWQiOiJsYm01bkFiNWJEVnB3b25pczFGc1BZY0p2a3gyIiwic3ViIjoibGJtNW5BYjViRFZwd29uaXMxRnNQWWNKdmt4MiIsImlhdCI6MTczOTU1NTgyOSwiZXhwIjoxNzM5NTU5NDI5LCJlbWFpbCI6ImV5YWxAZXRob3NpYS5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJleWFsQGV0aG9zaWEuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.GlgtlNIdbAsvQmYc-b9GCf-jWiMckoVcG8agEJRlzexV5NKMMDXF9gKLeQ-SuDTowfzVVADKSNrPFDuImUoLB-HdxKySqu2zKNrdk5MngeYLiA1bKGBMFeVnwbG5j3yVc3_6arIX0Eg6WqNQKcGqsEO5YL-1BJIjOuaeMu85Uuo2aweND84lxYWLQVRzLZyFhaPDnv9o1iYnh3dX9jC-jp08DIwpHob0hsIzpK-oS1558Lsm4dsVo9yPXfRgBK8fpjzqHzi_kXMMrQkM9Ru7MWootHuZO9EdxOFZWTV2sk9DoaPXtxpVAFPN5P1vTn9iAnxFp4OtbVF31hxtUOzyCw';
+let authToken = `Bearer ${process.env.AUTH_TOKEN ?? ''}`;
 const beginRecord = 0;
 const endRecord = 0;
 const numberOfProcesses = 50;
@@ -129,10 +129,10 @@ const checkCVExists = async (slug, { emails, phones }, excelFileObject, rowNumbe
     return errorMessage;
   } catch (error) {
     if (error.status === FORBIDDEN) {
-      await excelFileObject.xlsx.writeFile(outputFilePath);
+      authToken = refreshAuthToken();
       console.log('Processing Row: ', rowNumber);
       console.log(ResponseType.FORBIDDEN);
-      process.exit();
+      return RETRY_CV;
     }
     if (error.status === SERVER_ERROR) {
       // const outputFilePath = path.join(__dirname, "Validated_" + path.basename(uploadedFilePath));

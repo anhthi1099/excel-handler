@@ -6,16 +6,23 @@ import { fileURLToPath } from 'url';
 import * as cheerio from 'cheerio'; // ✅ Replace linkedom with cheerio
 import fs from 'fs/promises';
 import { FORBIDDEN, SERVER_ERROR, ResponseType, RETRY_CV } from './constant.mjs';
+import { getEnvs } from './utils/envHandler.mjs';
+import { refreshAuthToken } from './utils/utils.mjs';
 
 // Resolve __dirname in ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const credential = 'testrec@brightsource.com/12qwaszx';
-const authToken =
-  'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjhkMjUwZDIyYTkzODVmYzQ4NDJhYTU2YWJhZjUzZmU5NDcxNmVjNTQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiRXlhbCBTb2xvbW9uIiwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL2JyaWdodHNvdXJjZS1wcm9kIiwiYXVkIjoiYnJpZ2h0c291cmNlLXByb2QiLCJhdXRoX3RpbWUiOjE3Mzk0MzM4MDQsInVzZXJfaWQiOiJsYm01bkFiNWJEVnB3b25pczFGc1BZY0p2a3gyIiwic3ViIjoibGJtNW5BYjViRFZwd29uaXMxRnNQWWNKdmt4MiIsImlhdCI6MTczOTQ0NjI1MSwiZXhwIjoxNzM5NDQ5ODUxLCJlbWFpbCI6ImV5YWxAZXRob3NpYS5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJleWFsQGV0aG9zaWEuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.XU-5JA0QrT7IQw7C2Ghcd7bezuDBaAx_qzrP5OJd-vTDG1k3yX3ybSMfLYKGmaOpzR74UqDZT2OUAVR0pXBs-DY1H_nQm7Y462JsWlwtBd5kXJW38bNNJNlNCEBfEpE27MD_lJeyo0Qa0r3Lu9YuipVIsNHZiAbgqw7tVC9b9TWK2-QGDpKPIASjIESnTLM1ORAMVu0JIjH382ZUeseJWZ4jD2rsOBXEestdYPGwW_PhL5BjufNGCtHsSk3T5-65BLgDRvtDtSfymXt3rj6S0zTvoLlds_U_A-vlV1MLiunTu-sD38zIL5t0Zv9diXsA2wvG6sOUBw5p_h0M1Nzzrw';
+
+const envs = getEnvs();
+
+const authToken = {
+  token: envs.AUTH_TOKEN,
+  refreshing: false,
+};
 const beginRecord = 1;
 const endRecord = 2;
-const numberOfProcesses = 65;
+const numberOfProcesses = 1;
 
 const uploadedFilePath = './social_files/[Under Testing] _ Missing_socials urls.xlsx';
 let processedRows = 0;
@@ -122,11 +129,10 @@ const checkCVExists = async (slug, { emails, phones }, excelFileObject, rowNumbe
     return errorMessage;
   } catch (error) {
     if (error.status === FORBIDDEN) {
-      const outputFilePath = path.join(__dirname, 'Validated_' + path.basename(uploadedFilePath));
-      await excelFileObject.xlsx.writeFile(outputFilePath);
+      authToken.token = refreshAuthToken(authToken);
       console.log('Processing Row: ', rowNumber);
       console.log(ResponseType.FORBIDDEN);
-      process.exit();
+      return RETRY_CV;
     }
     if (error.status === SERVER_ERROR) {
       // const outputFilePath = path.join(__dirname, "Validated_" + path.basename(uploadedFilePath));
@@ -146,8 +152,13 @@ const checkCVExists = async (slug, { emails, phones }, excelFileObject, rowNumbe
 };
 
 function loadTextContentByCheerio(responseData) {
-  const $ = cheerio.load(responseData);
-  return $('body').text().replace(/\s+/g, ' ').trim(); // ✅ Extract full text content
+  const loadedData = cheerio.load(responseData);
+  console.log('loadedData');
+  const imgElements = loadedData('img');
+  const a = loadedData('img')
+    .map((i, el) => loadedData(el).attr())
+    .get(); // Extract all attributes of <img> elements
+  return loadedData('body').text().replace(/\s+/g, ' ').trim(); // ✅ Extract full text content
 }
 
 // Main function to process the Excel file
