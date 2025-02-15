@@ -7,21 +7,23 @@ import * as cheerio from 'cheerio'; // ✅ Replace linkedom with cheerio
 import fs from 'fs/promises';
 import { FORBIDDEN, SERVER_ERROR, ResponseType, RETRY_CV } from './constant.mjs';
 
+// Resolve __dirname in ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const credential = 'testrec@brightsource.com/12qwaszx';
 const authToken =
-  'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjhkMjUwZDIyYTkzODVmYzQ4NDJhYTU2YWJhZjUzZmU5NDcxNmVjNTQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiRXlhbCBTb2xvbW9uIiwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL2JyaWdodHNvdXJjZS1wcm9kIiwiYXVkIjoiYnJpZ2h0c291cmNlLXByb2QiLCJhdXRoX3RpbWUiOjE3Mzk1NTI0ODYsInVzZXJfaWQiOiJsYm01bkFiNWJEVnB3b25pczFGc1BZY0p2a3gyIiwic3ViIjoibGJtNW5BYjViRFZwd29uaXMxRnNQWWNKdmt4MiIsImlhdCI6MTczOTU1MjQ4NiwiZXhwIjoxNzM5NTU2MDg2LCJlbWFpbCI6ImV5YWxAZXRob3NpYS5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJleWFsQGV0aG9zaWEuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.EjiS9eUkWkmlwb19O84XvCMeGRRnWOTWF3MP-rdgjqgLYvwJiGxkEVHWRdIqd-X-KCYvp8ROil7HMmf1h-bSug259kdU6GFDOnaOD1-l7nzOofPiGRQ0qEDJovQttyuFkwZiJlClxH_QwW2uIeBVT5VvYy2oDWWt2DTxhpM3tVgeFV7H7yMD90qTN6Eak7qSTG5aq168RrP2iNu2BNBnXqu0PhJKVYmLlsV_QHgG7is2t0Ym-sU5pdyBiWDGoUpxoeN6f1nuE3n9yHoF8pDtjFFEuTC-Ned6ll62E7JkPN-deXni4T_3lew1AhZg1DrWqCvuXii0uFyd7USO07gd_Q';
+  'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjhkMjUwZDIyYTkzODVmYzQ4NDJhYTU2YWJhZjUzZmU5NDcxNmVjNTQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiRXlhbCBTb2xvbW9uIiwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL2JyaWdodHNvdXJjZS1wcm9kIiwiYXVkIjoiYnJpZ2h0c291cmNlLXByb2QiLCJhdXRoX3RpbWUiOjE3Mzk1NTU4MjksInVzZXJfaWQiOiJsYm01bkFiNWJEVnB3b25pczFGc1BZY0p2a3gyIiwic3ViIjoibGJtNW5BYjViRFZwd29uaXMxRnNQWWNKdmt4MiIsImlhdCI6MTczOTU1NTgyOSwiZXhwIjoxNzM5NTU5NDI5LCJlbWFpbCI6ImV5YWxAZXRob3NpYS5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJleWFsQGV0aG9zaWEuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.GlgtlNIdbAsvQmYc-b9GCf-jWiMckoVcG8agEJRlzexV5NKMMDXF9gKLeQ-SuDTowfzVVADKSNrPFDuImUoLB-HdxKySqu2zKNrdk5MngeYLiA1bKGBMFeVnwbG5j3yVc3_6arIX0Eg6WqNQKcGqsEO5YL-1BJIjOuaeMu85Uuo2aweND84lxYWLQVRzLZyFhaPDnv9o1iYnh3dX9jC-jp08DIwpHob0hsIzpK-oS1558Lsm4dsVo9yPXfRgBK8fpjzqHzi_kXMMrQkM9Ru7MWootHuZO9EdxOFZWTV2sk9DoaPXtxpVAFPN5P1vTn9iAnxFp4OtbVF31hxtUOzyCw';
 const beginRecord = 0;
 const endRecord = 0;
-const numberOfProcesses = 65;
+const numberOfProcesses = 50;
 
 let processedRows = 0;
 let totalRow = 0;
-const uploadedFilePath = './Original_report.xlsx';
-let toCheckSheetName = 'To be migrated';
-let reportSheetName = 'To be migrated_Report';
-let reportFileName = 'Validated_migrated_Original.xlsx';
+const validatedWorkSheetName = 'To be migrated_Report';
+const originalWorkSheetName = 'To be migrated';
+const uploadedFilePath = './Validated_migrated_Original.xlsx';
+const outputFilePath = path.join(__dirname, uploadedFilePath);
+const changedRowList = [];
 
 const getEmailsAndPhone = (stringValue) => {
   if (!stringValue || stringValue === '[]') return null;
@@ -31,6 +33,7 @@ const getEmailsAndPhone = (stringValue) => {
     .map((email) => email.trim());
 };
 
+// Function to validate email(s)
 const isValidEmails = (emailString) => {
   const emails = getEmailsAndPhone(emailString);
   if (emails === null) {
@@ -39,6 +42,7 @@ const isValidEmails = (emailString) => {
   return emails.every((email) => validator.isEmail(email));
 };
 
+// Function to validate phone numbers
 const isValidPhones = (phoneString) => {
   const phones = getEmailsAndPhone(phoneString);
   if (phones === null) {
@@ -55,10 +59,16 @@ const isValidPhones = (phoneString) => {
   return true;
 };
 
-const extractSlug = (slugString) => {
-  if (!slugString) return null;
-  return slugString.split('/').pop();
-};
+// Function to extract the last part of a URL from slug column
+function extractSlug(slugString, rowNumber) {
+  try {
+    if (!slugString) return null;
+    return slugString.split('/').pop();
+  } catch (error) {
+    console.error('Error extracting slug', error);
+    return null;
+  }
+}
 
 function checkContainReversedEmail(emailString, htmlString) {
   const [localPart, domainPart] = emailString.split('@');
@@ -68,7 +78,7 @@ function checkContainReversedEmail(emailString, htmlString) {
 }
 
 // Function to check if the profile CV exists
-const checkCVExists = async (slug, { emails, phones }, excelFileObject, rowNumber) => {
+const checkCVExists = async (slug, { emails, phones }, excelFileObject, rowNumber, row) => {
   console.log('emails', emails);
   console.log('calling api');
   try {
@@ -85,6 +95,8 @@ const checkCVExists = async (slug, { emails, phones }, excelFileObject, rowNumbe
       console.log('Abnormal response returned');
       return RETRY_CV;
     }
+
+    changedRowList.push(row);
 
     const textContent = loadTextContentByCheerio(responseData);
     const cleanedText = textContent.replace(/\s+|-/g, '').trim();
@@ -117,7 +129,6 @@ const checkCVExists = async (slug, { emails, phones }, excelFileObject, rowNumbe
     return errorMessage;
   } catch (error) {
     if (error.status === FORBIDDEN) {
-      const outputFilePath = path.join(__dirname, 'Validated_' + path.basename(uploadedFilePath));
       await excelFileObject.xlsx.writeFile(outputFilePath);
       console.log('Processing Row: ', rowNumber);
       console.log(ResponseType.FORBIDDEN);
@@ -156,10 +167,11 @@ const processExcelFile = async (filePath) => {
 
   const workbook = new ExcelJS.Workbook();
   await workbook.xlsx.readFile(filePath);
-  const worksheet = workbook.getWorksheet(toCheckSheetName);
+  const originalWorkSheet = workbook.getWorksheet(originalWorkSheetName);
+  const validatedWorkSheet = workbook.getWorksheet(validatedWorkSheetName);
 
   let emailCol, phoneCol, slugCol, statusCol, cvsCol, cvsIdCol;
-  const headerRow = worksheet.getRow(1);
+  const headerRow = originalWorkSheet.getRow(1);
 
   headerRow.eachCell((cell, colNumber) => {
     const value = cell.value.toString().toLowerCase();
@@ -168,6 +180,7 @@ const processExcelFile = async (filePath) => {
     if (value.includes('slug')) slugCol = colNumber;
     if (value === 'cvs') cvsCol = colNumber;
     if (value.includes('cvs_id')) cvsIdCol = colNumber;
+    if (value.includes('status')) statusCol = colNumber;
   });
 
   if (!emailCol || !phoneCol || !slugCol) {
@@ -175,75 +188,31 @@ const processExcelFile = async (filePath) => {
     return;
   }
 
-  statusCol = phoneCol + 1;
-  worksheet.spliceColumns(statusCol, 0, []); // Insert empty column
-  worksheet.getRow(1).getCell(statusCol).value = 'Status';
-  worksheet.getRow(1).getCell(statusCol).font = { bold: true }; // Make header bold
-
-  let unUpdatedWorkSheet = workbook.addWorksheet(reportSheetName);
-  unUpdatedWorkSheet.addRow(worksheet.getRow(1).values);
-  let newHeaderRow = unUpdatedWorkSheet.getRow(1);
-  worksheet.getRow(1).eachCell((cell, colNumber) => {
-    let newCell = newHeaderRow.getCell(colNumber);
-    newCell.value = cell.value;
-    newCell.font = cell.font;
-    newCell.alignment = cell.alignment;
-    newCell.fill = cell.fill;
-    newCell.border = cell.border;
-  });
-
   const rowsToValidate = [];
 
   const begin = beginRecord || 2;
-  const end = endRecord || worksheet.actualRowCount;
+  const end = endRecord || originalWorkSheet.actualRowCount;
 
   //Change the row number here to restrict the number of rows to be processed
   // For example for (let rowNumber = 100; rowNumber <= 200; rowNumber++) this will run the row 100 to 200 in excel file
   for (let rowNumber = begin; rowNumber <= end; rowNumber++) {
-    const row = worksheet.getRow(rowNumber);
+    const row = originalWorkSheet.getRow(rowNumber);
 
-    const emailValue = row.getCell(emailCol).value ? row.getCell(emailCol).value.toString() : '';
-    const phoneValue = row.getCell(phoneCol).value ? row.getCell(phoneCol).value.toString() : '';
-    const slugValue = row.getCell(slugCol).value ? row.getCell(slugCol).model.value : '';
-
-    const emailValid = isValidEmails(emailValue);
-    const phoneValid = isValidPhones(phoneValue);
-    row.getCell(statusCol).font = { bold: true, color: { argb: 'FF0000' } }; // Red text for errors
-
-    if ((emailValid === true || phoneValid === true) && emailValid !== false && phoneValid !== false) {
-      const slug = extractSlug(slugValue);
-      if (slug) {
-        rowsToValidate.push({ row, slug });
-      }
-    } else {
-      if (emailValid === false) {
-        row.getCell(statusCol).value = 'Invalid Email';
-      }
-      if (phoneValid === false) {
-        if (emailValid === false) {
-          row.getCell(statusCol).value = 'Invalid Email/Invalid Phone';
-          continue;
-        }
-        row.getCell(statusCol).value = 'Invalid Phone';
-      }
-      unUpdatedWorkSheet.addRow(row.values);
-      unUpdatedWorkSheet.getRow(unUpdatedWorkSheet.actualRowCount).getCell(statusCol).font = {
-        bold: true,
-        color: { argb: 'FF0000' },
-      }; // Red text for errors;
+    const statusValue = row.getCell(statusCol).value;
+    if (statusValue === RETRY_CV) {
+      rowsToValidate.push({ row, slug: extractSlug(row.getCell(slugCol).text, row.number) });
     }
   }
 
-  // const retryRows = await loopCheckCV({rowsToValidate, statusCol, emailCol, phoneCol, workbook, unUpdatedWorkSheet})
   totalRow = rowsToValidate.length;
-  await loopCheckCV({ rowsToValidate, statusCol, emailCol, phoneCol, workbook, unUpdatedWorkSheet });
+  await loopCheckCV({ rowsToValidate, statusCol, slugCol, emailCol, phoneCol, workbook, validatedWorkSheet });
+  await removePassValidationInReportFile(slugCol, statusCol, workbook, validatedWorkSheet);
 
-  const outputFilePath = path.join(__dirname, reportFileName);
   await workbook.xlsx.writeFile(outputFilePath);
   console.log(`Validation completed. Processed file saved as: ${outputFilePath}`);
 };
 
-async function loopCheckCV({ rowsToValidate, statusCol, emailCol, phoneCol, workbook, unUpdatedWorkSheet }) {
+async function loopCheckCV({ rowsToValidate, statusCol, slugCol, emailCol, phoneCol, workbook, validatedWorkSheet }) {
   const promiseList = [];
   // const listRetryRow = [];
 
@@ -265,8 +234,9 @@ async function loopCheckCV({ rowsToValidate, statusCol, emailCol, phoneCol, work
       statusCol,
       emailCol,
       phoneCol,
+      slugCol,
       workbook,
-      unUpdatedWorkSheet,
+      validatedWorkSheet,
       // listRetryRow
     });
 
@@ -277,9 +247,9 @@ async function loopCheckCV({ rowsToValidate, statusCol, emailCol, phoneCol, work
   // return listRetryRow;
 }
 
-async function checkCV({ rowsToValidate, statusCol, emailCol, phoneCol, workbook, unUpdatedWorkSheet, listRetryRow }) {
+async function checkCV({ rowsToValidate, statusCol, emailCol, slugCol, phoneCol, workbook, validatedWorkSheet }) {
   for (const { row, slug } of rowsToValidate) {
-    const errorMessage = await checkCVExists(
+    row.getCell(statusCol).value = await checkCVExists(
       slug,
       {
         emails: getEmailsAndPhone(row.getCell(emailCol).value),
@@ -287,18 +257,30 @@ async function checkCV({ rowsToValidate, statusCol, emailCol, phoneCol, workbook
       },
       workbook,
       row.number,
+      row,
     );
-    row.getCell(statusCol).value = errorMessage;
-    // if (errorMessage === RETRY_CV) {
-    //     listRetryRow.push(row);
-    //     continue;
-    // }
-    if (errorMessage) {
-      unUpdatedWorkSheet.addRow(row.values);
-      unUpdatedWorkSheet.getRow(unUpdatedWorkSheet.actualRowCount).getCell(statusCol).font = {
-        bold: true,
-        color: { argb: 'FF0000' },
-      };
+  }
+}
+
+async function removePassValidationInReportFile(slugCol, statusCol, workbook, validatedWorkSheet) {
+  for (let i = 2; i < validatedWorkSheet.actualRowCount; i++) {
+    const rowSlug = extractSlug(validatedWorkSheet.getRow(i).getCell(slugCol || 1).text);
+    const rowStatus = validatedWorkSheet.getRow(i).getCell(statusCol).text;
+
+    if (rowStatus === RETRY_CV) {
+      for (let z = 0; z < changedRowList.length; z++) {
+        const originalRowSlug = extractSlug(changedRowList[z].getCell(slugCol || 1).text);
+        const originalRowStatus = changedRowList[z].getCell(statusCol).text;
+
+        if (rowSlug === originalRowSlug) {
+          if (originalRowStatus) {
+            validatedWorkSheet.getRow(i).getCell(statusCol).value = originalRowStatus;
+          } else {
+            console.log('DID SPLICE ROW');
+            validatedWorkSheet.spliceRows(i, 1);
+          }
+        }
+      }
     }
   }
 }

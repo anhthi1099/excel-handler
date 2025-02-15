@@ -7,21 +7,22 @@ import * as cheerio from 'cheerio'; // ✅ Replace linkedom with cheerio
 import fs from 'fs/promises';
 import { FORBIDDEN, SERVER_ERROR, ResponseType, RETRY_CV } from './constant.mjs';
 
+// Resolve __dirname in ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const credential = 'testrec@brightsource.com/12qwaszx';
 const authToken =
-  'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjhkMjUwZDIyYTkzODVmYzQ4NDJhYTU2YWJhZjUzZmU5NDcxNmVjNTQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiRXlhbCBTb2xvbW9uIiwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL2JyaWdodHNvdXJjZS1wcm9kIiwiYXVkIjoiYnJpZ2h0c291cmNlLXByb2QiLCJhdXRoX3RpbWUiOjE3Mzk1NTI0ODYsInVzZXJfaWQiOiJsYm01bkFiNWJEVnB3b25pczFGc1BZY0p2a3gyIiwic3ViIjoibGJtNW5BYjViRFZwd29uaXMxRnNQWWNKdmt4MiIsImlhdCI6MTczOTU1MjQ4NiwiZXhwIjoxNzM5NTU2MDg2LCJlbWFpbCI6ImV5YWxAZXRob3NpYS5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJleWFsQGV0aG9zaWEuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.EjiS9eUkWkmlwb19O84XvCMeGRRnWOTWF3MP-rdgjqgLYvwJiGxkEVHWRdIqd-X-KCYvp8ROil7HMmf1h-bSug259kdU6GFDOnaOD1-l7nzOofPiGRQ0qEDJovQttyuFkwZiJlClxH_QwW2uIeBVT5VvYy2oDWWt2DTxhpM3tVgeFV7H7yMD90qTN6Eak7qSTG5aq168RrP2iNu2BNBnXqu0PhJKVYmLlsV_QHgG7is2t0Ym-sU5pdyBiWDGoUpxoeN6f1nuE3n9yHoF8pDtjFFEuTC-Ned6ll62E7JkPN-deXni4T_3lew1AhZg1DrWqCvuXii0uFyd7USO07gd_Q';
-const beginRecord = 0;
-const endRecord = 0;
+  'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjhkMjUwZDIyYTkzODVmYzQ4NDJhYTU2YWJhZjUzZmU5NDcxNmVjNTQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiRXlhbCBTb2xvbW9uIiwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL2JyaWdodHNvdXJjZS1wcm9kIiwiYXVkIjoiYnJpZ2h0c291cmNlLXByb2QiLCJhdXRoX3RpbWUiOjE3Mzk0MzM4MDQsInVzZXJfaWQiOiJsYm01bkFiNWJEVnB3b25pczFGc1BZY0p2a3gyIiwic3ViIjoibGJtNW5BYjViRFZwd29uaXMxRnNQWWNKdmt4MiIsImlhdCI6MTczOTQ0NjI1MSwiZXhwIjoxNzM5NDQ5ODUxLCJlbWFpbCI6ImV5YWxAZXRob3NpYS5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJleWFsQGV0aG9zaWEuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.XU-5JA0QrT7IQw7C2Ghcd7bezuDBaAx_qzrP5OJd-vTDG1k3yX3ybSMfLYKGmaOpzR74UqDZT2OUAVR0pXBs-DY1H_nQm7Y462JsWlwtBd5kXJW38bNNJNlNCEBfEpE27MD_lJeyo0Qa0r3Lu9YuipVIsNHZiAbgqw7tVC9b9TWK2-QGDpKPIASjIESnTLM1ORAMVu0JIjH382ZUeseJWZ4jD2rsOBXEestdYPGwW_PhL5BjufNGCtHsSk3T5-65BLgDRvtDtSfymXt3rj6S0zTvoLlds_U_A-vlV1MLiunTu-sD38zIL5t0Zv9diXsA2wvG6sOUBw5p_h0M1Nzzrw';
+const beginRecord = 1;
+const endRecord = 2;
 const numberOfProcesses = 65;
 
+const uploadedFilePath = './social_files/[Under Testing] _ Missing_socials urls.xlsx';
 let processedRows = 0;
 let totalRow = 0;
-const uploadedFilePath = './Original_report.xlsx';
-let toCheckSheetName = 'To be migrated';
-let reportSheetName = 'To be migrated_Report';
-let reportFileName = 'Validated_migrated_Original.xlsx';
+let toCheckSheetName = 'To_migrate';
+let reportSheetName = 'Not_migrate_report';
+let reportFileName = 'Social_link_report.xlsx';
 
 const getEmailsAndPhone = (stringValue) => {
   if (!stringValue || stringValue === '[]') return null;
@@ -31,6 +32,7 @@ const getEmailsAndPhone = (stringValue) => {
     .map((email) => email.trim());
 };
 
+// Function to validate email(s)
 const isValidEmails = (emailString) => {
   const emails = getEmailsAndPhone(emailString);
   if (emails === null) {
@@ -39,6 +41,7 @@ const isValidEmails = (emailString) => {
   return emails.every((email) => validator.isEmail(email));
 };
 
+// Function to validate phone numbers
 const isValidPhones = (phoneString) => {
   const phones = getEmailsAndPhone(phoneString);
   if (phones === null) {
@@ -55,6 +58,7 @@ const isValidPhones = (phoneString) => {
   return true;
 };
 
+// Function to extract the last part of a URL from slug column
 const extractSlug = (slugString) => {
   if (!slugString) return null;
   return slugString.split('/').pop();
@@ -88,6 +92,7 @@ const checkCVExists = async (slug, { emails, phones }, excelFileObject, rowNumbe
 
     const textContent = loadTextContentByCheerio(responseData);
     const cleanedText = textContent.replace(/\s+|-/g, '').trim();
+    console.log('cleanedText', cleanedText);
 
     if (response.status === 524) {
       return ResponseType.SERVER_TIMEOUT;
@@ -136,7 +141,7 @@ const checkCVExists = async (slug, { emails, phones }, excelFileObject, rowNumbe
     return `Error fetching CV exist status for slug: ${slug} with error response`;
   } finally {
     processedRows++;
-    console.log(`Processing ${Math.round((processedRows / totalRow) * 100)}% (${processedRows}/${totalRow})`);
+    console.log(`Processing ${Math.round((processedRows / totalRow) * 100)}%`);
   }
 };
 
@@ -158,7 +163,7 @@ const processExcelFile = async (filePath) => {
   await workbook.xlsx.readFile(filePath);
   const worksheet = workbook.getWorksheet(toCheckSheetName);
 
-  let emailCol, phoneCol, slugCol, statusCol, cvsCol, cvsIdCol;
+  let emailCol, phoneCol, slugCol, statusCol, cvsCol, cvsIdCol, socialCol;
   const headerRow = worksheet.getRow(1);
 
   headerRow.eachCell((cell, colNumber) => {
@@ -168,6 +173,7 @@ const processExcelFile = async (filePath) => {
     if (value.includes('slug')) slugCol = colNumber;
     if (value === 'cvs') cvsCol = colNumber;
     if (value.includes('cvs_id')) cvsIdCol = colNumber;
+    if (value.includes('social_links')) socialCol = colNumber;
   });
 
   if (!emailCol || !phoneCol || !slugCol) {
