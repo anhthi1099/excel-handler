@@ -6,13 +6,13 @@ import { fileURLToPath } from 'url';
 import * as cheerio from 'cheerio'; // ✅ Replace linkedom with cheerio
 import fs from 'fs/promises';
 import { FORBIDDEN, SERVER_ERROR, ResponseType, RETRY_CV } from './constant.mjs';
-import { refreshAuthToken } from './utils/utils.mjs';
+import { refreshAuthToken, getAuth } from './utils/auth.mjs';
 
 // Resolve __dirname in ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const credential = 'testrec@brightsource.com/12qwaszx';
-let authToken = `Bearer ${process.env.AUTH_TOKEN ?? ''}`;
+const authInfo = getAuth();
 const beginRecord = 0;
 const endRecord = 0;
 const numberOfProcesses = 50;
@@ -86,7 +86,7 @@ const checkCVExists = async (slug, { emails, phones }, excelFileObject, rowNumbe
     const url = `https://employer.brightsource.com/api/profiles/${slug}/cv-for-edit`;
     const response = await axios.post(url, null, {
       headers: {
-        Authorization: authToken,
+        Authorization: authInfo.token,
       },
     });
     let responseData = response.data.data.data;
@@ -129,7 +129,7 @@ const checkCVExists = async (slug, { emails, phones }, excelFileObject, rowNumbe
     return errorMessage;
   } catch (error) {
     if (error.status === FORBIDDEN) {
-      authToken = refreshAuthToken();
+      await refreshAuthToken();
       console.log('Processing Row: ', rowNumber);
       console.log(ResponseType.FORBIDDEN);
       return RETRY_CV;

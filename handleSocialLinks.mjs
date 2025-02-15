@@ -3,25 +3,18 @@ import validator from 'validator';
 import axios from 'axios';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import * as cheerio from 'cheerio'; // ✅ Replace linkedom with cheerio
+import * as cheerio from 'cheerio';
 import fs from 'fs/promises';
 import { FORBIDDEN, SERVER_ERROR, ResponseType, RETRY_CV } from './constant.mjs';
-import { getEnvs } from './utils/envHandler.mjs';
-import { refreshAuthToken } from './utils/utils.mjs';
+import { refreshAuthToken, getAuth } from './utils/auth.mjs';
+import { extractTextFromImage } from './utils/utils.mjs';
 
-// Resolve __dirname in ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const credential = 'testrec@brightsource.com/12qwaszx';
 
-const envs = getEnvs();
-
-const authToken = {
-  token: envs.AUTH_TOKEN,
-  refreshing: false,
-};
-const beginRecord = 1;
-const endRecord = 2;
+const authInfo = getAuth();
+const beginRecord = 2;
+const endRecord = 3;
 const numberOfProcesses = 1;
 
 const uploadedFilePath = './social_files/[Under Testing] _ Missing_socials urls.xlsx';
@@ -87,7 +80,7 @@ const checkCVExists = async (slug, { emails, phones }, excelFileObject, rowNumbe
     const url = `https://employer.brightsource.com/api/profiles/${slug}/cv-for-edit`;
     const response = await axios.post(url, null, {
       headers: {
-        Authorization: authToken,
+        Authorization: authInfo.token,
       },
     });
     let responseData = response.data.data.data;
@@ -98,8 +91,8 @@ const checkCVExists = async (slug, { emails, phones }, excelFileObject, rowNumbe
     }
 
     const textContent = loadTextContentByCheerio(responseData);
+    const textFromImage = await loadTextFromImg(responseData);
     const cleanedText = textContent.replace(/\s+|-/g, '').trim();
-    console.log('cleanedText', cleanedText);
 
     if (response.status === 524) {
       return ResponseType.SERVER_TIMEOUT;
@@ -129,7 +122,7 @@ const checkCVExists = async (slug, { emails, phones }, excelFileObject, rowNumbe
     return errorMessage;
   } catch (error) {
     if (error.status === FORBIDDEN) {
-      authToken.token = refreshAuthToken(authToken);
+      await refreshAuthToken();
       console.log('Processing Row: ', rowNumber);
       console.log(ResponseType.FORBIDDEN);
       return RETRY_CV;
@@ -151,14 +144,29 @@ const checkCVExists = async (slug, { emails, phones }, excelFileObject, rowNumbe
   }
 };
 
-function loadTextContentByCheerio(responseData) {
+async function loadTextContentByCheerio(responseData) {
   const loadedData = cheerio.load(responseData);
-  console.log('loadedData');
-  const imgElements = loadedData('img');
-  const a = loadedData('img')
-    .map((i, el) => loadedData(el).attr())
-    .get(); // Extract all attributes of <img> elements
   return loadedData('body').text().replace(/\s+/g, ' ').trim(); // ✅ Extract full text content
+}
+
+async function loadTextFromImg(responseData) {
+  const loadedData = cheerio.load(responseData);
+  const listCVImgBase64 = loadedData('img')
+    .map((i, el) => el.attribs.src)
+    .get();
+  // await all request and merge all returned text
+  const listExtractedText = await Promise.all(
+    listCVImgBase64.map(async (cvImgBase64) => {
+      return await extractTextFromImage(cvImgBase64);
+    }),
+  );
+  // console.log('listExtractedText', listExtractedText.flatMap(({ text }) => text).join(''));
+  console.log('listExtractedText', listExtractedText.flatMap(({ text }) => text).join('').replace(/\s+/g, '').trim().includes('linkedin'));
+  return listExtractedText;
+  // const rawTextData = await extractTextFromImage(cvImgBase64);
+  //
+  // console.log('extractedText', extractedText);
+  // return extractedText;
 }
 
 // Main function to process the Excel file
