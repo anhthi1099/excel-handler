@@ -7,43 +7,51 @@ import * as cheerio from 'cheerio';
 import fs from 'fs/promises';
 import { FORBIDDEN, SERVER_ERROR, ResponseType, RETRY_CV } from './constant.mjs';
 import { refreshAuthToken, getAuth } from './utils/auth.mjs';
-import { extractTextFromImage } from './utils/utils.mjs';
+import { extractTextFromImage, extractUrlProfile } from './utils/utils.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const authInfo = getAuth();
 const beginRecord = 2;
-const endRecord = 3;
-const numberOfProcesses = 1;
+const endRecord = 10;
+const numberOfProcesses = 5;
 
 const uploadedFilePath = './social_files/[Under Testing] _ Missing_socials urls.xlsx';
 let processedRows = 0;
 let totalRow = 0;
 let toCheckSheetName = 'To_migrate';
 let reportSheetName = 'Not_migrate_report';
-let reportFileName = 'Social_link_report.xlsx';
+let reportFileName = './social_files/Social_link_report.xlsx';
+const isStrictValidate = false;
 
-const getEmailsAndPhone = (stringValue) => {
+const getSocialLink = (stringValue) => {
   if (!stringValue || stringValue === '[]') return null;
-  return stringValue
+  const socialLink = stringValue
     .replace(/[\[\]'"]/g, '')
     .split(',')
     .map((email) => email.trim());
+
+  return socialLink.map((link) => {
+    if (link.length && link[link.length - 1] !== '/') {
+      return link + '/';
+    }
+    return link;
+  })[0];
 };
 
 // Function to validate email(s)
-const isValidEmails = (emailString) => {
-  const emails = getEmailsAndPhone(emailString);
-  if (emails === null) {
+function isValidSocialLink(rawLink) {
+  const socialLink = getSocialLink(rawLink);
+  if (socialLink === null) {
     return null;
   }
-  return emails.every((email) => validator.isEmail(email));
-};
+  return !!extractUrlProfile(socialLink);
+}
 
 // Function to validate phone numbers
 const isValidPhones = (phoneString) => {
-  const phones = getEmailsAndPhone(phoneString);
+  const phones = getSocialLink(phoneString);
   if (phones === null) {
     return null;
   }
@@ -72,9 +80,18 @@ function checkContainReversedEmail(emailString, htmlString) {
 }
 
 // Function to check if the profile CV exists
-const checkCVExists = async (slug, { emails, phones }, excelFileObject, rowNumber) => {
-  console.log('emails', emails);
-  console.log('calling api');
+const checkUrlProfile = async (
+  slug,
+  { socialLink },
+  rowNumber,
+  socialCol,
+  extractedUrlCol,
+  unUpdatedWorkSheet,
+  worksheet,
+  statusCol,
+) => {
+  console.log('checking URL', socialLink);
+  console.log('checking slug', slug);
   try {
     let errorMessage = '';
     const url = `https://employer.brightsource.com/api/profiles/${slug}/cv-for-edit`;
@@ -90,31 +107,70 @@ const checkCVExists = async (slug, { emails, phones }, excelFileObject, rowNumbe
       return RETRY_CV;
     }
 
-    const textContent = loadTextContentByCheerio(responseData);
-    const textFromImage = await loadTextFromImg(responseData);
-    const cleanedText = textContent.replace(/\s+|-/g, '').trim();
+    let extractedURL = undefined;
+    let textContent = await loadTextContentByCheerio(responseData);
+    let extractedUrlFromImg = undefined;
 
+    if (textContent.length && textContent.includes('File Is Corrupted')) {
+      return ResponseType.FILE_IS_CORRUPTED;
+    }
     if (response.status === 524) {
       return ResponseType.SERVER_TIMEOUT;
     }
-    if (!cleanedText) {
+    if (!textContent) {
       return ResponseType.EMPTY_RESPONSE;
     }
-    if (cleanedText.includes('File Is Corrupted')) {
-      return ResponseType.FILE_IS_CORRUPTED;
+
+    extractedURL = extractUrlProfile(textContent);
+
+    console.log('ExtractedURL', extractedURL);
+
+    if (isValidSocialLink(extractedURL) && extractedURL === socialLink) {
+      return '';
     }
-    if (
-      emails &&
-      emails.some(
-        (email) =>
-          !cleanedText.toLowerCase().includes(email.toLowerCase()) && !checkContainReversedEmail(email, cleanedText),
-      )
-    ) {
-      errorMessage = ResponseType.WRONG_EMAIL;
+
+    if (!extractedURL || !isValidSocialLink(extractedURL)) {
+      const rawStringFromImg = await loadTextFromImg(responseData);
+      extractedUrlFromImg = extractUrlProfile(rawStringFromImg);
+      console.log('extractedUrlFromImg', extractedUrlFromImg);
     }
-    if (phones && phones.some((phone) => !cleanedText.includes(phone.slice(-5)))) {
-      errorMessage += ResponseType.WRONG_PHONE;
+
+    if (extractedUrlFromImg && isValidSocialLink(extractedUrlFromImg) && extractedUrlFromImg !== socialLink) {
+      worksheet.getRow(rowNumber).getCell(extractedUrlCol).value = extractedUrlFromImg;
+      worksheet.getRow(rowNumber).getCell(statusCol).value = ResponseType.WRONG_URL;
+      unUpdatedWorkSheet.addRow(worksheet.getRow(rowNumber).values);
+      unUpdatedWorkSheet.getRow(unUpdatedWorkSheet.actualRowCount).getCell(statusCol).font = {
+        bold: true,
+        color: { argb: 'FF0000' },
+      };
+      unUpdatedWorkSheet.getRow(unUpdatedWorkSheet.actualRowCount).getCell(extractedUrlCol).font = {
+        bold: true,
+        color: { argb: 'FF0000' },
+      };
+
+      return ResponseType.WRONG_URL;
     }
+
+    if (extractedURL && isValidSocialLink(extractedURL)) {
+      worksheet.getRow(rowNumber).getCell(extractedUrlCol).value = extractedURL;
+      worksheet.getRow(rowNumber).getCell(statusCol).value = ResponseType.WRONG_URL;
+      unUpdatedWorkSheet.addRow(worksheet.getRow(rowNumber).values);
+      unUpdatedWorkSheet.getRow(unUpdatedWorkSheet.actualRowCount).getCell(statusCol).font = {
+        bold: true,
+        color: { argb: 'FF0000' },
+      };
+      unUpdatedWorkSheet.getRow(unUpdatedWorkSheet.actualRowCount).getCell(extractedUrlCol).font = {
+        bold: true,
+        color: { argb: 'FF0000' },
+      };
+
+      return ResponseType.WRONG_URL;
+    }
+
+    if (!isValidSocialLink(socialLink)) {
+      return ResponseType.INVALID_URL;
+    }
+
     console.log('Successful checked CV for slug: ', slug);
     console.log('Processing row: ', rowNumber);
 
@@ -123,14 +179,10 @@ const checkCVExists = async (slug, { emails, phones }, excelFileObject, rowNumbe
   } catch (error) {
     if (error.status === FORBIDDEN) {
       await refreshAuthToken();
-      console.log('Processing Row: ', rowNumber);
-      console.log(ResponseType.FORBIDDEN);
+      console.log('Refreshing Token');
       return RETRY_CV;
     }
     if (error.status === SERVER_ERROR) {
-      // const outputFilePath = path.join(__dirname, "Validated_" + path.basename(uploadedFilePath));
-      // await excelFileObject.xlsx.writeFile(outputFilePath);
-      console.log('Processing Row: ', rowNumber);
       console.log('SERVER ERROR');
       return ResponseType.SERVER_ERROR;
       // process.exit();
@@ -140,13 +192,13 @@ const checkCVExists = async (slug, { emails, phones }, excelFileObject, rowNumbe
     return `Error fetching CV exist status for slug: ${slug} with error response`;
   } finally {
     processedRows++;
-    console.log(`Processing ${Math.round((processedRows / totalRow) * 100)}%`);
+    console.log(`Processing ${Math.round((processedRows / totalRow) * 100)}% (${processedRows}/${totalRow})`);
   }
 };
 
 async function loadTextContentByCheerio(responseData) {
-  const loadedData = cheerio.load(responseData);
-  return loadedData('body').text().replace(/\s+/g, ' ').trim(); // ✅ Extract full text content
+  const loadedData = await cheerio.load(responseData);
+  return loadedData('body').html().replace(/\s+/g, ' ').trim(); // ✅ Extract full text content
 }
 
 async function loadTextFromImg(responseData) {
@@ -154,19 +206,18 @@ async function loadTextFromImg(responseData) {
   const listCVImgBase64 = loadedData('img')
     .map((i, el) => el.attribs.src)
     .get();
-  // await all request and merge all returned text
+
   const listExtractedText = await Promise.all(
     listCVImgBase64.map(async (cvImgBase64) => {
       return await extractTextFromImage(cvImgBase64);
     }),
   );
-  // console.log('listExtractedText', listExtractedText.flatMap(({ text }) => text).join(''));
-  console.log('listExtractedText', listExtractedText.flatMap(({ text }) => text).join('').replace(/\s+/g, '').trim().includes('linkedin'));
-  return listExtractedText;
-  // const rawTextData = await extractTextFromImage(cvImgBase64);
-  //
-  // console.log('extractedText', extractedText);
-  // return extractedText;
+
+  return listExtractedText
+    .flatMap(({ text }) => text)
+    .join('')
+    .replace(/\s+/g, '')
+    .trim();
 }
 
 // Main function to process the Excel file
@@ -182,7 +233,7 @@ const processExcelFile = async (filePath) => {
   await workbook.xlsx.readFile(filePath);
   const worksheet = workbook.getWorksheet(toCheckSheetName);
 
-  let emailCol, phoneCol, slugCol, statusCol, cvsCol, cvsIdCol, socialCol;
+  let emailCol, phoneCol, slugCol, statusCol, cvsCol, cvsIdCol, socialCol, extractedUrlCol;
   const headerRow = worksheet.getRow(1);
 
   headerRow.eachCell((cell, colNumber) => {
@@ -200,10 +251,16 @@ const processExcelFile = async (filePath) => {
     return;
   }
 
-  statusCol = phoneCol + 1;
-  worksheet.spliceColumns(statusCol, 0, []); // Insert empty column
+  // Add cols
+  statusCol = socialCol + 1;
+  extractedUrlCol = statusCol + 1;
+  worksheet.spliceColumns(statusCol, 0, []);
+  worksheet.spliceColumns(extractedUrlCol, 0, []);
   worksheet.getRow(1).getCell(statusCol).value = 'Status';
-  worksheet.getRow(1).getCell(statusCol).font = { bold: true }; // Make header bold
+  worksheet.getRow(1).getCell(statusCol).font = { bold: true };
+  worksheet.getRow(1).getCell(extractedUrlCol).value = 'Extracted URL';
+  worksheet.getRow(1).getCell(extractedUrlCol).font = { bold: true };
+  // Add cols
 
   let unUpdatedWorkSheet = workbook.addWorksheet(reportSheetName);
   unUpdatedWorkSheet.addRow(worksheet.getRow(1).values);
@@ -222,34 +279,28 @@ const processExcelFile = async (filePath) => {
   const begin = beginRecord || 2;
   const end = endRecord || worksheet.actualRowCount;
 
-  //Change the row number here to restrict the number of rows to be processed
-  // For example for (let rowNumber = 100; rowNumber <= 200; rowNumber++) this will run the row 100 to 200 in excel file
   for (let rowNumber = begin; rowNumber <= end; rowNumber++) {
     const row = worksheet.getRow(rowNumber);
 
-    const emailValue = row.getCell(emailCol).value ? row.getCell(emailCol).value.toString() : '';
-    const phoneValue = row.getCell(phoneCol).value ? row.getCell(phoneCol).value.toString() : '';
+    const rawSocialString = row.getCell(socialCol).value ? row.getCell(emailCol).value.toString() : '';
     const slugValue = row.getCell(slugCol).value ? row.getCell(slugCol).model.value : '';
 
-    const emailValid = isValidEmails(emailValue);
-    const phoneValid = isValidPhones(phoneValue);
+    let isSocialLinkValid = true;
+
+    if (isStrictValidate) {
+      isSocialLinkValid = isValidSocialLink(rawSocialString);
+    }
+
     row.getCell(statusCol).font = { bold: true, color: { argb: 'FF0000' } }; // Red text for errors
 
-    if ((emailValid === true || phoneValid === true) && emailValid !== false && phoneValid !== false) {
+    if (isSocialLinkValid === true && isSocialLinkValid !== false) {
       const slug = extractSlug(slugValue);
       if (slug) {
         rowsToValidate.push({ row, slug });
       }
     } else {
-      if (emailValid === false) {
-        row.getCell(statusCol).value = 'Invalid Email';
-      }
-      if (phoneValid === false) {
-        if (emailValid === false) {
-          row.getCell(statusCol).value = 'Invalid Email/Invalid Phone';
-          continue;
-        }
-        row.getCell(statusCol).value = 'Invalid Phone';
+      if (isSocialLinkValid === false) {
+        row.getCell(statusCol).value = 'Invalid URL';
       }
       unUpdatedWorkSheet.addRow(row.values);
       unUpdatedWorkSheet.getRow(unUpdatedWorkSheet.actualRowCount).getCell(statusCol).font = {
@@ -259,16 +310,33 @@ const processExcelFile = async (filePath) => {
     }
   }
 
-  // const retryRows = await loopCheckCV({rowsToValidate, statusCol, emailCol, phoneCol, workbook, unUpdatedWorkSheet})
   totalRow = rowsToValidate.length;
-  await loopCheckCV({ rowsToValidate, statusCol, emailCol, phoneCol, workbook, unUpdatedWorkSheet });
+  await loopCheckCV({
+    rowsToValidate,
+    statusCol,
+    emailCol,
+    phoneCol,
+    workbook,
+    worksheet,
+    unUpdatedWorkSheet,
+    socialCol,
+    extractedUrlCol,
+  });
 
   const outputFilePath = path.join(__dirname, reportFileName);
   await workbook.xlsx.writeFile(outputFilePath);
   console.log(`Validation completed. Processed file saved as: ${outputFilePath}`);
 };
 
-async function loopCheckCV({ rowsToValidate, statusCol, emailCol, phoneCol, workbook, unUpdatedWorkSheet }) {
+async function loopCheckCV({
+  rowsToValidate,
+  statusCol,
+  workbook,
+  unUpdatedWorkSheet,
+  worksheet,
+  socialCol,
+  extractedUrlCol,
+}) {
   const promiseList = [];
   // const listRetryRow = [];
 
@@ -288,11 +356,11 @@ async function loopCheckCV({ rowsToValidate, statusCol, emailCol, phoneCol, work
     const processPromise = checkCV({
       rowsToValidate: processRows,
       statusCol,
-      emailCol,
-      phoneCol,
       workbook,
       unUpdatedWorkSheet,
-      // listRetryRow
+      socialCol,
+      worksheet,
+      extractedUrlCol,
     });
 
     promiseList.push(processPromise);
@@ -302,23 +370,26 @@ async function loopCheckCV({ rowsToValidate, statusCol, emailCol, phoneCol, work
   // return listRetryRow;
 }
 
-async function checkCV({ rowsToValidate, statusCol, emailCol, phoneCol, workbook, unUpdatedWorkSheet, listRetryRow }) {
+async function checkCV({ rowsToValidate, statusCol, unUpdatedWorkSheet, socialCol, extractedUrlCol, worksheet }) {
   for (const { row, slug } of rowsToValidate) {
-    const errorMessage = await checkCVExists(
+    const errorMessage = await checkUrlProfile(
       slug,
       {
-        emails: getEmailsAndPhone(row.getCell(emailCol).value),
-        phones: getEmailsAndPhone(row.getCell(phoneCol).value),
+        socialLink: getSocialLink(row.getCell(socialCol).text),
       },
-      workbook,
       row.number,
+      socialCol,
+      extractedUrlCol,
+      unUpdatedWorkSheet,
+      worksheet,
+      statusCol,
     );
     row.getCell(statusCol).value = errorMessage;
     // if (errorMessage === RETRY_CV) {
     //     listRetryRow.push(row);
     //     continue;
     // }
-    if (errorMessage) {
+    if (errorMessage && errorMessage !== ResponseType.WRONG_URL) {
       unUpdatedWorkSheet.addRow(row.values);
       unUpdatedWorkSheet.getRow(unUpdatedWorkSheet.actualRowCount).getCell(statusCol).font = {
         bold: true,
