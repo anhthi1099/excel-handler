@@ -17,7 +17,7 @@ const authInfo = getAuth();
 const startRecord = 1601;
 const endRecord = 0;
 
-const numberOfProcesses = 5;
+const numberOfProcesses = 10;
 
 let processedRows = 0;
 let totalRow = 0;
@@ -71,7 +71,12 @@ const extractSlug = (slugString) => {
 };
 
 function isSameSocialLink(socialLink, extractedUrl) {
-  return socialLink.replace(/\/$/, '') === extractedUrl.replace(/\/$/, '');
+  const normalizeUrl = (url) =>
+    url.replace(/^http:/, 'https:') // Replace http with https
+      .replace(/^https:\/\/www\./, 'https://') // Remove www.
+      .replace(/\/$/, ''); // Remove trailing slash
+
+  return normalizeUrl(socialLink) === normalizeUrl(extractedUrl);
 }
 
 // Function to check if the profile CV exists
@@ -118,18 +123,29 @@ const checkUrlProfile = async (
 
     extractedURL = extractUrlProfile(textContent);
 
-    if (extractedURL && isValidSocialLink(extractedURL) && isSameSocialLink(socialLink, extractedURL)) {
-      return '';
-    }
-
     const rawStringFromImg = await loadTextFromImg(responseData);
     extractedUrlFromImg = extractUrlProfile(rawStringFromImg);
 
-    if (
-      extractedUrlFromImg &&
-      isValidSocialLink(extractedUrlFromImg) &&
-      !isSameSocialLink(socialLink, extractedUrlFromImg)
-    ) {
+    if (extractedURL && isValidSocialLink(extractedURL) && isSameSocialLink(socialLink, extractedURL)) {
+      if (extractedUrlFromImg && !isSameSocialLink(socialLink, extractedUrlFromImg)) {
+        worksheet.getRow(rowNumber).getCell(extractedUrlCol).value = extractedUrlFromImg;
+        worksheet.getRow(rowNumber).getCell(statusCol).value = ResponseType.WRONG_URL;
+        unUpdatedWorkSheet.addRow(worksheet.getRow(rowNumber).values);
+        unUpdatedWorkSheet.getRow(unUpdatedWorkSheet.actualRowCount).getCell(statusCol).font = {
+          bold: true,
+          color: { argb: 'FF0000' },
+        };
+        unUpdatedWorkSheet.getRow(unUpdatedWorkSheet.actualRowCount).getCell(extractedUrlCol).font = {
+          bold: true,
+          color: { argb: 'FF0000' },
+        };
+
+        return ResponseType.WRONG_URL;
+      }
+      return '';
+    }
+
+    if (extractedUrlFromImg && !isSameSocialLink(socialLink, extractedUrlFromImg)) {
       worksheet.getRow(rowNumber).getCell(extractedUrlCol).value = extractedUrlFromImg;
       worksheet.getRow(rowNumber).getCell(statusCol).value = ResponseType.WRONG_URL;
       unUpdatedWorkSheet.addRow(worksheet.getRow(rowNumber).values);
@@ -145,7 +161,7 @@ const checkUrlProfile = async (
       return ResponseType.WRONG_URL;
     }
 
-    if (extractedURL && isValidSocialLink(extractedURL) && !isValidSocialLink(extractedURL)) {
+    if (extractedURL && isValidSocialLink(extractedURL)) {
       worksheet.getRow(rowNumber).getCell(extractedUrlCol).value = extractedURL;
       worksheet.getRow(rowNumber).getCell(statusCol).value = ResponseType.WRONG_URL;
       unUpdatedWorkSheet.addRow(worksheet.getRow(rowNumber).values);
@@ -196,9 +212,9 @@ async function loadTextContentByCheerio(responseData) {
 
 async function loadTextFromImg(responseData) {
   const loadedData = cheerio.load(responseData);
-  const listCVImgBase64 = loadedData('img')
-    .map((i, el) => el.attribs.src)
-    .get();
+  const listImg = loadedData('img');
+  if (!listImg.length) return '';
+  const listCVImgBase64 = listImg.map((i, el) => el.attribs.src).get();
 
   const listExtractedText = await Promise.all(
     listCVImgBase64.map(async (cvImgBase64) => {
