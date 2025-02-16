@@ -2,14 +2,14 @@ import fs from 'fs';
 import path from 'path';
 import { config } from 'dotenv';
 
-const envPath = path.resolve('.env');
-config();
+config({ path: '.env.local' });
+const envPath = path.resolve('.env.local');
 
 export function updateEnvVariable(key, value) {
   let envVars = fs.readFileSync(envPath, 'utf8').split('\n');
 
   let updated = false;
-  envVars = envVars.map(line => {
+  envVars = envVars.map((line) => {
     if (line.startsWith(`${key}=`)) {
       updated = true;
       return `${key}=${value}`; // Update existing key
@@ -25,6 +25,5 @@ export function updateEnvVariable(key, value) {
 }
 
 export function getEnvs() {
-  const {AUTH_TOKEN} = process.env;
-  return {AUTH_TOKEN: `Bearer ${AUTH_TOKEN}`};
+  return { ...process.env, AUTH_TOKEN: `Bearer ${process.env.AUTH_TOKEN}` };
 }

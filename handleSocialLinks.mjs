@@ -13,31 +13,29 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const authInfo = getAuth();
-const beginRecord = 2;
-const endRecord = 10;
+
+const startRecord = 1501;
+const endRecord = 0;
+
 const numberOfProcesses = 5;
 
-const uploadedFilePath = './social_files/[Under Testing] _ Missing_socials urls.xlsx';
 let processedRows = 0;
 let totalRow = 0;
+
+const uploadedFilePath = './social_files/[Under Testing] _ Missing_socials urls.xlsx';
 let toCheckSheetName = 'To_migrate';
-let reportSheetName = 'Not_migrate_report';
-let reportFileName = './social_files/Social_link_report.xlsx';
+
+let reportFileName = './social_files/Social_link_report_2.xlsx';
+let reportSheetName = 'To_migrate_report';
+
 const isStrictValidate = false;
 
 const getSocialLink = (stringValue) => {
   if (!stringValue || stringValue === '[]') return null;
-  const socialLink = stringValue
+  return stringValue
     .replace(/[\[\]'"]/g, '')
     .split(',')
-    .map((email) => email.trim());
-
-  return socialLink.map((link) => {
-    if (link.length && link[link.length - 1] !== '/') {
-      return link + '/';
-    }
-    return link;
-  })[0];
+    .map((email) => email.trim())[0];
 };
 
 // Function to validate email(s)
@@ -72,11 +70,8 @@ const extractSlug = (slugString) => {
   return slugString.split('/').pop();
 };
 
-function checkContainReversedEmail(emailString, htmlString) {
-  const [localPart, domainPart] = emailString.split('@');
-  const email = `@${domainPart}${localPart}`;
-
-  return htmlString.toLowerCase().includes(email.toLowerCase());
+function isSameSocialLink(socialLink, extractedUrl) {
+  return socialLink.replace(/\/$/, '') === extractedUrl.replace(/\/$/, '');
 }
 
 // Function to check if the profile CV exists
@@ -123,19 +118,20 @@ const checkUrlProfile = async (
 
     extractedURL = extractUrlProfile(textContent);
 
-    console.log('ExtractedURL', extractedURL);
-
-    if (isValidSocialLink(extractedURL) && extractedURL === socialLink) {
+    if (isValidSocialLink(extractedURL) && isSameSocialLink(socialLink, extractedURL)) {
       return '';
     }
 
     if (!extractedURL || !isValidSocialLink(extractedURL)) {
       const rawStringFromImg = await loadTextFromImg(responseData);
       extractedUrlFromImg = extractUrlProfile(rawStringFromImg);
-      console.log('extractedUrlFromImg', extractedUrlFromImg);
     }
 
-    if (extractedUrlFromImg && isValidSocialLink(extractedUrlFromImg) && extractedUrlFromImg !== socialLink) {
+    if (
+      extractedUrlFromImg &&
+      isValidSocialLink(extractedUrlFromImg) &&
+      isSameSocialLink(socialLink, extractedUrlFromImg)
+    ) {
       worksheet.getRow(rowNumber).getCell(extractedUrlCol).value = extractedUrlFromImg;
       worksheet.getRow(rowNumber).getCell(statusCol).value = ResponseType.WRONG_URL;
       unUpdatedWorkSheet.addRow(worksheet.getRow(rowNumber).values);
@@ -185,7 +181,6 @@ const checkUrlProfile = async (
     if (error.status === SERVER_ERROR) {
       console.log('SERVER ERROR');
       return ResponseType.SERVER_ERROR;
-      // process.exit();
     }
     console.error('ERROR bug', error.status);
     console.error(`Error fetching CV exist status for slug: ${slug}`, error);
@@ -276,10 +271,10 @@ const processExcelFile = async (filePath) => {
 
   const rowsToValidate = [];
 
-  const begin = beginRecord || 2;
+  const start = startRecord || 2;
   const end = endRecord || worksheet.actualRowCount;
 
-  for (let rowNumber = begin; rowNumber <= end; rowNumber++) {
+  for (let rowNumber = start; rowNumber <= end; rowNumber++) {
     const row = worksheet.getRow(rowNumber);
 
     const rawSocialString = row.getCell(socialCol).value ? row.getCell(emailCol).value.toString() : '';

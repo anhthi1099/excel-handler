@@ -1,5 +1,5 @@
-import axios from 'axios';
 import { getEnvs, updateEnvVariable } from './envHandler.mjs';
+import axios from 'axios';
 
 const envs = getEnvs();
 
