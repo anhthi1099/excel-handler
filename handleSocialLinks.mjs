@@ -14,7 +14,7 @@ const __dirname = path.dirname(__filename);
 
 const authInfo = getAuth();
 
-const startRecord = 1501;
+const startRecord = 1601;
 const endRecord = 0;
 
 const numberOfProcesses = 5;
@@ -118,19 +118,17 @@ const checkUrlProfile = async (
 
     extractedURL = extractUrlProfile(textContent);
 
-    if (isValidSocialLink(extractedURL) && isSameSocialLink(socialLink, extractedURL)) {
+    if (extractedURL && isValidSocialLink(extractedURL) && isSameSocialLink(socialLink, extractedURL)) {
       return '';
     }
 
-    if (!extractedURL || !isValidSocialLink(extractedURL)) {
-      const rawStringFromImg = await loadTextFromImg(responseData);
-      extractedUrlFromImg = extractUrlProfile(rawStringFromImg);
-    }
+    const rawStringFromImg = await loadTextFromImg(responseData);
+    extractedUrlFromImg = extractUrlProfile(rawStringFromImg);
 
     if (
       extractedUrlFromImg &&
       isValidSocialLink(extractedUrlFromImg) &&
-      isSameSocialLink(socialLink, extractedUrlFromImg)
+      !isSameSocialLink(socialLink, extractedUrlFromImg)
     ) {
       worksheet.getRow(rowNumber).getCell(extractedUrlCol).value = extractedUrlFromImg;
       worksheet.getRow(rowNumber).getCell(statusCol).value = ResponseType.WRONG_URL;
@@ -147,7 +145,7 @@ const checkUrlProfile = async (
       return ResponseType.WRONG_URL;
     }
 
-    if (extractedURL && isValidSocialLink(extractedURL)) {
+    if (extractedURL && isValidSocialLink(extractedURL) && !isValidSocialLink(extractedURL)) {
       worksheet.getRow(rowNumber).getCell(extractedUrlCol).value = extractedURL;
       worksheet.getRow(rowNumber).getCell(statusCol).value = ResponseType.WRONG_URL;
       unUpdatedWorkSheet.addRow(worksheet.getRow(rowNumber).values);
