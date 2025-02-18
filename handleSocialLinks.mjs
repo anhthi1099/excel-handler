@@ -14,19 +14,19 @@ const __dirname = path.dirname(__filename);
 
 const authInfo = getAuth();
 
-const startRecord = 1601;
+const startRecord = 0;
 const endRecord = 0;
 
-const numberOfProcesses = 10;
+const numberOfProcesses = 50;
 
 let processedRows = 0;
 let totalRow = 0;
 
-const uploadedFilePath = './social_files/[Under Testing] _ Missing_socials urls.xlsx';
-let toCheckSheetName = 'To_migrate';
+const uploadedFilePath = './social_files/Have_to_validate.xlsx';
+let toCheckSheetName = 'Have to validate';
 
-let reportFileName = './social_files/Social_link_report_2.xlsx';
-let reportSheetName = 'To_migrate_report';
+let reportFileName = './social_files/2k_Social_link_report.xlsx';
+let reportSheetName = 'Social_Link_Report';
 
 const isStrictValidate = false;
 
@@ -72,7 +72,8 @@ const extractSlug = (slugString) => {
 
 function isSameSocialLink(socialLink, extractedUrl) {
   const normalizeUrl = (url) =>
-    url.replace(/^http:/, 'https:') // Replace http with https
+    url
+      .replace(/^http:/, 'https:') // Replace http with https
       .replace(/^https:\/\/www\./, 'https://') // Remove www.
       .replace(/\/$/, ''); // Remove trailing slash
 
@@ -122,32 +123,16 @@ const checkUrlProfile = async (
     }
 
     extractedURL = extractUrlProfile(textContent);
-
     const rawStringFromImg = await loadTextFromImg(responseData);
     extractedUrlFromImg = extractUrlProfile(rawStringFromImg);
 
     if (extractedURL && isValidSocialLink(extractedURL) && isSameSocialLink(socialLink, extractedURL)) {
-      if (extractedUrlFromImg && !isSameSocialLink(socialLink, extractedUrlFromImg)) {
-        worksheet.getRow(rowNumber).getCell(extractedUrlCol).value = extractedUrlFromImg;
-        worksheet.getRow(rowNumber).getCell(statusCol).value = ResponseType.WRONG_URL;
-        unUpdatedWorkSheet.addRow(worksheet.getRow(rowNumber).values);
-        unUpdatedWorkSheet.getRow(unUpdatedWorkSheet.actualRowCount).getCell(statusCol).font = {
-          bold: true,
-          color: { argb: 'FF0000' },
-        };
-        unUpdatedWorkSheet.getRow(unUpdatedWorkSheet.actualRowCount).getCell(extractedUrlCol).font = {
-          bold: true,
-          color: { argb: 'FF0000' },
-        };
-
-        return ResponseType.WRONG_URL;
-      }
       return '';
     }
 
     if (extractedUrlFromImg && !isSameSocialLink(socialLink, extractedUrlFromImg)) {
       worksheet.getRow(rowNumber).getCell(extractedUrlCol).value = extractedUrlFromImg;
-      worksheet.getRow(rowNumber).getCell(statusCol).value = ResponseType.WRONG_URL;
+      worksheet.getRow(rowNumber).getCell(statusCol).value = ResponseType.WRONG_URL_IMG_EXTRACT;
       unUpdatedWorkSheet.addRow(worksheet.getRow(rowNumber).values);
       unUpdatedWorkSheet.getRow(unUpdatedWorkSheet.actualRowCount).getCell(statusCol).font = {
         bold: true,
@@ -158,12 +143,12 @@ const checkUrlProfile = async (
         color: { argb: 'FF0000' },
       };
 
-      return ResponseType.WRONG_URL;
+      return ResponseType.WRONG_URL_IMG_EXTRACT;
     }
 
     if (extractedURL && isValidSocialLink(extractedURL)) {
       worksheet.getRow(rowNumber).getCell(extractedUrlCol).value = extractedURL;
-      worksheet.getRow(rowNumber).getCell(statusCol).value = ResponseType.WRONG_URL;
+      worksheet.getRow(rowNumber).getCell(statusCol).value = ResponseType.WRONG_URL_HTML_EXTRACT;
       unUpdatedWorkSheet.addRow(worksheet.getRow(rowNumber).values);
       unUpdatedWorkSheet.getRow(unUpdatedWorkSheet.actualRowCount).getCell(statusCol).font = {
         bold: true,
@@ -174,7 +159,7 @@ const checkUrlProfile = async (
         color: { argb: 'FF0000' },
       };
 
-      return ResponseType.WRONG_URL;
+      return ResponseType.WRONG_URL_HTML_EXTRACT;
     }
 
     if (!isValidSocialLink(socialLink)) {
@@ -292,7 +277,7 @@ const processExcelFile = async (filePath) => {
     const row = worksheet.getRow(rowNumber);
 
     const rawSocialString = row.getCell(socialCol).value ? row.getCell(emailCol).value.toString() : '';
-    const slugValue = row.getCell(slugCol).value ? row.getCell(slugCol).model.value : '';
+    const slugValue = row.getCell(slugCol).text ? row.getCell(slugCol).model.text : '';
 
     let isSocialLinkValid = true;
 
@@ -398,7 +383,7 @@ async function checkCV({ rowsToValidate, statusCol, unUpdatedWorkSheet, socialCo
     //     listRetryRow.push(row);
     //     continue;
     // }
-    if (errorMessage && errorMessage !== ResponseType.WRONG_URL) {
+    if (errorMessage && !errorMessage.includes(ResponseType.WRONG_URL)) {
       unUpdatedWorkSheet.addRow(row.values);
       unUpdatedWorkSheet.getRow(unUpdatedWorkSheet.actualRowCount).getCell(statusCol).font = {
         bold: true,
@@ -409,4 +394,4 @@ async function checkCV({ rowsToValidate, statusCol, unUpdatedWorkSheet, socialCo
 }
 
 // Run the function with the uploaded file
-processExcelFile(uploadedFilePath);
+await processExcelFile(uploadedFilePath);

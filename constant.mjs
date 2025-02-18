@@ -10,6 +10,8 @@ export const ResponseType = {
     WRONG_EMAIL: 'Wrong Email ',
     WRONG_PHONE: 'Wrong Phone',
     WRONG_URL: 'Wrong URL',
+    WRONG_URL_HTML_EXTRACT: 'Wrong URL, HTML Extracted',
+    WRONG_URL_IMG_EXTRACT: 'Wrong URL Img Extracted',
     INVALID_URL: 'Invalid URL',
 }
 
