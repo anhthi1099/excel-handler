@@ -1,20 +1,1221 @@
 [
   {
-    "profileSlug": "ta--95v5ni3V",
-    "profileName": "Unknown",
-    "foundBLockedCompanies": [
-      {
-        "company": "coTSNVdOjeDR",
-        "jobSlug": "jbO25BCKmGbD",
-        "profileSlug": "ta--95v5ni3V",
-        "companyName": "Toga Networks",
-        "jobName": "Deep Learning and Computer Vision expert/engineer"
-      }
-    ]
-  },
-  {
-    "profileSlug": "taI5ULNZJ0tW",
-    "profileName": "Unknown",
+    "profile": {
+      "_id": "63d1459f394024001d72729f",
+      "settings": {
+        "isBlockFromEmails": false,
+        "lastUpdated": 1674659231885
+      },
+      "talent": {
+        "wishlist": {
+          "selectedBlockedCompanies": [
+            "5c519c636a6e9443e7fa8b58"
+          ],
+          "companySizes": [],
+          "desiredLocations": [
+            500
+          ],
+          "desiredRoles": [
+            368,
+            235,
+            115
+          ],
+          "industries": [],
+          "jobTitle": [
+            115,
+            29636
+          ],
+          "positionTypes": [
+            3,
+            7,
+            4
+          ],
+          "skills": [
+            101
+          ],
+          "selectedBlockedCompaniesByTalent": [],
+          "currency": 0,
+          "desiredSalary": 10000,
+          "seniorityLevel": [
+            1
+          ],
+          "status": 2,
+          "desiredLocationsData": [
+            {
+              "city": "Tel Aviv-Yafo",
+              "cityAlt": [
+                "Tel Aviv",
+                "Tell Abīb",
+                "Tell Afif",
+                "Jaffa-Tel Aviv",
+                "Tel Aviv-Jaffa"
+              ],
+              "adminName": "Center",
+              "adminCode": "IL-M",
+              "adminType": "district",
+              "country": "Israel",
+              "iso2": "IL",
+              "iso3": "ISR",
+              "latitude": 32.08,
+              "longitude": 34.78,
+              "timezone": "Asia/Jerusalem",
+              "cityId": "656236e2eb5ea536945b2679"
+            }
+          ],
+          "workspaceType": [],
+          "lastUpdate": "2023-01-25T15:11:14.517Z"
+        },
+        "claimedDate": 1674659345732,
+        "status": 3,
+        "claimToken": null,
+        "statusEventLog": [
+          {
+            "status": 3,
+            "createDate": "2023-09-14T09:30:02.202Z"
+          }
+        ]
+      },
+      "linkedInData": {
+        "skills": [],
+        "dateUpdated": 1674659231885,
+        "experienceList": [],
+        "educationList": [],
+        "languages": []
+      },
+      "linkedInDataFromConversation": {
+        "skills": [],
+        "dateUpdated": 1674659231885,
+        "experienceList": [],
+        "educationList": []
+      },
+      "isContactPerson": false,
+      "exposurePolicyApproval": true,
+      "gender": 1,
+      "birthday": 389836800000,
+      "isClaimed": false,
+      "isDiscrete": false,
+      "isReviewed": false,
+      "hasSecurityClearance": false,
+      "skills": [
+        101
+      ],
+      "parsedSkills": [],
+      "categories": [
+        30
+      ],
+      "primarySkills": [],
+      "secondarySkills": [],
+      "summary": "",
+      "summaryCreateDate": 0,
+      "desiredSalary": 10000,
+      "salaryType": 1,
+      "addressStreet": "",
+      "aboutMe": "",
+      "seniority": 1,
+      "companySize": -1,
+      "industries": [],
+      "roles": [
+        368,
+        235,
+        115
+      ],
+      "isAvailable": true,
+      "relatedCompanies": [],
+      "relatedCompaniesEms": [],
+      "syncEms": true,
+      "followUpDate": 1674659239017,
+      "desiredLocations": [
+        2
+      ],
+      "positionTypes": [
+        3,
+        7,
+        4
+      ],
+      "rankingFromRecruiter": 0,
+      "areas": [],
+      "newTalent": false,
+      "cvMigrated": false,
+      "migration": 0,
+      "isDeleted": false,
+      "firstName": "koko",
+      "lastName": "fromeilat",
+      "firstNameHeb": "קוקי",
+      "lastNameHeb": "לידה",
+      "company": "",
+      "companyId": null,
+      "companySlug": "",
+      "companyEmsId": -1,
+      "companyLC": null,
+      "emails": [
+        {
+          "email": "kokojiffa+brs@gmail.com",
+          "emailType": "",
+          "isPrimary": true,
+          "isVerified": false,
+          "isTalentApprovedInvite": true
+        }
+      ],
+      "phones": [],
+      "address": 500,
+      "languages": [
+        {
+          "level": 3,
+          "language": 1
+        },
+        {
+          "level": 3,
+          "language": 2
+        }
+      ],
+      "currency": 0,
+      "openToRelocation": false,
+      "idNumber": "053065769",
+      "socialLinks": [],
+      "linkedinPublicProfileName": null,
+      "recruiterInChargeId": "6201118b4ecfbb68947988dc",
+      "recruiterInChargeSlug": "ustm1uc4LE6E",
+      "bsId": 7736826,
+      "slug": "taI5ULNZJ0tW",
+      "lastUpdate": 1674659231885,
+      "education": [],
+      "employment": [],
+      "dateCreated": 1674659231885,
+      "cvs": [],
+      "mergeLog": [],
+      "createdAt": "2023-01-25T15:07:11.891Z",
+      "updatedAt": "2023-09-14T09:30:02.247Z",
+      "__v": 0,
+      "position": "Junior QA Engineer",
+      "talentId": "63d145f744d331e6ac9a5980",
+      "talentSlug": "taYi--cvhvEw",
+      "locationData": {
+        "city": "Tel Aviv-Yafo",
+        "cityAlt": [
+          "Tel Aviv",
+          "Tell Abīb",
+          "Tell Afif",
+          "Jaffa-Tel Aviv",
+          "Tel Aviv-Jaffa"
+        ],
+        "adminName": "Center",
+        "adminCode": "IL-M",
+        "adminType": "district",
+        "country": "Israel",
+        "iso2": "IL",
+        "iso3": "ISR",
+        "latitude": 32.08,
+        "longitude": 34.78,
+        "timezone": "Asia/Jerusalem",
+        "cityId": "656236e2eb5ea536945b2679"
+      },
+      "yearsOfExperience": 0,
+      "topMatchedJobWishlist": [
+        {
+          "Job Slug": "jbRbNxQPzwWi",
+          "Match Score": 48.5,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbWXkntPTFbR",
+          "Match Score": 42,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbF9smGDZu82",
+          "Match Score": 42,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbtmHTFu7nV0",
+          "Match Score": 38,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbfB4caHFYvu",
+          "Match Score": 38,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jblkWa7G-mc0",
+          "Match Score": 38,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbT7hjeEbL8b",
+          "Match Score": 38,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbc0jYbDhdEX",
+          "Match Score": 38,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jb-eylh7cKVM",
+          "Match Score": 31.5,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbPmqDqmFs8M",
+          "Match Score": 31.5,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbfy6nQnVltK",
+          "Match Score": 31.5,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jby1SPfubhly",
+          "Match Score": 28,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbtZWrH5p5Zn",
+          "Match Score": 28,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbRLvCJ17iiW",
+          "Match Score": 28,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jb_geY48Zenz",
+          "Match Score": 28,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbWt9H4Msrx4",
+          "Match Score": 28,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbxxQu9Oe2Xo",
+          "Match Score": 28,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jb4I68KrPPEP",
+          "Match Score": 27.5,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jb-kBqWbnVce",
+          "Match Score": 27.5,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbcOjsauhr4_",
+          "Match Score": 26.25,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbP7rcCYxZtb",
+          "Match Score": 26.25,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbyYDFiPrJqs",
+          "Match Score": 26.25,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbkf-vcK-SXq",
+          "Match Score": 26.25,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbrgRDKM1t1j",
+          "Match Score": 26.25,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbembXKFskKi",
+          "Match Score": 26.25,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbBZvFCHdX2d",
+          "Match Score": 25.2,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbYNWWvK5aab",
+          "Match Score": 25.2,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbm8MzG-2-VW",
+          "Match Score": 25.2,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbT4vYOoPOjZ",
+          "Match Score": 25.2,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jb1N6xV-FOYv",
+          "Match Score": 24.5,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbx_5K6kwScq",
+          "Match Score": 24,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbSFUKj3yGXk",
+          "Match Score": 24,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jb6vONh151Wb",
+          "Match Score": 24,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbRVAIEZbDW0",
+          "Match Score": 21.2,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jb8guj71vNtV",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jb_PWChYbhkN",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jby5KeSki2DD",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbGNbz5Os2X_",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbZVQ72_U1lP",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbN5sREdhFka",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbjiRo62ggHv",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jb9OcXeRlsLz",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbrlh47prA-N",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jb8nmUYRUMUT",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbb2XNhsvoGs",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbM2FONpHGBi",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbVmhoBW2UQK",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbTM3RIAX-RZ",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jb_M-kVlO-qM",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbJEpZ_IxfjT",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbOufm2jYvrh",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbDkR4Rkdbn8",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jb-jL7aqI-XV",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbYwtNgvguKf",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jb-FFmCKffY3",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbBThYK0CHNJ",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jb2vflmgemZX",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jxRcdZhLN7-T",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jb_BUFNhulZs",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jb0yWUU4SOXX",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jber5BdKf6sY",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbdGERnQpeGc",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jb3AWhdy5fvD",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbzW66VIYvS8",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jb_DpxHs6sxR",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbWmbYQtj68c",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbldVB4Ol4Xs",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jb7CSlbkEtnz",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbPqg5JUwtqi",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbHJzXkXosGS",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbYmoDkjNwP-",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbvwWoskhOt1",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbmYPrK8u4ZK",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbn-ad_TdBJ5",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbUh-2aDTm2c",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbpdfVRvBTvq",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jb54aw3l_yZ0",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbtll1DEj9Ce",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jb_v8B9pH8nJ",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jb9LySebZn01",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbrwf86slrci",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbmj9S2RJWMj",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbYOPQGCxBzX",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbthP1za1oXn",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbsJfuUFEI48",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbWkiWN1GS_z",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbDBqHqMb4ci",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "W4VwLFmCPCez",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbsVVzejV6OP",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jb2hmNAPHxB0",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbP3E2L-ZOsP",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbpveE7fOlKr",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jb1mjCLP_y5G",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbuV40WIi8wI",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbtAHa6w5eLI",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbiN4E7-KlQY",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbUP3O5J_bR0",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbe-hbxudcw2",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbcVy28CwxR_",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        },
+        {
+          "Job Slug": "jbAcxNySSoFp",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T15:45:23.228Z"
+        }
+      ],
+      "topMatchedJobRecruiter": [
+        {
+          "Job Slug": "jbtmHTFu7nV0",
+          "Match Score": 38,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jblkWa7G-mc0",
+          "Match Score": 38,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbc0jYbDhdEX",
+          "Match Score": 38,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbT7hjeEbL8b",
+          "Match Score": 38,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbRbNxQPzwWi",
+          "Match Score": 27.5,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbSFUKj3yGXk",
+          "Match Score": 24,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbHPupt87_G5",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbOTxX2axs0_",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbP_EQ2gM3ks",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbWw7XJkI56p",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jby1SPfubhly",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbembXKFskKi",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jb8guj71vNtV",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbMax50Gmf_v",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jb_PWChYbhkN",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbjiRo62ggHv",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbGNbz5Os2X_",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbPmqDqmFs8M",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jby5KeSki2DD",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbVmhoBW2UQK",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbb2XNhsvoGs",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbT4vYOoPOjZ",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbxxQu9Oe2Xo",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jber5BdKf6sY",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbP7rcCYxZtb",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbHJzXkXosGS",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbrgRDKM1t1j",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbdGERnQpeGc",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbmYPrK8u4ZK",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbWmbYQtj68c",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jb2vflmgemZX",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbzW66VIYvS8",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbvwWoskhOt1",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jb9OcXeRlsLz",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jxRcdZhLN7-T",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbpdfVRvBTvq",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbiN4E7-KlQY",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jb_DpxHs6sxR",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbWUdaLvLURJ",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbPqg5JUwtqi",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbYmoDkjNwP-",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbZzJIdrWtaa",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbWXkntPTFbR",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jb1N6xV-FOYv",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jb9LySebZn01",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbldVB4Ol4Xs",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbm8MzG-2-VW",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbBZvFCHdX2d",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbsJfuUFEI48",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbF9smGDZu82",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jb_BUFNhulZs",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbBThYK0CHNJ",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbkf-vcK-SXq",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbfy6nQnVltK",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbIuTZdiFAGn",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbRnPNs8TcSV",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbK7FcJ9d0_r",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbK10xuWKc5k",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbM2FONpHGBi",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbUh-2aDTm2c",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbkPmVEVuJZL",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbRLvCJ17iiW",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbthP1za1oXn",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbN5sREdhFka",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jb7CSlbkEtnz",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbYNWWvK5aab",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbuV40WIi8wI",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbD1Umx9Augr",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbpveE7fOlKr",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbtll1DEj9Ce",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbtAHa6w5eLI",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbnSWF2QngXj",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbsMJufO_Ytx",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jb-eylh7cKVM",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbWkiWN1GS_z",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbi279bCU2hD",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbyYDFiPrJqs",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbJiyKh2uvdg",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbAcxNySSoFp",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbsVVzejV6OP",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jb3AWhdy5fvD",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jb_geY48Zenz",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbiF9SJOwevw",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbIOhHAsRoAG",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbWt9H4Msrx4",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbrwf86slrci",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbe-hbxudcw2",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jb_v8B9pH8nJ",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jb54aw3l_yZ0",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "W4VwLFmCPCez",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jb0yWUU4SOXX",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbmj9S2RJWMj",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbcOjsauhr4_",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbtZWrH5p5Zn",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbhLKFxPktNn",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbDBqHqMb4ci",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbYwtNgvguKf",
+          "Match Score": 21,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jba1F09tmt8B",
+          "Match Score": 17,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbJpSnsPXMbq",
+          "Match Score": 17,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        },
+        {
+          "Job Slug": "jbWyGQ9-gyTA",
+          "Match Score": 17,
+          "updatedAt": "2025-03-04T14:52:19.104Z"
+        }
+      ],
+      "topMatchedJobLinkedin": []
+    },
     "foundBLockedCompanies": [
       {
         "company": "conDl-OE_Wv8",
@@ -47,8 +1248,462 @@
     ]
   },
   {
-    "profileSlug": "taYzH34GUehh",
-    "profileName": "Unknown",
+    "profile": {
+      "_id": "5c4eecc86a6e9443e7f3d0b6",
+      "email": "andlau1986@gmail.com",
+      "__v": 0,
+      "aboutMe": "",
+      "address": 303,
+      "banned": false,
+      "birthday": 508204800000,
+      "company": "",
+      "dateCreated": 1423655236000,
+      "desiredSalary": 12000,
+      "education": [],
+      "emails": [
+        {
+          "_id": "5efee2f15a17f0001cfc07d0",
+          "email": "andlau1986@gmail.com",
+          "emailType": "Personal Email",
+          "isPrimary": true,
+          "isVerified": true
+        }
+      ],
+      "employment": [
+        {
+          "industries": [],
+          "_id": "5efee2f15a17f0001cfc07d3",
+          "companyEmsId": 27961,
+          "companyName": "Cancelon",
+          "location": null,
+          "position": "QA Engineer",
+          "isCurrent": false,
+          "seniority": null,
+          "startDate": 1509494400000,
+          "endDate": 1522540800000,
+          "description": "• Writing testing documents such as STR , STP, STD\n• Web and mobile testing\n• Back end testing\n• SQL (Join level queries)\n• HTML, CSS, JavaScript.\n• testing features in QA, STAGE and PROD environments.\n• Testing and verifying bugs on client / QA environment.\n• Ongoing work with JIRA fault management system.\n• Working in the Scram-Sprint model.\n…\n",
+          "companyId": "5e64e5d11c694b001c975e90",
+          "companySlug": "coxUTMeWXWZw",
+          "companyNameLC": "cancelon"
+        },
+        {
+          "industries": [],
+          "_id": "5efee2f15a17f0001cfc07d4",
+          "companyEmsId": 406,
+          "companyName": "Autodesk",
+          "location": null,
+          "position": "QA Engineer",
+          "isCurrent": false,
+          "seniority": null,
+          "startDate": 1493596800000,
+          "endDate": 1509494400000,
+          "description": "• Writing testing documents such as STR, STP, STD\n• Web and mobile testing\n• Back end testing\n• SQL (Join level queries)\n• HTML, CSS, JavaScript\n• Familiarity with the software development process, including specification\n…\n",
+          "companyId": "5cc19d775b18b6001c9b6bc3",
+          "companySlug": "coSyUPiUfKKZ",
+          "companyNameLC": "autodesk"
+        },
+        {
+          "industries": [],
+          "_id": "5efee2f15a17f0001cfc07d5",
+          "companyEmsId": 11386,
+          "companyName": "LivePerson",
+          "location": null,
+          "position": "Quality Assurance Engineer",
+          "isCurrent": false,
+          "seniority": null,
+          "startDate": 1451606400000,
+          "endDate": 1493596800000,
+          "description": "• Writing, performing and characterizing the manual UX tests in the WEB APPLICATION environment - REAL TIME.\n• Responsible for releasing customer versions and testing features in QA, STAGE and PROD environments.\n• Testing and verifying bugs on client / QA environment.\n• Ongoing work with JIRA fault management system.\n• Working in the Scram-Sprint model.\n…\n",
+          "companyId": "5e8ac828706d80001cc4eba7",
+          "companySlug": "coZfgJNblC7I",
+          "companyNameLC": "liveperson"
+        },
+        {
+          "industries": [],
+          "_id": "5efee2f15a17f0001cfc07d6",
+          "companyEmsId": 271,
+          "companyName": "Verint",
+          "location": null,
+          "position": "Quality Assurance Engineer",
+          "isCurrent": false,
+          "seniority": null,
+          "startDate": 1420070400000,
+          "endDate": 1472688000000,
+          "description": "• Testing software for web systems.\n• Ongoing work with QC system.\n• Constructing test scenarios in STR and STP STD methodologies.\n• Working with security forces such as the police, the army and the Shin Bet.",
+          "companyId": "5e64e2c5b4bfc1001d3dc2a4",
+          "companySlug": "coZAQQefDfoF",
+          "companyNameLC": "verint"
+        },
+        {
+          "industries": [],
+          "_id": "5efee2f15a17f0001cfc07d7",
+          "companyEmsId": 7540,
+          "companyName": "NICE Ltd",
+          "location": null,
+          "position": "Quality Assurance",
+          "isCurrent": false,
+          "seniority": null,
+          "startDate": 1356998400000,
+          "endDate": 1420070400000,
+          "description": "• Responsible for client side, work - Agile / Waterfall.\n• In-depth analysis of log files (using the Baraitail Logging Software at a TRACE / DEBUG level) to understand the closest layer to the source code run.\n• Tests that include writing SQL queries, working with SQL Server tables on a regular basis, daily work with data base\n• Excellent ability to understand system flow charts while putting in place the components of the VCD / VMware machine network on which the automation software is installed, as well as installing various parts of the system on different systems and configuring communications between the virtual machines.\n• Dynamic understanding of the system structure and various integrations interfacing with the system.\n• Enter the entire test program and its results to TFS \\ MTM servers for documentation.\n• System Server - Client Server.\n• Working with TCP / IP protocols,\n…\n",
+          "companyId": "5d6e2edc60acdc001c05508d",
+          "companySlug": "cobohnNOcpGr",
+          "companyNameLC": "nice ltd"
+        }
+      ],
+      "emsId": 648756,
+      "exposurePolicyApproval": false,
+      "firstName": "andlau",
+      "gender": 1,
+      "hasSecurityClearance": false,
+      "isAvailable": true,
+      "isClaimed": false,
+      "isDiscrete": false,
+      "isEmployer": false,
+      "isReviewed": false,
+      "languages": [],
+      "lastName": "kabada",
+      "lastUpdate": 1583406427000,
+      "middleName": "",
+      "militaryServiceInformation": "",
+      "otherInformation": "",
+      "phones": [
+        {
+          "_id": "5efee2f15a17f0001cfc07d1",
+          "phone": "972526428079",
+          "phoneType": "Personal Mobile",
+          "isPrimary": true,
+          "country": "il",
+          "callingCode": "972"
+        }
+      ],
+      "position": "Experienced Manual QA",
+      "profileImageUrl": "",
+      "recruterInCharge": {
+        "name": "Shikma Dagary",
+        "profileId": "530"
+      },
+      "relatedCompanies": [
+        271,
+        406,
+        767,
+        7540,
+        10736,
+        11386,
+        27961
+      ],
+      "skills": [
+        1393,
+        720,
+        698,
+        1,
+        380,
+        182,
+        172,
+        121
+      ],
+      "socialLinks": [
+        {
+          "_id": "5efee2f15a17f0001cfc07d2",
+          "isPrimary": true,
+          "link": "https://www.linkedin.com/in/andlau-kabada-583b4b67",
+          "linkType": 47
+        }
+      ],
+      "summary": "<p style=\"direction: rtl; text-align: right;\"><strong><u>בודק תוכנה, בעל 5 שנות ניסיון.</u></strong></p><p style=\"direction: rtl; text-align: right;\"><strong>בשנתיים האחרונות לא בתחום, פתח עסק כעצמאי והחליט לחזור לתחום הבדיקות. </strong></p><p style=\"direction: rtl; text-align: right;\">בתפקידו האחרון בחברת <strong>Cancelon (פרוייקט) </strong>במסגרת תפקידו ביצע בדיקות ידניות למוצר <strong>WEB </strong>כולל תמיכה בלקוחות החברה. </p><p style=\"direction: rtl; text-align: right;\">לפני כן בחברת <strong><u>Autodesk</u> </strong>(פרוייקט) במסגרת תפקידו ביצע בדיקות ידניות למוצר <strong>WEB ולMOBILE. כמו כן עסק מעט בפיתוח אוטומציה ופיתח ב Python.</strong></p><p style=\"direction: rtl; text-align: right;\">לפני כן&nbsp;בחברת <strong><u>Live Person</u></strong>. במסגרת תפקידו ביצע בדיקות ידניות למוצר <strong>WEB </strong>הן לצד ה-<strong>Client </strong>והן לצד ה-<strong>Server </strong>על גבי <strong>Windows</strong>. בנוסף, ביצע בדיקות למוצר <strong>SW </strong>ומוצר <strong>RT</strong>.</p><p style=\"direction: rtl; text-align: right;\">לפני כן, בחברת <strong>Verint </strong>ביצע בדיקות ידניות למוצר <strong>WEB </strong>תוך שימוש ב-<strong>SQL</strong>.</p><p style=\"direction: rtl; text-align: right;\">עוד קודם לכן, בחברת <strong><u>NICE</u> </strong>ביצע בדיקות ידניות למוצר <strong>Networking </strong>עבד עם <strong>פרטוקולי תקשורות </strong>כגון <strong>TCP</strong>/<strong>IP </strong>תוך שימוש ב-<strong>Windows </strong>ומעט <strong>Linux</strong>.</p><p style=\"direction: rtl; text-align: right;\"><br></p><p style=\"direction: rtl; text-align: right;\">מעוניין במשרות בדיקות ידניות באזורים חיפה-חולון. </p><p style=\"direction: rtl; text-align: right;\">&nbsp;</p><p style=\"direction: rtl; text-align: right;\">&nbsp;</p>",
+      "slug": "taYzH34GUehh",
+      "profileImageId": "648756",
+      "canSignIn": false,
+      "customToken": null,
+      "industries": [
+        304
+      ],
+      "infoUpdated": null,
+      "isActivated": false,
+      "isAdmin": false,
+      "managementLevel": 9,
+      "recruiterIncharge": null,
+      "relatedCompaniesEms": [],
+      "seniority": 9,
+      "userId": null,
+      "settings": {
+        "language": 0,
+        "email": {
+          "notifications": true,
+          "candidate_got_offer": true,
+          "candidate_withdrawn": true,
+          "summary": true,
+          "summary_type": 2,
+          "dailySummary": "true",
+          "weeklySummary": "true"
+        }
+      },
+      "syncEms": true,
+      "desiredLocations": [
+        5,
+        2,
+        11,
+        8
+      ],
+      "linkedinPublicProfileName": "andlau-kabada-583b4b67",
+      "positionTypes": [
+        3
+      ],
+      "roles": [
+        115
+      ],
+      "cvLang": 1,
+      "firstNameHeb": "אנדלאו",
+      "lastNameHeb": "קבדה",
+      "primarySkills": [],
+      "secondarySkills": [
+        121,
+        172,
+        182,
+        380,
+        1,
+        698,
+        720,
+        1252,
+        1393
+      ],
+      "followUpDate": 1547810312000,
+      "monetaryScalesManaged": -1,
+      "numberOfPeopleManaged": -1,
+      "rankingFromRecruiter": 3,
+      "yearsOfExperience": 0,
+      "recruiterInChargeId": "5df235452c2843001c7e98f6",
+      "recruiterInChargeSlug": "us22UR4F1ND_",
+      "cvMigrated": true,
+      "cvs": [
+        {
+          "_id": "6019485ec989d0001ca33bc9",
+          "lang": 0,
+          "cvType": 0,
+          "isPrimary": true,
+          "name": "taYzH34GUehh_1612269662248_4_cv",
+          "fileName": "taYzH34GUehh_1612269662248_4_cv.doc",
+          "lastEdited": 1612269662557,
+          "isAttachment": true,
+          "attachmentId": "6019485ea6bcf3001d34d3b3",
+          "editBy": "Inbox"
+        },
+        {
+          "_id": "5fb3c407a6e168001c4dfc0f",
+          "lang": 0,
+          "cvType": 0,
+          "isPrimary": false,
+          "name": "taYzH34GUehh_1605616647096_4_cv",
+          "fileName": "taYzH34GUehh_1605616647096_4_cv.doc",
+          "lastEdited": 1605616647511,
+          "isAttachment": true,
+          "attachmentId": "5fb3c40777c1b5001cc644c9",
+          "editBy": "Inbox"
+        },
+        {
+          "_id": "5ea1a66a7c28af4c3c395306",
+          "name": "taYzH34GUehh_1587652202818_cv",
+          "fileName": "taYzH34GUehh_1587652202818_cv.doc",
+          "lang": 1,
+          "cvType": 0,
+          "isPrimary": false,
+          "isMain": true,
+          "editBy": "ems",
+          "isAttachment": false,
+          "lastEdited": 1587652202901
+        },
+        {
+          "_id": "601966045ff053001dfed213",
+          "lang": 0,
+          "cvType": 1,
+          "name": "taYzH34GUehh_1612277252362_public",
+          "fileName": "taYzH34GUehh_1612277252362_public.doc",
+          "isPrimary": true,
+          "lastEdited": 1612277252416,
+          "editBy": "rose ben gigi",
+          "editById": "5df235452c2843001c7e98f6",
+          "editBySlug": "us22UR4F1ND_"
+        },
+        {
+          "_id": "60196678c989d0001ca33def",
+          "lang": 0,
+          "cvType": 2,
+          "name": "taYzH34GUehh_1612277368089_covered",
+          "fileName": "taYzH34GUehh_1612277368089_covered.docx",
+          "isPrimary": true,
+          "lastEdited": 1612277368147,
+          "editBy": "rose ben gigi",
+          "editById": "5df235452c2843001c7e98f6",
+          "editBySlug": "us22UR4F1ND_",
+          "isSummaryMigrated": true,
+          "elastic": true
+        }
+      ],
+      "bsId": 648756,
+      "migration": 0,
+      "categories": [
+        30
+      ],
+      "companyEmsId": -1,
+      "managemenRolesOnly": false,
+      "summaryCreateDate": 1605788195469,
+      "summaryCreatorUser": "5df235452c2843001c7e98f6",
+      "companySize": -1,
+      "newTalent": false,
+      "isContactPerson": false,
+      "isDeleted": false,
+      "idNumber": "304330616",
+      "companyLC": null,
+      "parsedSkills": [
+        87,
+        121,
+        140,
+        144,
+        152,
+        172,
+        175,
+        182,
+        275,
+        380,
+        1,
+        376,
+        387,
+        418,
+        440,
+        545,
+        625,
+        676,
+        688,
+        698,
+        720,
+        726,
+        1073,
+        1171,
+        1180,
+        1200,
+        1241,
+        1242,
+        1252,
+        1288,
+        1342,
+        1393,
+        1410,
+        369,
+        1440,
+        1446,
+        1461,
+        1467,
+        70,
+        1542,
+        218,
+        1606,
+        1636,
+        1653,
+        1654,
+        1762,
+        1798,
+        1814,
+        1829,
+        2107,
+        2175,
+        2207,
+        2215,
+        2358,
+        2437,
+        2442,
+        2560
+      ],
+      "companyId": null,
+      "companySlug": "",
+      "currency": 0,
+      "openToRelocation": false,
+      "salaryType": 1,
+      "talent": {
+        "wishlist": {
+          "selectedBlockedCompanies": [
+            "5cc19d775b18b6001c9b6bc3",
+            "5e64e2c5b4bfc1001d3dc2a4",
+            "5e64e5d11c694b001c975e90",
+            "5e8ac828706d80001cc4eba7"
+          ]
+        }
+      },
+      "linkedInData": {
+        "experienceList": [
+          {
+            "titleId": null
+          }
+        ],
+        "educationList": null
+      },
+      "updatedAt": "2023-05-09T18:23:25.306Z",
+      "locationData": {
+        "city": "Netanya",
+        "cityAlt": [
+          "Nathanya",
+          "Ntanya",
+          "Natanya"
+        ],
+        "adminName": "Sharon",
+        "adminCode": "",
+        "adminType": "district",
+        "country": "Israel",
+        "iso2": "IL",
+        "iso3": "ISR",
+        "latitude": 32.3286,
+        "longitude": 34.8567,
+        "timezone": "Asia/Jerusalem",
+        "cityId": "656236e2eb5ea536945b267f"
+      },
+      "summaries": [
+        {
+          "createDate": 1605788195469,
+          "creatorUser": "5df235452c2843001c7e98f6",
+          "summary": "<p style=\"direction: rtl; text-align: right;\"><strong><u>בודק תוכנה, בעל 5 שנות ניסיון.</u></strong></p><p style=\"direction: rtl; text-align: right;\"><strong>בשנתיים האחרונות לא בתחום, פתח עסק כעצמאי והחליט לחזור לתחום הבדיקות. </strong></p><p style=\"direction: rtl; text-align: right;\">בתפקידו האחרון בחברת <strong>Cancelon (פרוייקט) </strong>במסגרת תפקידו ביצע בדיקות ידניות למוצר <strong>WEB </strong>כולל תמיכה בלקוחות החברה. </p><p style=\"direction: rtl; text-align: right;\">לפני כן בחברת <strong><u>Autodesk</u> </strong>(פרוייקט) במסגרת תפקידו ביצע בדיקות ידניות למוצר <strong>WEB ולMOBILE. כמו כן עסק מעט בפיתוח אוטומציה ופיתח ב Python.</strong></p><p style=\"direction: rtl; text-align: right;\">לפני כן&nbsp;בחברת <strong><u>Live Person</u></strong>. במסגרת תפקידו ביצע בדיקות ידניות למוצר <strong>WEB </strong>הן לצד ה-<strong>Client </strong>והן לצד ה-<strong>Server </strong>על גבי <strong>Windows</strong>. בנוסף, ביצע בדיקות למוצר <strong>SW </strong>ומוצר <strong>RT</strong>.</p><p style=\"direction: rtl; text-align: right;\">לפני כן, בחברת <strong>Verint </strong>ביצע בדיקות ידניות למוצר <strong>WEB </strong>תוך שימוש ב-<strong>SQL</strong>.</p><p style=\"direction: rtl; text-align: right;\">עוד קודם לכן, בחברת <strong><u>NICE</u> </strong>ביצע בדיקות ידניות למוצר <strong>Networking </strong>עבד עם <strong>פרטוקולי תקשורות </strong>כגון <strong>TCP</strong>/<strong>IP </strong>תוך שימוש ב-<strong>Windows </strong>ומעט <strong>Linux</strong>.</p><p style=\"direction: rtl; text-align: right;\"><br></p><p style=\"direction: rtl; text-align: right;\">מעוניין במשרות בדיקות ידניות באזורים חיפה-חולון. </p><p style=\"direction: rtl; text-align: right;\">&nbsp;</p><p style=\"direction: rtl; text-align: right;\">&nbsp;</p>",
+          "isPrimary": true,
+          "updateDate": 1605788195469
+        }
+      ],
+      "isPhoneInterviewed": true,
+      "topMatchedJobWishlist": [],
+      "topMatchedJobRecruiter": [
+        {
+          "Job Slug": "jbBThYK0CHNJ",
+          "Match Score": 63,
+          "updatedAt": "2025-03-13T13:51:34.582Z"
+        },
+        {
+          "Job Slug": "jblkWa7G-mc0",
+          "Match Score": 63,
+          "updatedAt": "2025-03-13T13:51:34.582Z"
+        },
+        {
+          "Job Slug": "jb3AWhdy5fvD",
+          "Match Score": 63,
+          "updatedAt": "2025-03-13T13:51:34.582Z"
+        },
+        {
+          "Job Slug": "jbtAHa6w5eLI",
+          "Match Score": 63,
+          "updatedAt": "2025-03-13T13:51:34.582Z"
+        },
+        {
+          "Job Slug": "jb-eylh7cKVM",
+          "Match Score": 63,
+          "updatedAt": "2025-03-13T13:51:34.582Z"
+        },
+        {
+          "Job Slug": "jbsJfuUFEI48",
+          "Match Score": 63,
+          "updatedAt": "2025-03-13T13:51:34.582Z"
+        },
+        {
+          "Job Slug": "jbN5sREdhFka",
+          "Match Score": 63,
+          "updatedAt": "2025-03-13T13:51:34.582Z"
+        }
+      ]
+    },
     "foundBLockedCompanies": [
       {
         "company": "coSyUPiUfKKZ",

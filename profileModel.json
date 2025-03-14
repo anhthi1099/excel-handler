@@ -1,0 +1,738 @@
+{
+    "_id": "5c4ed0a06a6e9443e7f384e1",
+    "email": "Avejambari@gmail.com",
+    "__v": 0,
+    "aboutMe": "",
+    "address": 428,
+    "banned": false,
+    "birthday": null,
+    "company": "",
+    "dateCreated": 1423043336000,
+    "desiredSalary": 20000,
+    "education": [],
+    "emails": [
+      {
+        "_id": "5efee2375a17f0001cfc05c7",
+        "email": "avejambari@gmail.com",
+        "emailType": "Personal Email",
+        "isPrimary": true,
+        "isVerified": true
+      }
+    ],
+    "employment": [
+      {
+        "industries": [],
+        "_id": "5efee2375a17f0001cfc05cd",
+        "companyEmsId": 12336,
+        "companyName": "DolphinSoft",
+        "location": null,
+        "position": "Web Developer",
+        "isCurrent": false,
+        "seniority": null,
+        "startDate": 1425168000000,
+        "endDate": 1467331200000,
+        "description": "",
+        "companyNameLC": "dolphinsoft"
+      }
+    ],
+    "emsId": 643673,
+    "exposurePolicyApproval": false,
+    "firstName": "aviv",
+    "gender": 1,
+    "hasSecurityClearance": false,
+    "isAvailable": true,
+    "isClaimed": false,
+    "isDiscrete": false,
+    "isEmployer": false,
+    "isReviewed": false,
+    "languages": [
+      {
+        "_id": "5efee2375a17f0001cfc05c9",
+        "language": 1,
+        "level": 1
+      },
+      {
+        "_id": "5efee2375a17f0001cfc05ca",
+        "language": 2,
+        "level": 1
+      }
+    ],
+    "lastName": "jambari",
+    "lastUpdate": 1593752414000,
+    "middleName": "",
+    "militaryServiceInformation": "",
+    "otherInformation": "",
+    "phones": [
+      {
+        "_id": "5efee2375a17f0001cfc05c8",
+        "phone": "972549251878",
+        "phoneType": "Personal Mobile",
+        "isPrimary": true,
+        "country": "il",
+        "callingCode": "972"
+      }
+    ],
+    "position": "Experienced Front End",
+    "profileImageUrl": "",
+    "recruterInCharge": {
+      "name": "Shikma Dagary",
+      "profileId": "530"
+    },
+    "relatedCompanies": [
+      11502,
+      11782,
+      12336
+    ],
+    "skills": [
+      121,
+      172,
+      1,
+      433,
+      720,
+      1311,
+      1775,
+      2108,
+      152,
+      218,
+      997,
+      2175
+    ],
+    "socialLinks": [
+      {
+        "_id": "5efee2375a17f0001cfc05cb",
+        "isPrimary": true,
+        "link": "https://www.linkedin.com/in/aviv-jambari-68845694",
+        "linkType": 47
+      },
+      {
+        "_id": "5efee2375a17f0001cfc05cc",
+        "isPrimary": false,
+        "link": "https://il.linkedin.com/in/aviv-jambari-68845694",
+        "linkType": 47
+      }
+    ],
+    "summary": "<div align=right dir=RTL><strong>***************דיסקרטי*****************</strong></div><div align=right dir=RTL><strong>Web Developer, ניסיון של כ 4 שנים בעיקר בצד הFront.</strong></div><div align=right dir=RTL>כיום<strong> </strong>בחברת <strong><u>YIT</u></strong>, בתפקיד <strong>Full</strong>-<strong>stack Developer.</strong> במסגרת תפקידו מתמקד בפיתוח <strong>כלים פנימיים </strong>לחברה, <strong>פיתוח אתרים </strong>ללקוחות חיצוניים,<strong> 75% Frontend</strong> ו - <strong>25%</strong> <strong>Backend</strong>. עובד בסביבת <strong>Net</strong>. <strong>וMVC</strong>, <fontstyle=\"BACKGROUND-COLOR:#FFFF00\"><strong>ReactJS וAngularJS</strong></font>, <strong>ג'אווה-סקריפט </strong>לפי <strong>ES6</strong>, ניהול תוספים וגרסאות ע\"י <strong>WebPack וGit</strong>. עבודה אל מול בסיס נתונים <strong>MSSQL</strong>. התנסה בחלק מהפרויקטים גם <strong>בNodeJS</strong>. </div><div align=right dir=RTL>קודם לכן, <strong>מפתח </strong>בבית תוכנה <strong>Dolphin Soft</strong>, התנסה בפיתוח <strong>עמודי נחיתה</strong>, <strong>אתרים רספונסיביים </strong>ומעברונים בטכנולוגיות <strong>HTML</strong>,<strong>CSS</strong>,<strong>JS</strong>,<strong>Jquery</strong>, ו- <strong>Winforms </strong>בעיקר בצד לקוח, ותחזוק אתרי <strong>Net</strong>.</div><div align=right dir=RTL><strong>מחפש משרות FE\\FS בג\"ג מרכז/שפלה</strong></div><div align=right dir=RTL> </div>",
+    "slug": "taSksrKM9pTz",
+    "profileImageId": "643673",
+    "canSignIn": false,
+    "customToken": null,
+    "industries": [
+      142
+    ],
+    "infoUpdated": null,
+    "isActivated": false,
+    "isAdmin": false,
+    "managementLevel": 9,
+    "recruiterIncharge": null,
+    "relatedCompaniesEms": [],
+    "seniority": 9,
+    "userId": null,
+    "settings": {
+      "language": 0,
+      "email": {
+        "notifications": true,
+        "candidate_got_offer": true,
+        "candidate_withdrawn": true,
+        "summary": true,
+        "summary_type": 2,
+        "dailySummary": "true",
+        "weeklySummary": "true"
+      }
+    },
+    "linkedinPublicProfileName": "aviv-jambari-68845694",
+    "syncEms": true,
+    "firstNameHeb": "אביב",
+    "lastNameHeb": "ג`מברי",
+    "desiredLocations": [
+      2,
+      10
+    ],
+    "positionTypes": [
+      3
+    ],
+    "roles": [
+      14,
+      250
+    ],
+    "cvLang": 1,
+    "linkedInData": {
+      "currentPosition": "Web Developer",
+      "displayName": "Aviv Jambari",
+      "experienceList": [
+        {
+          "_id": "60ed3c3006d824001ce1c952",
+          "title": "Web Developer",
+          "companyName": "YIT - Yedioth Information Technology",
+          "companyLinkedinName": "https://www.linkedin.com/company/yit---yedioth-information-technology/",
+          "experienceDescription": "Building responsive landing pages and websites, with the highest Frontend framewotks(angular,react, ect).\nWww.yit.co.il - example",
+          "dates": "Jul 2016 – Present",
+          "companySlug": "coNr5Lv8DjF4",
+          "companyId": "5cc1a03d5b18b6001c9b6f2d",
+          "titleId": 19835
+        }
+      ],
+      "educationList": [
+        {
+          "_id": "60ed3c3006d824001ce1c951",
+          "schoolName": "Tech Career Israel",
+          "degreeName": "Web Developer",
+          "schoolLinkedinName": "https://www.linkedin.com/school/3153264/",
+          "endDate": null
+        }
+      ],
+      "skills": [
+        "HTML",
+        "Photoshop",
+        "Windows"
+      ],
+      "dateUpdated": 1629115373069,
+      "skillList": [
+        {
+          "skillId": "5f4f8900b09113474036aba6",
+          "skillName": "html"
+        },
+        {
+          "skillId": "5f4f8900b09113474036aeb2",
+          "skillName": "Photoshop"
+        },
+        {
+          "skillId": "5f4f8900b09113474036b26c",
+          "skillName": "Windows"
+        }
+      ]
+    },
+    "primarySkills": [
+      1775,
+      2108
+    ],
+    "secondarySkills": [
+      121,
+      152,
+      172,
+      1,
+      433,
+      720,
+      1311,
+      1737,
+      2425
+    ],
+    "followUpDate": 1626160184072,
+    "monetaryScalesManaged": -1,
+    "numberOfPeopleManaged": -1,
+    "rankingFromRecruiter": 4,
+    "yearsOfExperience": 8.3,
+    "recruiterInChargeId": "5daffe6509a529001cecab10",
+    "recruiterInChargeSlug": "usxIzhhnPRpV",
+    "cvMigrated": true,
+    "cvs": [
+      {
+        "_id": "5ea1a6557c28af4c3c394f10",
+        "name": "taSksrKM9pTz_1587652181696_cv",
+        "fileName": "taSksrKM9pTz_1587652181696_cv.doc",
+        "lang": 1,
+        "cvType": 0,
+        "isPrimary": true,
+        "isMain": true,
+        "editBy": "ems",
+        "isAttachment": false,
+        "lastEdited": 1587652181807
+      },
+      {
+        "_id": "5ea1a6557c28af4c3c394f11",
+        "name": "taSksrKM9pTz_1587652181696_covered",
+        "fileName": "taSksrKM9pTz_1587652181696_covered.doc",
+        "lang": 1,
+        "cvType": 2,
+        "isPrimary": true,
+        "isMain": false,
+        "editBy": "ems",
+        "isAttachment": false,
+        "lastEdited": 1587652181807,
+        "elastic": true
+      },
+      {
+        "_id": "5ea1a6557c28af4c3c394f12",
+        "name": "taSksrKM9pTz_1587652181696_covered",
+        "fileName": "taSksrKM9pTz_1587652181696_covered.pdf",
+        "lang": 1,
+        "cvType": 2,
+        "isPrimary": false,
+        "isMain": false,
+        "editBy": "ems",
+        "isAttachment": false,
+        "lastEdited": 1587652181807
+      },
+      {
+        "_id": "5efa6c4fbaac35001d5a630d",
+        "name": "taSksrKM9pTz_1593470031551_public",
+        "fileName": "taSksrKM9pTz_1593470031551_public.doc",
+        "lang": 0,
+        "cvType": 1,
+        "isPrimary": true,
+        "lastEdited": 1593470031618
+      }
+    ],
+    "bsId": 643673,
+    "migration": 0,
+    "categories": [
+      2
+    ],
+    "companyEmsId": 0,
+    "managemenRolesOnly": true,
+    "summaryCreateDate": 1544629667000,
+    "summaryCreatorUser": "5cd954f612347e001c82f86d",
+    "companySize": 0,
+    "newTalent": false,
+    "isContactPerson": false,
+    "talent": {
+      "wishlist": {
+        "selectedBlockedCompanies": [
+          "5cc19fc95b18b6001c9b6db6",
+          "5cc1a03d5b18b6001c9b6f2d",
+          "5e64e42c6b4d15001ca21959"
+        ]
+      }
+    },
+    "isDeleted": false,
+    "idNumber": "203495874",
+    "companyLC": null,
+    "parsedSkills": [
+      87,
+      121,
+      140,
+      144,
+      152,
+      172,
+      1,
+      376,
+      398,
+      432,
+      433,
+      720,
+      997,
+      998,
+      1160,
+      1180,
+      1199,
+      1248,
+      1281,
+      1311,
+      1313,
+      1334,
+      1457,
+      1526,
+      70,
+      1556,
+      218,
+      1601,
+      1653,
+      1654,
+      1737,
+      1764,
+      1775,
+      1788,
+      1798,
+      1814,
+      1846,
+      1861,
+      2055,
+      2108,
+      2260,
+      2358,
+      2404,
+      2425,
+      374
+    ],
+    "source": 18,
+    "updatedAt": "2023-05-09T18:23:25.306Z",
+    "locationData": {
+      "city": "Ramla",
+      "cityAlt": [
+        "Ramle",
+        "Er Ramle"
+      ],
+      "adminName": "Shfela",
+      "adminCode": "",
+      "adminType": "district",
+      "country": "Israel",
+      "iso2": "IL",
+      "iso3": "ISR",
+      "latitude": 31.9275,
+      "longitude": 34.8625,
+      "timezone": "Asia/Jerusalem",
+      "cityId": "656236e2eb5ea536945b268e"
+    },
+    "summaries": [
+      {
+        "createDate": 1544629667000,
+        "creatorUser": "5cd954f612347e001c82f86d",
+        "summary": "<div align=right dir=RTL><strong>***************דיסקרטי*****************</strong></div><div align=right dir=RTL><strong>Web Developer, ניסיון של כ 4 שנים בעיקר בצד הFront.</strong></div><div align=right dir=RTL>כיום<strong> </strong>בחברת <strong><u>YIT</u></strong>, בתפקיד <strong>Full</strong>-<strong>stack Developer.</strong> במסגרת תפקידו מתמקד בפיתוח <strong>כלים פנימיים </strong>לחברה, <strong>פיתוח אתרים </strong>ללקוחות חיצוניים,<strong> 75% Frontend</strong> ו - <strong>25%</strong> <strong>Backend</strong>. עובד בסביבת <strong>Net</strong>. <strong>וMVC</strong>, <fontstyle=\"BACKGROUND-COLOR:#FFFF00\"><strong>ReactJS וAngularJS</strong></font>, <strong>ג'אווה-סקריפט </strong>לפי <strong>ES6</strong>, ניהול תוספים וגרסאות ע\"י <strong>WebPack וGit</strong>. עבודה אל מול בסיס נתונים <strong>MSSQL</strong>. התנסה בחלק מהפרויקטים גם <strong>בNodeJS</strong>. </div><div align=right dir=RTL>קודם לכן, <strong>מפתח </strong>בבית תוכנה <strong>Dolphin Soft</strong>, התנסה בפיתוח <strong>עמודי נחיתה</strong>, <strong>אתרים רספונסיביים </strong>ומעברונים בטכנולוגיות <strong>HTML</strong>,<strong>CSS</strong>,<strong>JS</strong>,<strong>Jquery</strong>, ו- <strong>Winforms </strong>בעיקר בצד לקוח, ותחזוק אתרי <strong>Net</strong>.</div><div align=right dir=RTL><strong>מחפש משרות FE\\FS בג\"ג מרכז/שפלה</strong></div><div align=right dir=RTL> </div>",
+        "isPrimary": true,
+        "updateDate": 1544629667000
+      }
+    ],
+    "isPhoneInterviewed": true,
+    "linkedInDataAIExtraction": {
+      "primarySkills": [
+        "Angular"
+      ],
+      "jobTitles": [
+        "Web Developer"
+      ],
+      "supertitles": [
+        "Web Developer"
+      ],
+      "supertitleImportanceScore": [
+        {
+          "title": "Web Developer",
+          "score": 0.0414
+        }
+      ],
+      "mostRelevantSupertitle": "Web Developer",
+      "industries": [
+        "Software",
+        "IT Service Providers"
+      ],
+      "totalProfileYOE": 1.34,
+      "jobtitleYOEs": [
+        {
+          "title": "Web Developer",
+          "YOEs": 1.34
+        }
+      ],
+      "totalSupertitleYOE": 1.34,
+      "supertitleYOEs": [
+        {
+          "title": "Web Developer",
+          "YOEs": 1.34
+        }
+      ],
+      "seniorityLevel": "Experienced",
+      "languages": [],
+      "companySize": [
+        "50-200"
+      ],
+      "location": [
+        "Netanya, Sharon, Israel",
+        "Rishon LeZiyyon, Center, Israel"
+      ]
+    },
+    "topMatchedJobWishlist": [],
+    "topMatchedJobRecruiter": [
+      {
+        "Job Slug": "jbU03d_PHyJR",
+        "Match Score": 89,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbUpfYgnHC3g",
+        "Match Score": 89,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbIM0n_Ae_Mb",
+        "Match Score": 89,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbidWqykSENq",
+        "Match Score": 89,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbKqa3JRhABq",
+        "Match Score": 89,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbO0myHgZuJ-",
+        "Match Score": 89,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jb1PdaXoOjwq",
+        "Match Score": 89,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbx7SDsaTcGE",
+        "Match Score": 89,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbzbZ55twnVi",
+        "Match Score": 89,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jb8jZe9ltsSV",
+        "Match Score": 89,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbyFyl3Dc_Vq",
+        "Match Score": 89,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jboq1XdaXiAe",
+        "Match Score": 89,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbCYmyJSGdub",
+        "Match Score": 89,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbo8ZdTsu0jO",
+        "Match Score": 89,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbgy165thk26",
+        "Match Score": 82,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbzDiMeWcMh8",
+        "Match Score": 77,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jb2auVGrXIGS",
+        "Match Score": 77,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbGBfMnU7iyD",
+        "Match Score": 77,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbt985NJJRY3",
+        "Match Score": 77,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbFsIBHCE0jg",
+        "Match Score": 77,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbXJERphxmEM",
+        "Match Score": 77,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbxTuz6Q8Gkz",
+        "Match Score": 72,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jb_oSRyu7NfA",
+        "Match Score": 72,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbq-5waoFXf1",
+        "Match Score": 72,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbjLcfDikSG8",
+        "Match Score": 71,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbStUCyf-zkT",
+        "Match Score": 71,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbZBSL7mQLu_",
+        "Match Score": 71,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbWgiQbKT1nm",
+        "Match Score": 71,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jb7K2vJh9UWp",
+        "Match Score": 71,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbF3Ljw9MLoH",
+        "Match Score": 71,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbC-BTlAF5yg",
+        "Match Score": 71,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbXp4l1MpXLr",
+        "Match Score": 71,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbEzeWj96VIA",
+        "Match Score": 71,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbqHwjXsU18M",
+        "Match Score": 71,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jb2uEwckd58S",
+        "Match Score": 71,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbTXxvk6sMjK",
+        "Match Score": 71,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbeOJHBNaQm_",
+        "Match Score": 71,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbCc-oAU6ih6",
+        "Match Score": 71,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbKU5yehRbDd",
+        "Match Score": 71,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbyVT_j286Nb",
+        "Match Score": 71,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jblJPyDzJEWr",
+        "Match Score": 71,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbBRSNdQVrEq",
+        "Match Score": 71,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbxJc_-eZFxv",
+        "Match Score": 71,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbb-ZV-BjVhK",
+        "Match Score": 71,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbEKU-ryIIp-",
+        "Match Score": 71,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jb5ZT87Cu_PV",
+        "Match Score": 67.4,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbSzHdR6nENA",
+        "Match Score": 67.4,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbYKfbnE0dyx",
+        "Match Score": 65,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbx_5K6kwScq",
+        "Match Score": 65,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbcSQuw1dv8j",
+        "Match Score": 65,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbTmFmqonAo2",
+        "Match Score": 65,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbXvbc7Io15V",
+        "Match Score": 65,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbv63iPL8ANG",
+        "Match Score": 65,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbYnUN6ijota",
+        "Match Score": 65,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbpeoe6g8TcJ",
+        "Match Score": 65,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jb5XaARDVvpR",
+        "Match Score": 65,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbRHq_Vf4waC",
+        "Match Score": 65,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbLlfKNBTeck",
+        "Match Score": 64,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbginh2YL3u0",
+        "Match Score": 62,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbGKck8H_BPR",
+        "Match Score": 62,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbM7x0T_63Ae",
+        "Match Score": 60,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jb5PSACGXoLW",
+        "Match Score": 60,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      },
+      {
+        "Job Slug": "jbAjghCUsg5n",
+        "Match Score": 60,
+        "updatedAt": "2025-03-14T11:20:46.273Z"
+      }
+    ]
+  },

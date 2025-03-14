@@ -1,116 +1,103 @@
 {
   "_id": {
-    "$oid": "5c4eecbf6a6e9443e7f3cfda"
+    "$oid": "5c5c2fb06a6e9443e714d09e"
   },
-  "emsId": 110317,
+  "emsId": 110720,
   "__v": 0,
   "careerLevel": [
-    "Experienced"
+    "Senior"
   ],
   "company": {
-    "$oid": "5c4eeb686a6e9443e7f3cb26"
+    "$oid": "5c5c2ea76a6e9443e714cd96"
   },
   "compensationType": "",
-  "dateCreated": 1546260246000,
-  "dateUpdate": 1551916800000,
+  "dateCreated": 1547653910000,
+  "dateUpdate": 1582637982000,
   "education": [
     "ראשון",
     "ראשון",
     "ראשון"
   ],
   "hiringManagers": [],
-  "hrManagers": [
-    {
-      "$oid": "5ea51d93d3160e001c8cb649"
-    }
-  ],
+  "hrManagers": [],
   "industry": [
-    "AdTech"
+    "Cyber Security",
+    "Software"
   ],
   "isNewJob": true,
-  "jobDescription": "About us:We serve the top Security and Intelligence Agencies in the world with our state-of-the-art Web Intelligence solutions. Our solutions assist investigators and analysts with their day-to-day fight to identify and investigate threats.We are currently expanding and growing our activities, we are entering new markets, we are leveraging AI and Machine Learning and we are looking to add talented, dynamic and curious people to our family.  About the position:As our Marketing Manager you will be responsible for planning and execution of all marketing activities. This includes creation of marketing and sales tools as well as branding and digital presence.   What you will be dealing with:•         Responsible for planning and execution of all product and company marketing activities•         Manage the creation of marketing and sales collaterals that transform technology into clear business propositions •         Drive campaigns (internal and external) to increase awareness and generate demand around different offerings•         Manage customer community, social and web presence•         Build and execute conferences and shows plan•         Create competitive analysis and competitive positioning documents•         Identify market needs and take key part in the definition of relevant product capabilities and solutions portfolio roadmap•         Manage lead to opportunity process, including automation, tracking, supporting material etc.•         Build and maintain global target list Requirements:•         We are looking for a creative, dynamic and SU loving product marketing person who is a self-starter•         Great presentation skills, creative, innovative, motivated, dynamic and results-oriented •         4-6 years of marketing product management experience within technology company in the digital domain •         Fluent in English with exceptional written and verbal communication skills•         Intelligence background - significant advantage•         Degree in computer science or electrical engineering - significant advantage",
-  "languages": [],
+  "jobDescription": "<div>The Product Manager is responsible for both product planning and product marketing. This includes managing the product throughout the product lifecycle, gathering and prioritizing product and customer requirements, defining the product vision, and working closely with engineering, to deliver winning products. It also includes working with sales, marketing and support to ensure revenue and customer satisfaction goals are met. The Product Manager’s job also includes ensuring that the product and marketing efforts support the company’s overall strategy and goals.  The Product Manager is expected to: </div><div>•Define the product strategy and roadmap </div><div>•Deliver MRDs and PRDs with prioritized features and corresponding justification </div><div>•Be an expert with respect to the competition </div><div>•Develop the core positioning and messaging for the product </div><div>•Perform product demos to customers </div><div>•Set pricing to meet revenue and profitability goals </div><div>•Develop sales tools and collateral </div><div>•Brief and train the sales force at quarterly sales meetings </div><div>•Act as a leader within the company  </div><div> </div><div>Requirements: </div><div>•Minimum of 4 years’ experience as a Product Manager  </div><div>•Demonstrated success defining and launching excellent products </div><div>•Excellent written and verbal communication skills </div><div>•Technical background, with experience in designing UX </div><div>•Excellent teamwork skills </div><div>•Proven ability to influence cross-functional teams without formal authority </div><div>•Must be able to travel 30% of the time </div><div>•Examples and at least one sample of an effective document delivered in the past and effective and impressive UX </div><div>•Strong analytical skills </div><div>•Excellent Integration skills </div><div>•Innovative, open-minded, out-of-the-box thinking abilities  </div><div>•Proven presentations and customer facing skills</div>",
+  "languages": [
+    1,
+    2
+  ],
   "location": 123,
   "mandatorySkills": [
-    440,
-    2137,
-    1769,
-    2574
+    2360,
+    2358,
+    1080,
+    1079
   ],
   "positionType": [
     3
   ],
   "salary": 0,
   "secondarySkills": [
-    440,
-    1769
+    1080,
+    2358,
+    2360
   ],
   "specialization": [
-    "Marcom",
-    "Marketing Manager"
+    "Product Manager"
   ],
-  "title": "Marketing Manager",
-  "slug": "jbxELqcnPt5C",
-  "companySlug": "coLI8xQIgj-h",
+  "title": "product manager",
+  "slug": "jb4SsxfvP3qm",
+  "companySlug": "cobUXR3WgjlL",
   "degreeTypes": [],
   "discretePosition": false,
   "industries": [
-    321
+    39
   ],
   "isDiscrete": false,
   "recruiterIncharge": {
-    "emsId": 19201,
-    "name": "Michal Dimant Solomon",
-    "email": "michal.dimant-solomon@ethosia.com"
+    "emsId": 1178083,
+    "name": "Daniel Kellner",
+    "email": "daniel.kellner@ethosia.com"
   },
   "roles": [
-    79,
-    78
+    80
   ],
   "seniorityLevel": [
-    9
+    15
   ],
   "skills": [
-    1300,
-    831,
-    1653,
-    419,
-    1407,
-    42
+    1080,
+    2358,
+    2360
   ],
   "syncEms": true,
-  "status": 0,
-  "mainRole": 79,
   "monetaryScalesManaged": -1,
   "numberOfPeopleManaged": -1,
+  "salaryEstimation": 0,
+  "yearsOfExperience": 4,
+  "status": 0,
+  "mainRole": 80,
   "projectType": [
     1
   ],
-  "salaryEstimation": 0,
-  "yearsOfExperience": 4,
-  "bsId": 110317,
+  "bsId": 110720,
   "region": 5,
-  "emailsForCv": [
-    "agt.3i-mindmm@applynow.io"
-  ],
+  "emailsForCv": [],
   "migration": 3,
-  "locationRegion": 5,
-  "positionCode": "",
-  "recruiterInChargeId": {
-    "$oid": "5d7100ed900f38001cae2680"
-  },
-  "recruiterInChargeSlug": "usseHrJPxrdt",
-  "titleLC": "marketing manager",
   "companyData": {
-    "name": "AGT",
-    "profileImageUrl": "",
+    "name": "NSO Group",
+    "profileImageUrl": "5c5c2ea76a6e9443e714cd961607869582.png",
     "socialLinks": {
-      "linkedin": "https://www.linkedin.com/company/agt-international"
+      "linkedin": "https://www.linkedin.com/company/nso-group/"
     },
-    "bsId": 13997
+    "bsId": 24530
   },
   "titleKeys": [
-    "marketing",
+    "product",
     "manager"
   ],
   "locationData": {
