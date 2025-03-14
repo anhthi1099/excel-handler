@@ -1,0 +1,89 @@
+{
+  "_id": {
+    "$oid": "612b5b0b488e99355cf0ef25"
+  },
+  "key": "seniorityLevels",
+  "val": {
+    "1": {
+      "elId": 1,
+      "value": "Junior",
+      "valueHeb": "זוטר",
+      "order": 2,
+      "managerial": "no",
+      "yearsOfExp": "2-4",
+      "synonyms": "Intermediate,Entry-Level Engineer,Associate,Specialist,Trainee"
+    },
+    "2": {
+      "order": 5,
+      "value": "Team Leader",
+      "valueHeb": "ראש צוות",
+      "elId": 2,
+      "managerial": "yes",
+      "yearsOfExp": "0-3"
+    },
+    "3": {
+      "order": 7,
+      "value": "Director",
+      "valueHeb": "דירקטור",
+      "elId": 3,
+      "managerial": "yes",
+      "yearsOfExp": "+10"
+    },
+    "5": {
+      "order": 8,
+      "value": "CxO",
+      "valueHeb": "הנהלה בכירה",
+      "elId": 5,
+      "managerial": "yes",
+      "yearsOfExp": "+10"
+    },
+    "9": {
+      "order": 3,
+      "value": "Experienced",
+      "valueHeb": "מנוסה",
+      "elId": 9,
+      "managerial": "no",
+      "yearsOfExp": "5-8"
+    },
+    "14": {
+      "order": 6,
+      "value": "Manager",
+      "valueHeb": "מנהל",
+      "elId": 14,
+      "managerial": "yes",
+      "yearsOfExp": "4-9"
+    },
+    "15": {
+      "order": 4,
+      "value": "Senior",
+      "valueHeb": "בכיר",
+      "elId": 15,
+      "managerial": "no",
+      "yearsOfExp": "+9"
+    },
+    "16": {
+      "order": 10,
+      "value": "Owner",
+      "valueHeb": "בעלים",
+      "elId": 16,
+      "managerial": "yes",
+      "yearsOfExp": "0-40"
+    },
+    "17": {
+      "order": 9,
+      "value": "Consultant",
+      "valueHeb": "יועץ",
+      "elId": 17,
+      "managerial": "no",
+      "yearsOfExp": "0-40"
+    },
+    "18": {
+      "order": 11,
+      "value": "Founder",
+      "valueHeb": "מייסד",
+      "elId": 18,
+      "managerial": null,
+      "yearsOfExp": null
+    }
+  }
+}

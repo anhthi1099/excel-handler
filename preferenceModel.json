@@ -1,0 +1,38 @@
+{
+  "_id": {
+    "$oid": "6527b5dd837a2c2b2ebff16e"
+  },
+  "userSlug": "usvsqgSPF8xC",
+  "companySizes": [],
+  "desiredLocations": [
+    123
+  ],
+  "desiredRoles": [
+    14,
+    250
+  ],
+  "desiredSalary": 25000,
+  "industries": [],
+  "jobTitle": [],
+  "positionTypes": [
+    3
+  ],
+  "seniorityLevel": [
+    2
+  ],
+  "skills": [
+    2108
+  ],
+  "status": 2,
+  "createdAt": {
+    "$date": "2023-10-12T09:01:17.554Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-06T08:57:28.018Z"
+  },
+  "__v": 0,
+  "desiredLocationsData": [],
+  "workspaceType": [
+    2
+  ]
+}

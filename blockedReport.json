@@ -1,0 +1,62 @@
+[
+  {
+    "profileSlug": "ta--95v5ni3V",
+    "profileName": "Unknown",
+    "foundBLockedCompanies": [
+      {
+        "company": "coTSNVdOjeDR",
+        "jobSlug": "jbO25BCKmGbD",
+        "profileSlug": "ta--95v5ni3V",
+        "companyName": "Toga Networks",
+        "jobName": "Deep Learning and Computer Vision expert/engineer"
+      }
+    ]
+  },
+  {
+    "profileSlug": "taI5ULNZJ0tW",
+    "profileName": "Unknown",
+    "foundBLockedCompanies": [
+      {
+        "company": "conDl-OE_Wv8",
+        "jobSlug": "jb4I68KrPPEP",
+        "profileSlug": "taI5ULNZJ0tW",
+        "companyName": "Ethosia",
+        "jobName": "Qa manual tester"
+      },
+      {
+        "company": "conDl-OE_Wv8",
+        "jobSlug": "jbRbNxQPzwWi",
+        "profileSlug": "taI5ULNZJ0tW",
+        "companyName": "Ethosia",
+        "jobName": "qa"
+      },
+      {
+        "company": "conDl-OE_Wv8",
+        "jobSlug": "jbfB4caHFYvu",
+        "profileSlug": "taI5ULNZJ0tW",
+        "companyName": "Ethosia",
+        "jobName": "Qa tester checkup"
+      },
+      {
+        "company": "conDl-OE_Wv8",
+        "jobSlug": "jbi279bCU2hD",
+        "profileSlug": "taI5ULNZJ0tW",
+        "companyName": "",
+        "jobName": "TTT DDD yoav testing job"
+      }
+    ]
+  },
+  {
+    "profileSlug": "taYzH34GUehh",
+    "profileName": "Unknown",
+    "foundBLockedCompanies": [
+      {
+        "company": "coSyUPiUfKKZ",
+        "jobSlug": "jb3AWhdy5fvD",
+        "profileSlug": "taYzH34GUehh",
+        "companyName": "Autodesk Israel",
+        "jobName": "Senior QA Engineer"
+      }
+    ]
+  }
+]

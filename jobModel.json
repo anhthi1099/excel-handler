@@ -1,0 +1,150 @@
+{
+  "_id": {
+    "$oid": "5c4eecbf6a6e9443e7f3cfda"
+  },
+  "emsId": 110317,
+  "__v": 0,
+  "careerLevel": [
+    "Experienced"
+  ],
+  "company": {
+    "$oid": "5c4eeb686a6e9443e7f3cb26"
+  },
+  "compensationType": "",
+  "dateCreated": 1546260246000,
+  "dateUpdate": 1551916800000,
+  "education": [
+    "ראשון",
+    "ראשון",
+    "ראשון"
+  ],
+  "hiringManagers": [],
+  "hrManagers": [
+    {
+      "$oid": "5ea51d93d3160e001c8cb649"
+    }
+  ],
+  "industry": [
+    "AdTech"
+  ],
+  "isNewJob": true,
+  "jobDescription": "About us:We serve the top Security and Intelligence Agencies in the world with our state-of-the-art Web Intelligence solutions. Our solutions assist investigators and analysts with their day-to-day fight to identify and investigate threats.We are currently expanding and growing our activities, we are entering new markets, we are leveraging AI and Machine Learning and we are looking to add talented, dynamic and curious people to our family.  About the position:As our Marketing Manager you will be responsible for planning and execution of all marketing activities. This includes creation of marketing and sales tools as well as branding and digital presence.   What you will be dealing with:•         Responsible for planning and execution of all product and company marketing activities•         Manage the creation of marketing and sales collaterals that transform technology into clear business propositions •         Drive campaigns (internal and external) to increase awareness and generate demand around different offerings•         Manage customer community, social and web presence•         Build and execute conferences and shows plan•         Create competitive analysis and competitive positioning documents•         Identify market needs and take key part in the definition of relevant product capabilities and solutions portfolio roadmap•         Manage lead to opportunity process, including automation, tracking, supporting material etc.•         Build and maintain global target list Requirements:•         We are looking for a creative, dynamic and SU loving product marketing person who is a self-starter•         Great presentation skills, creative, innovative, motivated, dynamic and results-oriented •         4-6 years of marketing product management experience within technology company in the digital domain •         Fluent in English with exceptional written and verbal communication skills•         Intelligence background - significant advantage•         Degree in computer science or electrical engineering - significant advantage",
+  "languages": [],
+  "location": 123,
+  "mandatorySkills": [
+    440,
+    2137,
+    1769,
+    2574
+  ],
+  "positionType": [
+    3
+  ],
+  "salary": 0,
+  "secondarySkills": [
+    440,
+    1769
+  ],
+  "specialization": [
+    "Marcom",
+    "Marketing Manager"
+  ],
+  "title": "Marketing Manager",
+  "slug": "jbxELqcnPt5C",
+  "companySlug": "coLI8xQIgj-h",
+  "degreeTypes": [],
+  "discretePosition": false,
+  "industries": [
+    321
+  ],
+  "isDiscrete": false,
+  "recruiterIncharge": {
+    "emsId": 19201,
+    "name": "Michal Dimant Solomon",
+    "email": "michal.dimant-solomon@ethosia.com"
+  },
+  "roles": [
+    79,
+    78
+  ],
+  "seniorityLevel": [
+    9
+  ],
+  "skills": [
+    1300,
+    831,
+    1653,
+    419,
+    1407,
+    42
+  ],
+  "syncEms": true,
+  "status": 0,
+  "mainRole": 79,
+  "monetaryScalesManaged": -1,
+  "numberOfPeopleManaged": -1,
+  "projectType": [
+    1
+  ],
+  "salaryEstimation": 0,
+  "yearsOfExperience": 4,
+  "bsId": 110317,
+  "region": 5,
+  "emailsForCv": [
+    "agt.3i-mindmm@applynow.io"
+  ],
+  "migration": 3,
+  "locationRegion": 5,
+  "positionCode": "",
+  "recruiterInChargeId": {
+    "$oid": "5d7100ed900f38001cae2680"
+  },
+  "recruiterInChargeSlug": "usseHrJPxrdt",
+  "titleLC": "marketing manager",
+  "companyData": {
+    "name": "AGT",
+    "profileImageUrl": "",
+    "socialLinks": {
+      "linkedin": "https://www.linkedin.com/company/agt-international"
+    },
+    "bsId": 13997
+  },
+  "titleKeys": [
+    "marketing",
+    "manager"
+  ],
+  "locationData": {
+    "city": "Herzliyya",
+    "cityAlt": [
+      "Herzlia B",
+      "Hervlia B",
+      "Hervlia",
+      "Herzliya",
+      "Hertsliyah",
+      "Herseliya",
+      "Herzliyah",
+      "Hertsliyya"
+    ],
+    "adminName": "Sharon",
+    "adminCode": "",
+    "adminType": "district",
+    "country": "Israel",
+    "iso2": "IL",
+    "iso3": "ISR",
+    "latitude": 32.1653,
+    "longitude": 34.8458,
+    "geoLocation": {
+      "type": "Point",
+      "coordinates": [
+        34.8458,
+        32.1653
+      ]
+    },
+    "timezone": "Asia/Jerusalem",
+    "cityId": {
+      "$oid": "656236e2eb5ea536945b268a"
+    }
+  },
+  "isExternal": false,
+  "workspaceType": -1
+}

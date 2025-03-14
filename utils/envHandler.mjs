@@ -25,5 +25,5 @@ export function updateEnvVariable(key, value) {
 }
 
 export function getEnvs() {
-  return { ...process.env, AUTH_TOKEN: `Bearer ${process.env.AUTH_TOKEN}` };
+  return { ...process.env, keyAUTH_TOKEN: `Bearer ${process.env.AUTH_TOKEN}` };
 }

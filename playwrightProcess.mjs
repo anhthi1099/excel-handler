@@ -4,6 +4,85 @@ import { API_LIST, DEV_CREDENTIALS } from './constant.mjs';
 
 /**
  * Process profiles using Playwright to navigate to profile pages and click the Match tab
+ * @param {Array} profileSlugs - Array of objects containing profile slugs [{slug: "slug1"}, {slug: "slug2"}]
+ */
+export async function processProfilesBySlug(profileSlugs) {
+  try {
+    console.log(`✅ Processing ${profileSlugs.length} profiles from provided slugs`);
+
+    // Use dev environment credentials
+    const { email, password } = DEV_CREDENTIALS;
+    console.log(`🔑 Using dev environment credentials (${email})`);
+    
+    // Launch the browser
+    console.log('🚀 Launching browser...');
+    const browser = await chromium.launch({ 
+      headless: false, // Set to true for headless mode, false to see the browser
+      slowMo: 500 // Slow down operations by 500ms for visibility
+    });
+    
+    // Create a new context with viewport size
+    const context = await browser.newContext({
+      viewport: { width: 1280, height: 800 }
+    });
+    
+    // Create a new page
+    const page = await context.newPage();
+    
+    // Login to the application
+    await login(page, email, password);
+    
+    // Process each profile
+    for (let i = 0; i < profileSlugs.length; i++) {
+      const profile = profileSlugs[i];
+      const { slug } = profile;
+      
+      if (!slug) {
+        console.warn(`⚠️ Profile at index ${i} missing slug, skipping`);
+        continue;
+      }
+      
+      console.log(`🔄 Processing profile ${i+1}/${profileSlugs.length} with slug: ${slug}`);
+      
+      try {
+        // Navigate to the profile page
+        const profileUrl = API_LIST.profilePage(slug);
+        console.log(`📄 Navigating to: ${profileUrl}`);
+        await page.goto(profileUrl, { waitUntil: 'networkidle' });
+        
+        // Wait for the page to load
+        await page.waitForLoadState('domcontentloaded');
+        
+        // Look for the Match tab and click it
+        console.log('🔍 Looking for Match tab...');
+
+        await page.locator("div[class*='tab']", {hasText: 'Matches'}).last().click();
+        
+        
+        // Wait for 20 seconds before moving to the next profile
+        console.log(`⏳ Waiting for 10 seconds...`);
+        await new Promise(resolve => setTimeout(resolve, 10000));
+        
+        console.log(`✅ Completed processing for profile with slug: ${slug}`);
+      } catch (error) {
+        console.error(`❌ Error processing profile with slug ${slug}:`, error.message);
+        // Take a screenshot for debugging
+      }
+    }
+    
+    // Close the browser
+    console.log('🔚 Closing browser...');
+    await browser.close();
+    
+    console.log('✅ Process completed successfully');
+  } catch (error) {
+    console.error('❌ Error in processProfilesBySlug:', error);
+    throw error; // Re-throw the error so it can be caught by the caller
+  }
+}
+
+/**
+ * Process profiles using Playwright to navigate to profile pages and click the Match tab
  */
 async function playwrightProcess() {
   try {
@@ -120,5 +199,10 @@ async function login(page, email, password) {
   }
 }
 
-// Run the function
-playwrightProcess().catch(console.error); 
+// Export the original process function as well
+export { playwrightProcess };
+
+// Run the function if this file is executed directly
+if (import.meta.url === `file://${process.argv[1]}`) {
+  playwrightProcess().catch(console.error);
+} 

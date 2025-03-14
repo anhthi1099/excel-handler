@@ -445,9 +445,11 @@ async function handleReportMatchJob() {
     console.log('✅ Connected successfully');
 
     const db = client.db('db1'); // Specify the database name
+    const talentDB = client.db('talent'); // Specify the database name
     const profilesCollection = db.collection('profilemodels'); // Change this to your collection
     const companiesCollection = db.collection('companymodels'); // Change this to your collection
     const jobsCollection = db.collection('jobmodels'); // Change this to your collection
+    const talenCollection = db.collection('jobmodels'); // Change this to your collection
 
     // Filter profiles with blocked companies
     const { filteredProfiles, removedProfiles, analysisResults, summary } = await filterBlockedCompanies(
