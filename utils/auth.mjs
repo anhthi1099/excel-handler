@@ -30,3 +30,22 @@ export async function refreshAuthToken() {
   updateEnvVariable('AUTH_TOKEN', authResponse.data.idToken);
   authInfo.token = `Bearer ${authResponse.data.idToken}`;
 }
+
+export async function refreshAuthTokenDevEnv() {
+  if (authInfo.refreshing) {
+    await new Promise((resolve) => setTimeout(resolve, 8000));
+    return;
+  }
+  authInfo.refreshing = true;
+  const authResponse = await axios.post(
+    'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyDeUGus981J3DtLLQoC08IXy-0V6TehoWU',
+    {
+      email: 'testrec@brightsource.com',
+      password: '12qwaszx',
+      returnSecureToken: true,
+    },
+  );
+  authInfo.refreshing = false;
+  updateEnvVariable('AUTH_TOKEN', authResponse.data.idToken);
+  authInfo.token = `Bearer ${authResponse.data.idToken}`;
+}

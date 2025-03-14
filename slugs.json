@@ -1,0 +1,841 @@
+{
+  "profileSlugs": [
+    "tai3rV4zFrcG",
+    "ta8StSq8sm44",
+    "ta_Z3hoKNY1L",
+    "tagkNOB18RMT",
+    "ta1fsX88rP8A",
+    "ta7Gr4r65ZHU",
+    "taSksrKM9pTz",
+    "taf_6tolQaYC",
+    "taAKz1zL-7bG",
+    "ta05yyphoPWM",
+    "taa7KcIiflPg",
+    "taxiOkrgDcbH",
+    "taFzfkUyfYuA",
+    "taivWGhXA1wB",
+    "taRAfGBzrYA9",
+    "tawm0k5tl82o",
+    "taahRWy9Fqig",
+    "taNkuQZSScRf",
+    "tagIMz8FY0p0",
+    "tabOJFygEhnq",
+    "tar-m5gV8H50",
+    "tajIC2jBTAUS",
+    "tai78aRP4fR9",
+    "taveq3_ytFFq",
+    "tahcL5Pm5BB_",
+    "tal1MC6gejbO",
+    "taFrRmxucFrC",
+    "taFVFo5qnWI1",
+    "ta2QtXGCsV3Q",
+    "taiNDiN4Nk6V",
+    "tarq5eS2jWAW",
+    "taZKy0L4xWGP",
+    "taGPSledOfMh",
+    "tapWYDi7moVV",
+    "tagMk7VmrEKp",
+    "taYzH34GUehh",
+    "ta7VNGV-X8nW",
+    "taOaXOOhYrrB",
+    "taLRA69zzA5R",
+    "taP_5S88aohy",
+    "tag1X4oUAyzV",
+    "taTrgICdDk2S",
+    "tacm8irjy4M0",
+    "taJJGdPp_WcK",
+    "ta32K-OBTqmi",
+    "taTG0xmx2zbh",
+    "ta2uRrb1H90b",
+    "taFdzeZY8ZV6",
+    "taIRbKWPnAeH",
+    "tayiYUAtYgDB"
+  ],
+  "companySlugs": [
+    "coFdNHNXbFQV",
+    "cokyafsVqiyR",
+    "cor6jluzgBts",
+    "co4W1evtVyc5",
+    "coqu21kbeXEl",
+    "coLy0VbQmQz-",
+    "co1IycauyGK2",
+    "coNr5Lv8DjF4",
+    "coqxSPLqqUcr",
+    "coysdGAVGws9",
+    "cofXy2xgxffh",
+    "copkzww9hFVT",
+    "coIHqqbTHfqr",
+    "con4edphmCYy",
+    "coXu2IVe7RW1",
+    "co2jhIUh4N1N",
+    "coCGcRznbfBx",
+    "co9gVrxivUHJ",
+    "coK11TAaPAFp",
+    "coBpef3Tqtl_",
+    "coZ3WrPi1j42",
+    "coDkW7Ctr-zy",
+    "coUOhzeLh-QO",
+    "coCMWE7ZzThc",
+    "conDl-OE_Wv8",
+    "cosfqBPNQQgS",
+    "co5vFzfUJVyv",
+    "coHNdjHmz34Z",
+    "con1dm67Jxj8",
+    "coJnPM3kmU1h",
+    "coXAqkDK5Kkl",
+    "coVV0xObyKC6",
+    "cobm_iVzCHGC",
+    "coURKDIoraCI",
+    "cob9nq04z0rm",
+    "coJLQg0ikhYo",
+    "coWxk5H-77E9",
+    "coC1_NnXVDSL",
+    "cojjouvoboJH",
+    "coBZ6EdcZ8u0",
+    "cojOQgWO2HFr",
+    "coAaauqPALNy",
+    "cozj8_gIKbNH",
+    "coZBsh0ejCQs",
+    "coDedOCPNgbn",
+    "couQKDltGftQ",
+    "cokrSSPFzjeN",
+    "co4vmxOK9Npw",
+    "coliDfN7Sbox",
+    "contKjmc6_V7",
+    "cohvTH0nkFeM",
+    "cohmZs6DD-9D",
+    "co5G_AgC6vtB",
+    "coFFUhEZumNT",
+    "coCB-T2deYmD",
+    "colaMjtDHE7B",
+    "copmU6mp1jEf",
+    "co_Zxd3jGtgl",
+    "coROAjZ-wMyM",
+    "coEAzj4674SZ",
+    "co7P3ig3ASRl",
+    "coBl8-nTHI35",
+    "colDddok4Sal",
+    "coYtFyJ05HD0",
+    "coxUTMeWXWZw",
+    "coSyUPiUfKKZ",
+    "coZfgJNblC7I",
+    "coZAQQefDfoF",
+    "cobohnNOcpGr",
+    "coOQgaR3lypj",
+    "coPUbKYJt-Gc",
+    "coliSZqUgRUA",
+    "coiWGtgYj7sb",
+    "cociy0HkaXmS",
+    "coC0RMAKY1TG",
+    "coxdMm2YjFlo",
+    "coPDxr5dtzx0",
+    "co9n7aXJ44fg",
+    "comKCUvM7baI",
+    "coPILUYtCprW",
+    "coUrAHdWMM3j",
+    "co72PwQ3Flu4",
+    "coWlRmU9gcPC",
+    "coIqT0M0zJsr",
+    "cotLx7HFIG9c",
+    "co87r5QZ-Tlk"
+  ],
+  "recruiterSlugs": [
+    "tap5YU2OCN-Y",
+    "usp44LS9E6fP",
+    "us1hwQ_Rxfbm",
+    "us_owRuvt7A4",
+    "usxIzhhnPRpV",
+    "us22UR4F1ND_",
+    "taNF9Stffz8I",
+    "us7GGekAIIzE",
+    "usuSYSq7fYWD",
+    "taFrDjw6d9Wr",
+    "usfVURnSykWx",
+    "us1_FpgBv6aM",
+    "usV1_XOzPEaW"
+  ],
+  "educationSlugs": [
+    "cobp0QRx9ckE",
+    "coljSNbyyth7",
+    "co1IycauyGK2",
+    "colrS2bq14GY",
+    "coEIG7xpHpMZ",
+    "com-Nog4hgCr",
+    "cos2snoANlPs"
+  ],
+  "editBySlugs": [
+    "us9l1icOFy_l",
+    "us_-k3aA0K0I",
+    "usuSYSq7fYWD",
+    "uswj9fDWCIF-",
+    "us1hwQ_Rxfbm",
+    "usI9C42r7kje",
+    "usWMmByw9Brm",
+    "us22UR4F1ND_",
+    "uss6wV8HMeH_",
+    "uspcMttn8mtK",
+    "usV1_XOzPEaW"
+  ],
+  "talentSlugs": [
+    "tasYy1YVnnA0",
+    "ta0w7_L9ymw6"
+  ],
+  "allSlugs": [
+    {
+      "path": "slug",
+      "value": "tai3rV4zFrcG"
+    },
+    {
+      "path": "recruiterInChargeSlug",
+      "value": "tap5YU2OCN-Y"
+    },
+    {
+      "path": "slug",
+      "value": "ta8StSq8sm44"
+    },
+    {
+      "path": "companySlug",
+      "value": "coFdNHNXbFQV"
+    },
+    {
+      "path": "recruiterInChargeSlug",
+      "value": "usp44LS9E6fP"
+    },
+    {
+      "path": "linkedInData.experienceList.0.companySlug",
+      "value": "cokyafsVqiyR"
+    },
+    {
+      "path": "linkedInData.educationList.0.educationInstitutionSlug",
+      "value": "cobp0QRx9ckE"
+    },
+    {
+      "path": "talentSlug",
+      "value": "tasYy1YVnnA0"
+    },
+    {
+      "path": "slug",
+      "value": "ta_Z3hoKNY1L"
+    },
+    {
+      "path": "companySlug",
+      "value": "cor6jluzgBts"
+    },
+    {
+      "path": "linkedInData.educationList.0.educationInstitutionSlug",
+      "value": "coljSNbyyth7"
+    },
+    {
+      "path": "linkedInData.educationList.1.educationInstitutionSlug",
+      "value": "co1IycauyGK2"
+    },
+    {
+      "path": "talentSlug",
+      "value": "ta0w7_L9ymw6"
+    },
+    {
+      "path": "employment.0.companySlug",
+      "value": "co4W1evtVyc5"
+    },
+    {
+      "path": "employment.1.companySlug",
+      "value": "coqu21kbeXEl"
+    },
+    {
+      "path": "slug",
+      "value": "tagkNOB18RMT"
+    },
+    {
+      "path": "recruiterInChargeSlug",
+      "value": "us1hwQ_Rxfbm"
+    },
+    {
+      "path": "companySlug",
+      "value": "coLy0VbQmQz-"
+    },
+    {
+      "path": "slug",
+      "value": "ta1fsX88rP8A"
+    },
+    {
+      "path": "recruiterInChargeSlug",
+      "value": "us_owRuvt7A4"
+    },
+    {
+      "path": "slug",
+      "value": "ta7Gr4r65ZHU"
+    },
+    {
+      "path": "slug",
+      "value": "taSksrKM9pTz"
+    },
+    {
+      "path": "linkedInData.experienceList.0.companySlug",
+      "value": "coNr5Lv8DjF4"
+    },
+    {
+      "path": "recruiterInChargeSlug",
+      "value": "usxIzhhnPRpV"
+    },
+    {
+      "path": "employment.0.companySlug",
+      "value": "coqxSPLqqUcr"
+    },
+    {
+      "path": "employment.4.companySlug",
+      "value": "coysdGAVGws9"
+    },
+    {
+      "path": "slug",
+      "value": "taf_6tolQaYC"
+    },
+    {
+      "path": "slug",
+      "value": "taAKz1zL-7bG"
+    },
+    {
+      "path": "companySlug",
+      "value": "cofXy2xgxffh"
+    },
+    {
+      "path": "linkedInData.educationList.0.educationInstitutionSlug",
+      "value": "colrS2bq14GY"
+    },
+    {
+      "path": "linkedInData.educationList.1.educationInstitutionSlug",
+      "value": "coEIG7xpHpMZ"
+    },
+    {
+      "path": "employment.3.companySlug",
+      "value": "copkzww9hFVT"
+    },
+    {
+      "path": "slug",
+      "value": "ta05yyphoPWM"
+    },
+    {
+      "path": "linkedInData.educationList.0.educationInstitutionSlug",
+      "value": "com-Nog4hgCr"
+    },
+    {
+      "path": "employment.0.companySlug",
+      "value": "coIHqqbTHfqr"
+    },
+    {
+      "path": "employment.1.companySlug",
+      "value": "con4edphmCYy"
+    },
+    {
+      "path": "employment.2.companySlug",
+      "value": "coXu2IVe7RW1"
+    },
+    {
+      "path": "slug",
+      "value": "taa7KcIiflPg"
+    },
+    {
+      "path": "employment.0.companySlug",
+      "value": "co2jhIUh4N1N"
+    },
+    {
+      "path": "employment.1.companySlug",
+      "value": "coCGcRznbfBx"
+    },
+    {
+      "path": "employment.2.companySlug",
+      "value": "co9gVrxivUHJ"
+    },
+    {
+      "path": "slug",
+      "value": "taxiOkrgDcbH"
+    },
+    {
+      "path": "recruiterInChargeSlug",
+      "value": "us22UR4F1ND_"
+    },
+    {
+      "path": "cvs.7.editBySlug",
+      "value": "us9l1icOFy_l"
+    },
+    {
+      "path": "employment.0.companySlug",
+      "value": "coK11TAaPAFp"
+    },
+    {
+      "path": "slug",
+      "value": "taFzfkUyfYuA"
+    },
+    {
+      "path": "recruiterInChargeSlug",
+      "value": "taNF9Stffz8I"
+    },
+    {
+      "path": "employment.0.companySlug",
+      "value": "coBpef3Tqtl_"
+    },
+    {
+      "path": "employment.1.companySlug",
+      "value": "coZ3WrPi1j42"
+    },
+    {
+      "path": "employment.2.companySlug",
+      "value": "coDkW7Ctr-zy"
+    },
+    {
+      "path": "slug",
+      "value": "taivWGhXA1wB"
+    },
+    {
+      "path": "recruiterInChargeSlug",
+      "value": "us7GGekAIIzE"
+    },
+    {
+      "path": "employment.0.companySlug",
+      "value": "coUOhzeLh-QO"
+    },
+    {
+      "path": "slug",
+      "value": "taRAfGBzrYA9"
+    },
+    {
+      "path": "companySlug",
+      "value": "coCMWE7ZzThc"
+    },
+    {
+      "path": "slug",
+      "value": "tawm0k5tl82o"
+    },
+    {
+      "path": "companySlug",
+      "value": "conDl-OE_Wv8"
+    },
+    {
+      "path": "linkedInData.experienceList.0.companySlug",
+      "value": "cosfqBPNQQgS"
+    },
+    {
+      "path": "linkedInData.experienceList.1.companySlug",
+      "value": "co5vFzfUJVyv"
+    },
+    {
+      "path": "employment.1.companySlug",
+      "value": "coHNdjHmz34Z"
+    },
+    {
+      "path": "employment.3.companySlug",
+      "value": "con1dm67Jxj8"
+    },
+    {
+      "path": "employment.4.companySlug",
+      "value": "coJnPM3kmU1h"
+    },
+    {
+      "path": "slug",
+      "value": "taahRWy9Fqig"
+    },
+    {
+      "path": "recruiterInChargeSlug",
+      "value": "usuSYSq7fYWD"
+    },
+    {
+      "path": "cvs.11.editBySlug",
+      "value": "us_-k3aA0K0I"
+    },
+    {
+      "path": "companySlug",
+      "value": "coXAqkDK5Kkl"
+    },
+    {
+      "path": "slug",
+      "value": "taNkuQZSScRf"
+    },
+    {
+      "path": "cvs.1.editBySlug",
+      "value": "uswj9fDWCIF-"
+    },
+    {
+      "path": "companySlug",
+      "value": "coVV0xObyKC6"
+    },
+    {
+      "path": "linkedInData.experienceList.0.companySlug",
+      "value": "cobm_iVzCHGC"
+    },
+    {
+      "path": "slug",
+      "value": "tagIMz8FY0p0"
+    },
+    {
+      "path": "recruiterInChargeSlug",
+      "value": "taFrDjw6d9Wr"
+    },
+    {
+      "path": "companySlug",
+      "value": "coURKDIoraCI"
+    },
+    {
+      "path": "linkedInData.experienceList.0.companySlug",
+      "value": "cob9nq04z0rm"
+    },
+    {
+      "path": "linkedInData.educationList.0.educationInstitutionSlug",
+      "value": "cos2snoANlPs"
+    },
+    {
+      "path": "employment.0.companySlug",
+      "value": "coJLQg0ikhYo"
+    },
+    {
+      "path": "slug",
+      "value": "tabOJFygEhnq"
+    },
+    {
+      "path": "linkedInData.experienceList.0.companySlug",
+      "value": "coWxk5H-77E9"
+    },
+    {
+      "path": "slug",
+      "value": "tar-m5gV8H50"
+    },
+    {
+      "path": "companySlug",
+      "value": "coC1_NnXVDSL"
+    },
+    {
+      "path": "employment.2.companySlug",
+      "value": "cojjouvoboJH"
+    },
+    {
+      "path": "employment.3.companySlug",
+      "value": "coBZ6EdcZ8u0"
+    },
+    {
+      "path": "employment.4.companySlug",
+      "value": "cojOQgWO2HFr"
+    },
+    {
+      "path": "employment.5.companySlug",
+      "value": "coAaauqPALNy"
+    },
+    {
+      "path": "slug",
+      "value": "tajIC2jBTAUS"
+    },
+    {
+      "path": "slug",
+      "value": "tai78aRP4fR9"
+    },
+    {
+      "path": "slug",
+      "value": "taveq3_ytFFq"
+    },
+    {
+      "path": "slug",
+      "value": "tahcL5Pm5BB_"
+    },
+    {
+      "path": "companySlug",
+      "value": "cozj8_gIKbNH"
+    },
+    {
+      "path": "slug",
+      "value": "tal1MC6gejbO"
+    },
+    {
+      "path": "companySlug",
+      "value": "coZBsh0ejCQs"
+    },
+    {
+      "path": "linkedInData.experienceList.0.companySlug",
+      "value": "coDedOCPNgbn"
+    },
+    {
+      "path": "employment.0.companySlug",
+      "value": "couQKDltGftQ"
+    },
+    {
+      "path": "employment.2.companySlug",
+      "value": "cokrSSPFzjeN"
+    },
+    {
+      "path": "employment.3.companySlug",
+      "value": "co4vmxOK9Npw"
+    },
+    {
+      "path": "slug",
+      "value": "taFrRmxucFrC"
+    },
+    {
+      "path": "slug",
+      "value": "taFVFo5qnWI1"
+    },
+    {
+      "path": "employment.0.companySlug",
+      "value": "coliDfN7Sbox"
+    },
+    {
+      "path": "employment.1.companySlug",
+      "value": "contKjmc6_V7"
+    },
+    {
+      "path": "slug",
+      "value": "ta2QtXGCsV3Q"
+    },
+    {
+      "path": "slug",
+      "value": "taiNDiN4Nk6V"
+    },
+    {
+      "path": "companySlug",
+      "value": "cohvTH0nkFeM"
+    },
+    {
+      "path": "slug",
+      "value": "tarq5eS2jWAW"
+    },
+    {
+      "path": "companySlug",
+      "value": "cohmZs6DD-9D"
+    },
+    {
+      "path": "employment.0.companySlug",
+      "value": "co5G_AgC6vtB"
+    },
+    {
+      "path": "employment.1.companySlug",
+      "value": "coFFUhEZumNT"
+    },
+    {
+      "path": "employment.3.companySlug",
+      "value": "coCB-T2deYmD"
+    },
+    {
+      "path": "employment.11.companySlug",
+      "value": "colaMjtDHE7B"
+    },
+    {
+      "path": "employment.15.companySlug",
+      "value": "copmU6mp1jEf"
+    },
+    {
+      "path": "employment.17.companySlug",
+      "value": "co_Zxd3jGtgl"
+    },
+    {
+      "path": "employment.18.companySlug",
+      "value": "coROAjZ-wMyM"
+    },
+    {
+      "path": "slug",
+      "value": "taZKy0L4xWGP"
+    },
+    {
+      "path": "recruiterInChargeSlug",
+      "value": "usfVURnSykWx"
+    },
+    {
+      "path": "cvs.2.editBySlug",
+      "value": "usI9C42r7kje"
+    },
+    {
+      "path": "employment.0.companySlug",
+      "value": "coEAzj4674SZ"
+    },
+    {
+      "path": "employment.2.companySlug",
+      "value": "co7P3ig3ASRl"
+    },
+    {
+      "path": "slug",
+      "value": "taGPSledOfMh"
+    },
+    {
+      "path": "cvs.2.editBySlug",
+      "value": "usWMmByw9Brm"
+    },
+    {
+      "path": "employment.0.companySlug",
+      "value": "coBl8-nTHI35"
+    },
+    {
+      "path": "employment.2.companySlug",
+      "value": "colDddok4Sal"
+    },
+    {
+      "path": "slug",
+      "value": "tapWYDi7moVV"
+    },
+    {
+      "path": "slug",
+      "value": "tagMk7VmrEKp"
+    },
+    {
+      "path": "companySlug",
+      "value": "coYtFyJ05HD0"
+    },
+    {
+      "path": "employment.0.companySlug",
+      "value": "coxUTMeWXWZw"
+    },
+    {
+      "path": "employment.1.companySlug",
+      "value": "coSyUPiUfKKZ"
+    },
+    {
+      "path": "employment.2.companySlug",
+      "value": "coZfgJNblC7I"
+    },
+    {
+      "path": "employment.3.companySlug",
+      "value": "coZAQQefDfoF"
+    },
+    {
+      "path": "employment.4.companySlug",
+      "value": "cobohnNOcpGr"
+    },
+    {
+      "path": "slug",
+      "value": "taYzH34GUehh"
+    },
+    {
+      "path": "employment.0.companySlug",
+      "value": "coOQgaR3lypj"
+    },
+    {
+      "path": "employment.1.companySlug",
+      "value": "coPUbKYJt-Gc"
+    },
+    {
+      "path": "employment.2.companySlug",
+      "value": "coliSZqUgRUA"
+    },
+    {
+      "path": "slug",
+      "value": "ta7VNGV-X8nW"
+    },
+    {
+      "path": "slug",
+      "value": "taOaXOOhYrrB"
+    },
+    {
+      "path": "companySlug",
+      "value": "coiWGtgYj7sb"
+    },
+    {
+      "path": "linkedInData.experienceList.0.companySlug",
+      "value": "cociy0HkaXmS"
+    },
+    {
+      "path": "slug",
+      "value": "taLRA69zzA5R"
+    },
+    {
+      "path": "recruiterInChargeSlug",
+      "value": "us1_FpgBv6aM"
+    },
+    {
+      "path": "companySlug",
+      "value": "coC0RMAKY1TG"
+    },
+    {
+      "path": "slug",
+      "value": "taP_5S88aohy"
+    },
+    {
+      "path": "recruiterInChargeSlug",
+      "value": "usV1_XOzPEaW"
+    },
+    {
+      "path": "cvs.10.editBySlug",
+      "value": "uss6wV8HMeH_"
+    },
+    {
+      "path": "cvs.11.editBySlug",
+      "value": "uspcMttn8mtK"
+    },
+    {
+      "path": "slug",
+      "value": "tag1X4oUAyzV"
+    },
+    {
+      "path": "companySlug",
+      "value": "coxdMm2YjFlo"
+    },
+    {
+      "path": "linkedInData.experienceList.0.companySlug",
+      "value": "coPDxr5dtzx0"
+    },
+    {
+      "path": "slug",
+      "value": "taTrgICdDk2S"
+    },
+    {
+      "path": "companySlug",
+      "value": "co9n7aXJ44fg"
+    },
+    {
+      "path": "employment.3.companySlug",
+      "value": "comKCUvM7baI"
+    },
+    {
+      "path": "employment.4.companySlug",
+      "value": "coPILUYtCprW"
+    },
+    {
+      "path": "slug",
+      "value": "tacm8irjy4M0"
+    },
+    {
+      "path": "slug",
+      "value": "taJJGdPp_WcK"
+    },
+    {
+      "path": "slug",
+      "value": "ta32K-OBTqmi"
+    },
+    {
+      "path": "slug",
+      "value": "taTG0xmx2zbh"
+    },
+    {
+      "path": "companySlug",
+      "value": "coUrAHdWMM3j"
+    },
+    {
+      "path": "slug",
+      "value": "ta2uRrb1H90b"
+    },
+    {
+      "path": "companySlug",
+      "value": "co72PwQ3Flu4"
+    },
+    {
+      "path": "employment.0.companySlug",
+      "value": "coWlRmU9gcPC"
+    },
+    {
+      "path": "employment.2.companySlug",
+      "value": "coIqT0M0zJsr"
+    },
+    {
+      "path": "slug",
+      "value": "taFdzeZY8ZV6"
+    },
+    {
+      "path": "slug",
+      "value": "taIRbKWPnAeH"
+    },
+    {
+      "path": "companySlug",
+      "value": "cotLx7HFIG9c"
+    },
+    {
+      "path": "slug",
+      "value": "tayiYUAtYgDB"
+    },
+    {
+      "path": "companySlug",
+      "value": "co87r5QZ-Tlk"
+    }
+  ]
+}
