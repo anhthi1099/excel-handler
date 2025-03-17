@@ -14,8 +14,13 @@ dotenv.config({ path: '.env.local' });
 const uri = 'mongodb+srv://db_user_dev:uuGXYGfncLb6KCwg@main.sqbh5.gcp.mongodb.net/db1?retryWrites=true&w=majority';
 
 // Get the domains from environment variables or use defaults
-const PROFILE_DOMAIN = process.env.DOMAIN || 'https://rec-test1.firebaseapp.com/profile/';
-const JOB_DOMAIN = process.env.JOB_DOMAIN || 'https://rec-test1.firebaseapp.com/jobs/';
+const PROFILE_DOMAIN = `${process.env.DOMAIN}/profile/`;
+const JOB_DOMAIN = process.env.JOB_DOMAIN;
+const REFRESH_WISHLIST_PROFILE_URL = (profileSlug) =>
+  `${PROFILE_DOMAIN}/api/v1/candidates/wishlist-matching/${profileSlug}`;
+
+const REFRESH_RECRUITER_PROFILE_URL = (profileSlug) =>
+  `${PROFILE_DOMAIN}/api/v1/candidates/recruiter-matching/${profileSlug}`;
 
 const profileWithBlockedCompanyInMatchJobs = [];
 
@@ -986,6 +991,7 @@ async function handleCalculateJobScore() {
         const queryFindProfileWithTalentSlug = {
           $and: [
             { talentSlug: { $exists: true } },
+            { isAvailable: true },
             {
               $or: [
                 { topMatchedJobWishlist: { $exists: true, $type: 'array', $ne: [] } },
@@ -1001,15 +1007,16 @@ async function handleCalculateJobScore() {
 
         // Query for documents where at least one of topMatchedJobWishlist, topMatchedJobRecruiter, or topMatchedJobLinkedin is a non-empty array
         const query = {
-          $and: [
-            { isAvailable: true }, // This is now a required condition
-            // {
-            //   $or: [
-            //     { topMatchedJobWishlist: { $exists: true, $type: 'array', $ne: [] } },
-            //     { topMatchedJobRecruiter: { $exists: true, $type: 'array', $ne: [] } },
-            //   ],
-            // },
-          ],
+          isAvailable: true,
+          // $and: [
+          // { isAvailable: true }, // This is now a required condition
+          // {
+          //   $or: [
+          //     { topMatchedJobWishlist: { $exists: true, $type: 'array', $ne: [] } },
+          //     { topMatchedJobRecruiter: { $exists: true, $type: 'array', $ne: [] } },
+          //   ],
+          // },
+          // ],
         };
         const normalProfiles = await profileCollection.find(query).limit(250).toArray();
         console.log(`✅ First query: Found ${normalProfiles.length} records`);
@@ -1082,10 +1089,9 @@ async function handleCalculateJobScore() {
 }
 
 async function handleClickMatchUsingPlaywright(profileSlugs) {
+  return;
   if (profileSlugs.length) {
-    await processProfilesBySlug(profileSlugs).catch((err) =>
-      console.error('❌ Error in playwright process:', err),
-    );
+    await processProfilesBySlug(profileSlugs).catch((err) => console.error('❌ Error in playwright process:', err));
   }
 }
 
