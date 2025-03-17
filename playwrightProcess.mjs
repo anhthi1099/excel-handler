@@ -72,8 +72,8 @@ export async function processProfilesBySlug(profileSlugs) {
           await page.locator("div[class*='tab']", {hasText: 'Matches'}).last().click();
           
           // Wait for 10 seconds before moving to the next profile
-          console.log(`⏳ Batch ${batchIndex + 1}: Waiting for 10 seconds...`);
-          await new Promise(resolve => setTimeout(resolve, 10000));
+          console.log(`⏳ Batch ${batchIndex + 1}: Waiting for 6 seconds...`);
+          await new Promise(resolve => setTimeout(resolve, 6000));
           
           console.log(`✅ Batch ${batchIndex + 1}: Completed processing for profile with slug: ${slug}`);
         } catch (error) {

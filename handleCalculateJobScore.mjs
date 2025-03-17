@@ -45,51 +45,51 @@ async function handleWishlistJob(wishlistProfile, talentDB, db) {
   const metadataCollection = db.collection('metadata');
   let seniorityRanking = {};
 
-  try {
-    const seniorityLevelsMetadata = await metadataCollection.findOne({
-      key: { $regex: 'seniorityLevels', $options: 'i' },
-    });
+  // try {
+  //   const seniorityLevelsMetadata = await metadataCollection.findOne({
+  //     key: { $regex: 'seniorityLevels', $options: 'i' },
+  //   });
 
-    if (seniorityLevelsMetadata && seniorityLevelsMetadata.val) {
-      // Create a mapping of seniority ID to order value
-      Object.entries(seniorityLevelsMetadata.val).forEach(([id, data]) => {
-        if (data && data.order) {
-          seniorityRanking[id] = data.order;
-        }
-      });
-      console.log('✅ Successfully fetched seniorityLevels from metadata');
-    } else {
-      console.warn('⚠️ seniorityLevels metadata not found or invalid, using fallback values');
-      // Fallback to hardcoded values if metadata is not available
-      seniorityRanking = {
-        1: 2, // Junior (order: 2)
-        2: 5, // Team Leader (order: 5)
-        3: 7, // Director (order: 7)
-        5: 8, // CxO (order: 8)
-        9: 3, // Experienced (order: 3)
-        14: 6, // Manager (order: 6)
-        15: 4, // Senior (order: 4)
-        16: 10, // Owner (order: 10)
-        17: 9, // Consultant (order: 9)
-        18: 11, // Founder (order: 11)
-      };
-    }
-  } catch (error) {
-    console.error('❌ Error fetching seniorityLevels metadata:', error);
-    // Fallback to hardcoded values if there's an error
-    seniorityRanking = {
-      1: 2, // Junior
-      2: 5, // Team Leader
-      3: 7, // Director
-      5: 8, // CxO
-      9: 3, // Experienced
-      14: 6, // Manager
-      15: 4, // Senior
-      16: 10, // Owner
-      17: 9, // Consultant
-      18: 11, // Founder
-    };
-  }
+  //   if (seniorityLevelsMetadata && seniorityLevelsMetadata.val) {
+  //     // Create a mapping of seniority ID to order value
+  //     Object.entries(seniorityLevelsMetadata.val).forEach(([id, data]) => {
+  //       if (data && data.order) {
+  //         seniorityRanking[id] = data.order;
+  //       }
+  //     });
+  //     console.log('✅ Successfully fetched seniorityLevels from metadata');
+  //   } else {
+  //     console.warn('⚠️ seniorityLevels metadata not found or invalid, using fallback values');
+  //     // Fallback to hardcoded values if metadata is not available
+  //     seniorityRanking = {
+  //       1: 2, // Junior (order: 2)
+  //       2: 5, // Team Leader (order: 5)
+  //       3: 7, // Director (order: 7)
+  //       5: 8, // CxO (order: 8)
+  //       9: 3, // Experienced (order: 3)
+  //       14: 6, // Manager (order: 6)
+  //       15: 4, // Senior (order: 4)
+  //       16: 10, // Owner (order: 10)
+  //       17: 9, // Consultant (order: 9)
+  //       18: 11, // Founder (order: 11)
+  //     };
+  //   }
+  // } catch (error) {
+  //   console.error('❌ Error fetching seniorityLevels metadata:', error);
+  //   // Fallback to hardcoded values if there's an error
+  //   seniorityRanking = {
+  //     1: 2, // Junior
+  //     2: 5, // Team Leader
+  //     3: 7, // Director
+  //     5: 8, // CxO
+  //     9: 3, // Experienced
+  //     14: 6, // Manager
+  //     15: 4, // Senior
+  //     16: 10, // Owner
+  //     17: 9, // Consultant
+  //     18: 11, // Founder
+  //   };
+  // }
 
   // Check for each profile if any of their matched jobs belong to blocked companies
   // Find users in talentDB.Users that match profileSlug with wishlistProfile slugs
@@ -164,11 +164,9 @@ async function handleWishlistJob(wishlistProfile, talentDB, db) {
 
       // Skills Matching (Weight: 36)
       // Calculate the fraction of overlapping skills between job requirements and candidate skills
-      if (jobDetails.mandatorySkills && preferences.skills) {
+      if (jobDetails.skills && preferences.skills) {
         const candidateSkills = preferences.skills;
-        const jobSkills = Array.isArray(jobDetails.mandatorySkills)
-          ? jobDetails.mandatorySkills
-          : [jobDetails.mandatorySkills];
+        const jobSkills = Array.isArray(jobDetails.skills) ? jobDetails.skills : [jobDetails.skills];
 
         // Count matching skills
         const matchingSkillsCount = jobSkills.filter((skill) => candidateSkills.includes(skill)).length;
@@ -188,15 +186,15 @@ async function handleWishlistJob(wishlistProfile, talentDB, db) {
       // Seniority Alignment (Weight: 17)
       // Full points if candidate's seniority meets or exceeds job requirements
       if (jobDetails.seniorityLevel && preferences.seniorityLevel) {
-        const jobSeniority = jobDetails.seniorityLevel[0]; // Take first seniority level
-        const candidateSeniority = preferences.seniorityLevel[0]; // Take first preference
+        const jobSeniority = jobDetails.seniorityLevel; // Take first seniority level
+        const candidateSeniority = preferences.seniorityLevel; // Take first preference
 
         // Get order values from the dynamically fetched seniorityRanking
-        const jobSeniorityOrder = seniorityRanking[jobSeniority] || 0;
-        const candidateSeniorityOrder = seniorityRanking[candidateSeniority] || 0;
+        // const jobSeniorityOrder = seniorityRanking[jobSeniority] || 0;
+        // const candidateSeniorityOrder = seniorityRanking[candidateSeniority] || 0;
 
         // Check if candidate's seniority meets or exceeds job requirement based on order value
-        if (candidateSeniorityOrder >= jobSeniorityOrder) {
+        if (jobSeniority.some((seniority) => candidateSeniority.includes(seniority))) {
           score += 17;
           scoreBreakdown.seniority = 17;
         } else {
@@ -241,7 +239,7 @@ async function handleWishlistJob(wishlistProfile, talentDB, db) {
         jobTitle: jobDetails.title || 'Unknown',
         jobRoles: jobDetails.roles || [],
         preferenceRoles: preferences.desiredRoles || [],
-        jobMandatorySkills: jobDetails.mandatorySkills || [],
+        jobSkills: jobDetails.skills || [],
         preferenceSkills: preferences.skills || [],
         jobSeniorityLevel: jobDetails.seniorityLevel || [],
         preferenceSeniorityLevel: preferences.seniorityLevel || [],
@@ -309,60 +307,60 @@ async function handleRecruiterJob(recruiterProfiles, db) {
 
   // Fetch seniorityLevels from metadata collection for seniority comparison
   const metadataCollection = db.collection('metadata');
-  let seniorityRanking = {};
+  // let seniorityRanking = {};
 
-  try {
-    const seniorityLevelsMetadata = await metadataCollection.findOne({
-      key: { $regex: 'seniorityLevels', $options: 'i' },
-    });
+  // try {
+  //   const seniorityLevelsMetadata = await metadataCollection.findOne({
+  //     key: { $regex: 'seniorityLevels', $options: 'i' },
+  //   });
 
-    if (seniorityLevelsMetadata && seniorityLevelsMetadata.val) {
-      // Create a mapping of seniority ID to order value
-      Object.entries(seniorityLevelsMetadata.val).forEach(([id, data]) => {
-        if (data && data.order) {
-          seniorityRanking[id] = data.order;
-        }
-      });
-      console.log('✅ Successfully fetched seniorityLevels from metadata');
-    } else {
-      console.warn('⚠️ seniorityLevels metadata not found or invalid, using fallback values');
-      // Fallback to hardcoded values if metadata is not available
-      seniorityRanking = {
-        1: 2, // Junior (order: 2)
-        2: 5, // Team Leader (order: 5)
-        3: 7, // Director (order: 7)
-        5: 8, // CxO (order: 8)
-        9: 3, // Experienced (order: 3)
-        14: 6, // Manager (order: 6)
-        15: 4, // Senior (order: 4)
-        16: 10, // Owner (order: 10)
-        17: 9, // Consultant (order: 9)
-        18: 11, // Founder (order: 11)
-      };
-    }
-  } catch (error) {
-    console.error('❌ Error fetching seniorityLevels metadata:', error);
-    // Fallback to hardcoded values if there's an error
-    seniorityRanking = {
-      1: 2, // Junior
-      2: 5, // Team Leader
-      3: 7, // Director
-      5: 8, // CxO
-      9: 3, // Experienced
-      14: 6, // Manager
-      15: 4, // Senior
-      16: 10, // Owner
-      17: 9, // Consultant
-      18: 11, // Founder
-    };
-  }
+  //   if (seniorityLevelsMetadata && seniorityLevelsMetadata.val) {
+  //     // Create a mapping of seniority ID to order value
+  //     Object.entries(seniorityLevelsMetadata.val).forEach(([id, data]) => {
+  //       if (data && data.order) {
+  //         seniorityRanking[id] = data.order;
+  //       }
+  //     });
+  //     console.log('✅ Successfully fetched seniorityLevels from metadata');
+  //   } else {
+  //     console.warn('⚠️ seniorityLevels metadata not found or invalid, using fallback values');
+  //     // Fallback to hardcoded values if metadata is not available
+  //     seniorityRanking = {
+  //       1: 2, // Junior (order: 2)
+  //       2: 5, // Team Leader (order: 5)
+  //       3: 7, // Director (order: 7)
+  //       5: 8, // CxO (order: 8)
+  //       9: 3, // Experienced (order: 3)
+  //       14: 6, // Manager (order: 6)
+  //       15: 4, // Senior (order: 4)
+  //       16: 10, // Owner (order: 10)
+  //       17: 9, // Consultant (order: 9)
+  //       18: 11, // Founder (order: 11)
+  //     };
+  //   }
+  // } catch (error) {
+  //   console.error('❌ Error fetching seniorityLevels metadata:', error);
+  //   // Fallback to hardcoded values if there's an error
+  //   seniorityRanking = {
+  //     1: 2, // Junior
+  //     2: 5, // Team Leader
+  //     3: 7, // Director
+  //     5: 8, // CxO
+  //     9: 3, // Experienced
+  //     14: 6, // Manager
+  //     15: 4, // Senior
+  //     16: 10, // Owner
+  //     17: 9, // Consultant
+  //     18: 11, // Founder
+  //   };
+  // }
 
   // Calculate scores for each profile and its matched jobs
   for (const profile of recruiterProfiles) {
     if (!profile.topMatchedJobRecruiter || profile.topMatchedJobRecruiter.length === 0) continue;
 
     // Extract profile skills (only using primarySkills since secondary skills are optional)
-    const profileSkills = profile.primarySkills || [];
+    const profileSkills = [...profile.primarySkills, ...profile.skills] || [];
 
     // Calculate score for each matched job
     const scoredJobs = profile.topMatchedJobRecruiter.map((matchedJob) => {
@@ -393,11 +391,8 @@ async function handleRecruiterJob(recruiterProfiles, db) {
       }
 
       // Skills Matching (Weight: 36)
-      // Calculate the fraction of overlapping skills between job mandatory skills and profile skills
-      if (jobDetails.mandatorySkills && profileSkills.length > 0) {
-        const jobSkills = Array.isArray(jobDetails.mandatorySkills)
-          ? jobDetails.mandatorySkills
-          : [jobDetails.mandatorySkills];
+      if (jobDetails.skills && profileSkills.length > 0) {
+        const jobSkills = Array.isArray(jobDetails.skills) ? jobDetails.skills : [jobDetails.skills];
 
         // Count matching skills
         const matchingSkillsCount = jobSkills.filter((skill) => profileSkills.includes(skill)).length;
@@ -417,17 +412,15 @@ async function handleRecruiterJob(recruiterProfiles, db) {
       // Seniority Alignment (Weight: 17)
       // Full points if profile's seniority meets or exceeds job requirements
       if (jobDetails.seniorityLevel && profile.seniority) {
-        const jobSeniority = Array.isArray(jobDetails.seniorityLevel)
-          ? jobDetails.seniorityLevel[0]
-          : jobDetails.seniorityLevel;
+        const jobSeniority = jobDetails.seniorityLevel;
         const profileSeniority = profile.seniority;
 
         // Get order values from the dynamically fetched seniorityRanking
-        const jobSeniorityOrder = seniorityRanking[jobSeniority] || 0;
-        const profileSeniorityOrder = seniorityRanking[profileSeniority] || 0;
+        // const jobSeniorityOrder = seniorityRanking[jobSeniority] || 0;
+        // const profileSeniorityOrder = seniorityRanking[profileSeniority] || 0;
 
         // Check if profile's seniority meets or exceeds job requirement based on order value
-        if (profileSeniorityOrder >= jobSeniorityOrder) {
+        if (jobSeniority.some((seniority) => profileSeniority === seniority)) {
           score += 17;
           scoreBreakdown.seniority = 17;
         } else {
@@ -497,7 +490,7 @@ async function handleRecruiterJob(recruiterProfiles, db) {
         jobTitle: jobDetails.title || 'Unknown',
         jobRoles: jobDetails.roles || [],
         profileRoles: profile.roles || [],
-        jobMandatorySkills: jobDetails.mandatorySkills || [],
+        jobSkill: jobDetails.skills || [],
         profileSkills: profileSkills,
         jobSeniorityLevel: jobDetails.seniorityLevel || [],
         profileSeniority: profile.seniority,
@@ -578,37 +571,37 @@ async function mergeProfileLists(wishlistProfiles, recruiterProfiles) {
 
 async function exportExcelReport(profiles) {
   console.log('📊 Creating Excel report...');
-  
+
   const workbook = new ExcelJS.Workbook();
   workbook.creator = 'Job Matching System';
   workbook.lastModifiedBy = 'Job Matching System';
   workbook.created = new Date();
   workbook.modified = new Date();
-  
+
   // Create Summary Sheet (renamed)
   const summarySheet = workbook.addWorksheet('Report Summary');
-  
+
   // Set up the columns for the summary sheet (removed Position, Seniority, and other columns)
   summarySheet.columns = [
     { header: 'Profile ID', key: 'profileId', width: 15 },
     { header: 'Name', key: 'name', width: 25 },
     { header: 'Email', key: 'email', width: 30 },
     { header: 'Profile Details', key: 'profileLink', width: 20 },
-    { header: 'Profile URL', key: 'profileUrl', width: 25 }
+    { header: 'Profile URL', key: 'profileUrl', width: 25 },
   ];
-  
+
   // Style the header row
   summarySheet.getRow(1).font = { bold: true };
   summarySheet.getRow(1).fill = {
     type: 'pattern',
     pattern: 'solid',
-    fgColor: { argb: 'FFD3D3D3' }
+    fgColor: { argb: 'FFD3D3D3' },
   };
-  
+
   // Create Blocked Companies Sheet (if there are any blocked companies)
   if (profileWithBlockedCompanyInMatchJobs.length > 0) {
     const blockedSheet = workbook.addWorksheet('Blocked Companies');
-    
+
     // Set up columns for the blocked companies sheet
     blockedSheet.columns = [
       { header: 'Profile ID', key: 'profileId', width: 15 },
@@ -616,23 +609,23 @@ async function exportExcelReport(profiles) {
       { header: 'Profile URL', key: 'profileUrl', width: 25 },
       { header: 'Company Name', key: 'companyName', width: 25 },
       { header: 'Job Title', key: 'jobTitle', width: 30 },
-      { header: 'Job URL', key: 'jobUrl', width: 20 }
+      { header: 'Job URL', key: 'jobUrl', width: 20 },
     ];
-    
+
     // Style the header row
     blockedSheet.getRow(1).font = { bold: true };
     blockedSheet.getRow(1).fill = {
       type: 'pattern',
       pattern: 'solid',
-      fgColor: { argb: 'FFFFCCCC' } // Light red background for blocked companies
+      fgColor: { argb: 'FFFFCCCC' }, // Light red background for blocked companies
     };
-    
+
     // For each profile with blocked companies
     for (const blockedItem of profileWithBlockedCompanyInMatchJobs) {
       const profile = blockedItem.profile;
       const profileName = `${profile.firstName || ''} ${profile.lastName || ''}`.trim() || 'Unknown';
       const profileSlug = profile.slug;
-      
+
       // For each blocked company in this profile
       for (const blockedCompany of blockedItem.foundBLockedCompanies) {
         // Add row data
@@ -642,44 +635,44 @@ async function exportExcelReport(profiles) {
           'Open Profile',
           blockedCompany.companyName || 'Unknown',
           blockedCompany.jobName || 'Unknown',
-          'View Job'
+          'View Job',
         ]);
-        
+
         // Get current row number
         const currentRowNumber = dataRow.number;
-        
+
         // Add profile URL hyperlink
         const profileUrl = `${PROFILE_DOMAIN}${profileSlug}`;
         blockedSheet.getCell(`C${currentRowNumber}`).value = {
           text: 'Open Profile',
           hyperlink: profileUrl,
-          tooltip: `Open ${profileSlug} profile page`
+          tooltip: `Open ${profileSlug} profile page`,
         };
-        
+
         // Style the profile URL hyperlink
         blockedSheet.getCell(`C${currentRowNumber}`).font = {
           color: { argb: 'FF800080' }, // Purple color for profile links
-          underline: true
+          underline: true,
         };
-        
+
         // Add job URL hyperlink
         const jobUrl = `${JOB_DOMAIN}${blockedCompany.jobSlug}`;
         blockedSheet.getCell(`F${currentRowNumber}`).value = {
           text: 'View Job',
           hyperlink: jobUrl,
-          tooltip: `View job ${blockedCompany.jobSlug} details`
+          tooltip: `View job ${blockedCompany.jobSlug} details`,
         };
-        
+
         // Style the job URL hyperlink
         blockedSheet.getCell(`F${currentRowNumber}`).font = {
           color: { argb: 'FF008000' }, // Green color for job links
-          underline: true
+          underline: true,
         };
       }
     }
-    
+
     // Auto-fit columns width for better readability
-    blockedSheet.columns.forEach(column => {
+    blockedSheet.columns.forEach((column) => {
       let maxLength = 0;
       column.eachCell({ includeEmpty: true }, (cell) => {
         const columnLength = cell.value ? cell.value.toString().length : 10;
@@ -690,110 +683,112 @@ async function exportExcelReport(profiles) {
       column.width = Math.min(maxLength + 2, 50); // Cap width at 50 characters
     });
   }
-  
+
   // For each profile, create a dedicated sheet
   for (const profile of profiles) {
     const profileSlug = profile.slug;
-    
+
     if (!profileSlug) {
       continue; // Skip profiles without a slug
     }
-    
+
     // Add data to the summary sheet
     const rowIndex = summarySheet.addRow({
       profileId: profileSlug,
       name: `${profile.firstName || ''} ${profile.lastName || ''}`.trim() || 'Unknown',
-      email: profile.email || profile.emails?.find(e => e.isPrimary)?.email || 'Not available',
+      email: profile.email || profile.emails?.find((e) => e.isPrimary)?.email || 'Not available',
       profileLink: 'View Details',
-      profileUrl: 'Open Profile'
+      profileUrl: 'Open Profile',
     }).number;
-    
+
     // Add hyperlink to the profile sheet
     summarySheet.getCell(`D${rowIndex}`).value = {
       text: 'View Details',
       hyperlink: `#'${profileSlug}'!A1`,
-      tooltip: `Go to ${profileSlug} details`
+      tooltip: `Go to ${profileSlug} details`,
     };
-    
+
     // Style the hyperlink
     summarySheet.getCell(`D${rowIndex}`).font = {
       color: { argb: 'FF0000FF' },
-      underline: true
+      underline: true,
     };
-    
+
     // Add external hyperlink to the actual profile page
     const profileUrl = `${PROFILE_DOMAIN}${profileSlug}`;
     summarySheet.getCell(`E${rowIndex}`).value = {
       text: 'Open Profile',
       hyperlink: profileUrl,
-      tooltip: `Open ${profileSlug} profile page`
+      tooltip: `Open ${profileSlug} profile page`,
     };
-    
+
     // Style the external hyperlink
     summarySheet.getCell(`E${rowIndex}`).font = {
       color: { argb: 'FF800080' }, // Purple color to distinguish from internal links
-      underline: true
+      underline: true,
     };
-    
+
     // Create a dedicated sheet for this profile
     const profileSheet = workbook.addWorksheet(profileSlug);
-    
+
     // Get profile URL for the header
     const profileUrlForHeader = `${PROFILE_DOMAIN}${profileSlug}`;
-    
+
     // Add a "Back to Summary" hyperlink at the top of the profile sheet
     const backLinkRow = profileSheet.addRow(['Back to Summary']);
     profileSheet.getCell('A1').value = {
       text: 'Back to Summary',
       hyperlink: `#'Report Summary'!A1`,
-      tooltip: 'Return to Report Summary'
+      tooltip: 'Return to Report Summary',
     };
-    
+
     // Style the back link
     profileSheet.getCell('A1').font = {
       color: { argb: 'FF0000FF' },
       underline: true,
-      bold: true
+      bold: true,
     };
-    
+
     // Add some padding
     profileSheet.addRow([]);
-    
+
     // Add profile header information
     profileSheet.addRow([`Profile: ${profileSlug}`]);
     profileSheet.addRow([`Name: ${profile.firstName || ''} ${profile.lastName || ''}`]);
-    profileSheet.addRow([`Email: ${profile.email || profile.emails?.find(e => e.isPrimary)?.email || 'Not available'}`]);
+    profileSheet.addRow([
+      `Email: ${profile.email || profile.emails?.find((e) => e.isPrimary)?.email || 'Not available'}`,
+    ]);
     profileSheet.addRow([`Position: ${profile.position || 'Not specified'}`]);
     profileSheet.addRow([`Seniority: ${getSeniorityLabel(profile.seniority) || 'Not specified'}`]);
-    
+
     // Add profile URL to header section
     const profileUrlRow = profileSheet.addRow([`Profile URL:`]);
     profileSheet.getCell(`A8`).font = { bold: true };
-    
+
     // Add hyperlink cell for the profile URL
     profileSheet.getCell(`B8`).value = {
       text: profileUrlForHeader,
       hyperlink: profileUrlForHeader,
-      tooltip: `Open ${profileSlug} profile page`
+      tooltip: `Open ${profileSlug} profile page`,
     };
-    
+
     // Style the profile URL hyperlink
     profileSheet.getCell(`B8`).font = {
       color: { argb: 'FF800080' },
-      underline: true
+      underline: true,
     };
-    
+
     profileSheet.addRow([]);
-    
+
     // Style the profile header
     for (let i = 3; i <= 8; i++) {
       profileSheet.getRow(i).font = { bold: true };
     }
-    
+
     // Add Wishlist Jobs table if available
     if (profile.topMatchedJobWishlist && profile.topMatchedJobWishlist.length > 0) {
       profileSheet.addRow(['Wishlist Jobs']);
-      
+
       // Create header row for wishlist jobs
       const wishlistHeaderRow = profileSheet.addRow([
         'Job Slug',
@@ -805,25 +800,25 @@ async function exportExcelReport(profiles) {
         'Company Size Match',
         'Industry Match',
         'Language Match',
-        'Job URL' // Add Job URL column
+        'Job URL', // Add Job URL column
       ]);
-      
+
       // Style the header row
       wishlistHeaderRow.eachCell((cell) => {
         cell.font = { bold: true };
         cell.fill = {
           type: 'pattern',
           pattern: 'solid',
-          fgColor: { argb: 'FFCCFFCC' }
+          fgColor: { argb: 'FFCCFFCC' },
         };
       });
-      
+
       // Add wishlist job rows
       profile.topMatchedJobWishlist.forEach((job, rowIndex) => {
         const scoreDetails = job.scoreDetails || {};
         const breakdown = scoreDetails.breakdown || {};
         const jobSlug = job['Job Slug'];
-        
+
         const dataRow = profileSheet.addRow([
           jobSlug,
           job.score || job['Match Score'] || 'N/A',
@@ -834,35 +829,35 @@ async function exportExcelReport(profiles) {
           breakdown.companySize !== undefined ? breakdown.companySize : 'N/A',
           breakdown.industries !== undefined ? breakdown.industries : 'N/A',
           breakdown.languages !== undefined ? breakdown.languages : 'N/A',
-          'View Job' // Placeholder for job URL link
+          'View Job', // Placeholder for job URL link
         ]);
-        
+
         // Get row number for adding hyperlink
         const currentRowNumber = dataRow.number;
-        
+
         // Add job URL hyperlink
         const jobUrl = `${JOB_DOMAIN}${jobSlug}`;
         profileSheet.getCell(`J${currentRowNumber}`).value = {
           text: 'View Job',
           hyperlink: jobUrl,
-          tooltip: `View job ${jobSlug} details`
+          tooltip: `View job ${jobSlug} details`,
         };
-        
+
         // Style the job URL hyperlink
         profileSheet.getCell(`J${currentRowNumber}`).font = {
           color: { argb: 'FF008000' }, // Green color for job links
-          underline: true
+          underline: true,
         };
       });
-      
+
       // Add a blank row after the table
       profileSheet.addRow([]);
     }
-    
+
     // Add Recruiter Jobs table if available
     if (profile.topMatchedJobRecruiter && profile.topMatchedJobRecruiter.length > 0) {
       profileSheet.addRow(['Recruiter Jobs']);
-      
+
       // Create header row for recruiter jobs
       const recruiterHeaderRow = profileSheet.addRow([
         'Job Slug',
@@ -874,25 +869,25 @@ async function exportExcelReport(profiles) {
         'Company Size Match',
         'Industry Match',
         'Language Match',
-        'Job URL' // Add Job URL column
+        'Job URL', // Add Job URL column
       ]);
-      
+
       // Style the header row
       recruiterHeaderRow.eachCell((cell) => {
         cell.font = { bold: true };
         cell.fill = {
           type: 'pattern',
           pattern: 'solid',
-          fgColor: { argb: 'FFFFCCCC' }
+          fgColor: { argb: 'FFFFCCCC' },
         };
       });
-      
+
       // Add recruiter job rows
       profile.topMatchedJobRecruiter.forEach((job, rowIndex) => {
         const scoreDetails = job.scoreDetails || {};
         const breakdown = scoreDetails.breakdown || {};
         const jobSlug = job['Job Slug'];
-        
+
         const dataRow = profileSheet.addRow([
           jobSlug,
           job.score || job['Match Score'] || 'N/A',
@@ -903,30 +898,30 @@ async function exportExcelReport(profiles) {
           breakdown.companySize !== undefined ? breakdown.companySize : 'N/A',
           breakdown.industries !== undefined ? breakdown.industries : 'N/A',
           breakdown.languages !== undefined ? breakdown.languages : 'N/A',
-          'View Job' // Placeholder for job URL link
+          'View Job', // Placeholder for job URL link
         ]);
-        
+
         // Get row number for adding hyperlink
         const currentRowNumber = dataRow.number;
-        
+
         // Add job URL hyperlink
         const jobUrl = `${JOB_DOMAIN}${jobSlug}`;
         profileSheet.getCell(`J${currentRowNumber}`).value = {
           text: 'View Job',
           hyperlink: jobUrl,
-          tooltip: `View job ${jobSlug} details`
+          tooltip: `View job ${jobSlug} details`,
         };
-        
+
         // Style the job URL hyperlink
         profileSheet.getCell(`J${currentRowNumber}`).font = {
           color: { argb: 'FF008000' }, // Green color for job links
-          underline: true
+          underline: true,
         };
       });
     }
-    
+
     // Auto-fit columns width for better readability
-    profileSheet.columns.forEach(column => {
+    profileSheet.columns.forEach((column) => {
       let maxLength = 0;
       column.eachCell({ includeEmpty: true }, (cell) => {
         const columnLength = cell.value ? cell.value.toString().length : 10;
@@ -937,12 +932,12 @@ async function exportExcelReport(profiles) {
       column.width = Math.min(maxLength + 2, 50); // Cap width at 50 characters
     });
   }
-  
+
   // Save the workbook to a file
-  const fileName = `JobMatchingReport_${new Date().toISOString().split('T')[0]}.xlsx`;
+  const fileName = `jobMatchReport/JobMatchingReport_${new Date().toISOString().split('T')[0]}.xlsx`;
   await workbook.xlsx.writeFile(fileName);
   console.log(`✅ Excel report saved as ${fileName}`);
-  
+
   return fileName;
 }
 
@@ -958,9 +953,9 @@ function getSeniorityLabel(seniorityId) {
     15: 'Senior',
     16: 'Owner',
     17: 'Consultant',
-    18: 'Founder'
+    18: 'Founder',
   };
-  
+
   return seniorityLabels[seniorityId] || `Level ${seniorityId}`;
 }
 
@@ -1016,10 +1011,7 @@ async function handleCalculateJobScore() {
             // },
           ],
         };
-        const normalProfiles = await profileCollection
-          .find(query)
-          .limit(160)
-          .toArray();
+        const normalProfiles = await profileCollection.find(query).limit(250).toArray();
         console.log(`✅ First query: Found ${normalProfiles.length} records`);
 
         combinedProfiles = [...normalProfiles, ...profileWithTalentSlug];
@@ -1046,11 +1038,7 @@ async function handleCalculateJobScore() {
           // Import the playwright process function and run it with the slugs
           try {
             console.log(`handling ${slugsForPlaywright.length} profiles for playwright processing`);
-            if (slugsForPlaywright.length) {
-              await processProfilesBySlug(slugsForPlaywright).catch((err) =>
-                console.error('❌ Error in playwright process:', err),
-              );
-            }
+            await handleClickMatchUsingPlaywright(slugsForPlaywright);
           } catch (importError) {
             console.error('❌ Failed to import or run playwright process:', importError);
           }
@@ -1064,10 +1052,7 @@ async function handleCalculateJobScore() {
 
       await writeFile('rawQueryProfiles.json', JSON.stringify(updatedProfiles, null, 2));
 
-      const filteredProfiles = await handleFilterBlockedCompanies(
-        updatedProfiles.length ? updatedProfiles : [],
-        db,
-      );
+      const filteredProfiles = await handleFilterBlockedCompanies(updatedProfiles.length ? updatedProfiles : [], db);
 
       const wishlistProfiles = filteredProfiles.filter(
         (profile) => profile.topMatchedJobWishlist?.length > 0 && profile.talentSlug,
@@ -1082,10 +1067,9 @@ async function handleCalculateJobScore() {
 
       // Merge and save the final combined results
       const mergedProfiles = await mergeProfileLists(wishlistProfiles, recruiterProfiles);
-      
+
       // Generate Excel report
       await exportExcelReport(mergedProfiles);
-      
     } catch (queryError) {
       console.error('❌ Query execution failed:', queryError);
     }
@@ -1097,12 +1081,20 @@ async function handleCalculateJobScore() {
   }
 }
 
+async function handleClickMatchUsingPlaywright(profileSlugs) {
+  if (profileSlugs.length) {
+    await processProfilesBySlug(profileSlugs).catch((err) =>
+      console.error('❌ Error in playwright process:', err),
+    );
+  }
+}
+
 // Helper function to safely compare MongoDB ObjectIds or their string representations
 function isSameObjectId(id1, id2) {
   if (!id1 || !id2) return false;
 
   // Convert to string if they're not already
-  const str1 = typeof id1 === 'object' ? id1.toString() || id1.$oid?.toString() : id1.toString();
+  const str1 = typeof id1 === 'object' ? id1.toString() || id1.$soid?.toString() : id1.toString();
   const str2 = typeof id2 === 'object' ? id2.toString() || id2.$oid?.toString() : id2.toString();
 
   return str1 === str2;
