@@ -7,6 +7,7 @@ import { processProfiles } from './processProfiles.mjs';
 import { processProfilesBySlug } from './playwrightProcess.mjs';
 import { log } from 'console';
 import dotenv from 'dotenv';
+import axios from 'axios';
 
 // Load environment variables from .env.local
 dotenv.config({ path: '.env.local' });
@@ -24,6 +25,26 @@ const REFRESH_RECRUITER_PROFILE_URL = (profileSlug) =>
 
 const profileWithBlockedCompanyInMatchJobs = [];
 
+// Add a delay function
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+// Function to refresh profile data via API
+async function refreshProfileData(profileSlug, isWishlist) {
+  try {
+    const url = isWishlist 
+      ? REFRESH_WISHLIST_PROFILE_URL(profileSlug)
+      : REFRESH_RECRUITER_PROFILE_URL(profileSlug);
+    
+    console.log(`Refreshing profile data for ${profileSlug} using ${url}`);
+    const response = await axios.get(url);
+    console.log(`Profile refresh for ${profileSlug} completed with status: ${response.status}`);
+    return true;
+  } catch (error) {
+    console.error(`Failed to refresh profile data for ${profileSlug}:`, error.message);
+    return false;
+  }
+}
+
 async function handleWishlistJob(wishlistProfile, talentDB, db) {
   // Extract slugs from wishlistProfile
   const talentSlugs = wishlistProfile.map((profile) => profile.talentSlug);
@@ -37,7 +58,7 @@ async function handleWishlistJob(wishlistProfile, talentDB, db) {
   // Get job details from collection
   const jobsCollection = db.collection('jobmodels');
   const jobs = await jobsCollection
-    .find({ slug: { $in: jobSlugs } }, { projection: { slug: 1, company: 1 } })
+    .find({ slug: { $in: jobSlugs } }, { projection: { slug: 1, company: 1, companySlug: 1 } })
     .toArray();
 
   // Create a map of job slug to company ID
@@ -49,7 +70,48 @@ async function handleWishlistJob(wishlistProfile, talentDB, db) {
   // Fetch seniorityLevels from metadata collection for seniority comparison
   const metadataCollection = db.collection('metadata');
   let seniorityRanking = {};
+  let metaDataCompanySize = {};
 
+  try {
+    const companySizeMetadata = await metadataCollection.findOne({
+      key: { $regex: 'companySize', $options: 'i' },
+    });
+
+    if (companySizeMetadata && companySizeMetadata.val) {
+      metaDataCompanySize = companySizeMetadata.val;
+    }
+  } catch (error) {
+    console.error('❌ Error fetching companySize metadata:', error);
+  }
+  
+  const companyCollection = db.collection('companymodels');
+
+  // Create a map of job slugs to company size IDs
+  const jobSlugToCompanySizeIdMap = {};
+  
+  const companySlugList = jobs
+    .map(job => job.companySlug)
+    .filter(Boolean);
+  
+  // Get companies with these slugs
+  const allCompanies = await companyCollection.find(
+    { slug: { $in: companySlugList } },
+    { projection: { slug: 1, sizeId: 1, bsId: 1 } }
+  ).toArray();
+  
+  // Create a map of company slug to size ID
+  const companySizeMap = {};
+  allCompanies.forEach(company => {
+    companySizeMap[company.slug] = company.sizeId; 
+  });
+  
+  // Create the final job slug to company size map
+  jobs.forEach(job => {
+    if (job.companySlug && companySizeMap[job.companySlug]) {
+      jobSlugToCompanySizeIdMap[job.slug] = companySizeMap[job.companySlug];
+    }
+  });
+  
   // try {
   //   const seniorityLevelsMetadata = await metadataCollection.findOne({
   //     key: { $regex: 'seniorityLevels', $options: 'i' },
@@ -210,8 +272,8 @@ async function handleWishlistJob(wishlistProfile, talentDB, db) {
 
       // Company Size (Weight: 1)
       // Exact match between candidate preference and job company size
-      if (jobDetails.companyData && jobDetails.companyData.bsId && preferences.companySizes) {
-        const hasMatchingCompanySize = preferences.companySizes.includes(jobDetails.companyData.bsId);
+      if (jobDetails.companySlug && preferences.companySizes) {
+        const hasMatchingCompanySize = preferences.companySizes.includes(jobSlugToCompanySizeIdMap[jobSlug]);
 
         if (hasMatchingCompanySize) {
           score += 1;
@@ -310,6 +372,36 @@ async function handleRecruiterJob(recruiterProfiles, db) {
     jobDetailsMap[job.slug] = job;
   });
 
+  // Create a map of job slugs to company size IDs
+  const jobSlugToCompanySizeIdMap = {};
+  
+  // Extract company slugs from the jobs
+  const companySlugList = jobs
+    .map(job => job.companySlug)
+    .filter(Boolean);
+  
+  // Get companies with these slugs
+  const companyCollection = db.collection('companymodels');
+  const allCompanies = await companyCollection.find(
+    { slug: { $in: companySlugList } },
+    { projection: { slug: 1, sizeId: 1, bsId: 1 } }
+  ).toArray();
+  
+  // Create a map of company slug to size ID
+  const companySizeMap = {};
+  allCompanies.forEach(company => {
+    companySizeMap[company.slug] = company.sizeId; // Use sizeId if available
+  });
+  
+  // Create the final job slug to company size map
+  jobs.forEach(job => {
+    if (job.companySlug && companySizeMap[job.companySlug]) {
+      jobSlugToCompanySizeIdMap[job.slug] = companySizeMap[job.companySlug];
+    }
+  });
+  
+  console.log(`✅ Created map of ${Object.keys(jobSlugToCompanySizeIdMap).length} job slugs to company size IDs for recruiter profiles`);
+  
   // Fetch seniorityLevels from metadata collection for seniority comparison
   const metadataCollection = db.collection('metadata');
   // let seniorityRanking = {};
@@ -436,10 +528,10 @@ async function handleRecruiterJob(recruiterProfiles, db) {
 
       // Company Size (Weight: 1)
       // Exact match between profile's preferred company size and job's company size
-      if (jobDetails.companyData && jobDetails.companyData.bsId && profile.companySize) {
+      if (jobSlugToCompanySizeIdMap[jobSlug] && profile.companySize) {
         const profileCompanySizes = Array.isArray(profile.companySize) ? profile.companySize : [profile.companySize];
-
-        const hasMatchingCompanySize = profileCompanySizes.includes(jobDetails.companyData.bsId);
+        
+        const hasMatchingCompanySize = profileCompanySizes.includes(jobSlugToCompanySizeIdMap[jobSlug]);
 
         if (hasMatchingCompanySize) {
           score += 1;
@@ -1066,10 +1158,25 @@ async function handleCalculateJobScore() {
       );
       const recruiterProfiles = filteredProfiles.filter((profile) => profile.topMatchedJobRecruiter?.length > 0);
 
-      console.log(`handling ${wishlistProfiles.length} wish list profile`);
+      // Refresh wishlist profiles data
+      console.log(`Refreshing ${wishlistProfiles.length} wishlist profiles before calculation`);
+      for (const profile of wishlistProfiles) {
+        await refreshProfileData(profile.slug, true);
+      }
+
+      // Refresh recruiter profiles data
+      console.log(`Refreshing ${recruiterProfiles.length} recruiter profiles before calculation`);
+      for (const profile of recruiterProfiles) {
+        await refreshProfileData(profile.slug, false);
+      }
+
+      await delay(5000); // Wait for 5 seconds between API calls
+
+
+      console.log(`Handling ${wishlistProfiles.length} wish list profile`);
       await handleWishlistJob(wishlistProfiles, talentDB, db);
 
-      console.log(`handling ${recruiterProfiles.length} recruiter profile`);
+      console.log(`Handling ${recruiterProfiles.length} recruiter profile`);
       await handleRecruiterJob(recruiterProfiles, db);
 
       // Merge and save the final combined results

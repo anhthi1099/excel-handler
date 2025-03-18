@@ -574,15 +574,16 @@
     "topMatchedJobWishlist": [
       {
         "Job Slug": "jbRbNxQPzwWi",
-        "Match Score": 48.5,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
+        "Match Score": 89,
+        "updatedAt": "2025-03-17T08:18:58.701Z",
         "scoreDetails": {
           "raw": 89,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 36,
             "seniority": 17,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -615,8 +616,8 @@
       },
       {
         "Job Slug": "jbWXkntPTFbR",
-        "Match Score": 42,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
+        "Match Score": 72,
+        "updatedAt": "2025-03-17T08:18:58.701Z",
         "scoreDetails": {
           "raw": 72,
           "maxPossible": 100,
@@ -658,8 +659,8 @@
       },
       {
         "Job Slug": "jbF9smGDZu82",
-        "Match Score": 42,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
+        "Match Score": 72,
+        "updatedAt": "2025-03-17T08:18:58.701Z",
         "scoreDetails": {
           "raw": 72,
           "maxPossible": 100,
@@ -698,4661 +699,9 @@
           ],
           "preferenceIndustries": []
         }
-      },
-      {
-        "Job Slug": "jbtmHTFu7nV0",
-        "Match Score": 38,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 53,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 17,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Junior QA Engineer ",
-          "jobRoles": [
-            115
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            1252,
-            182
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            1
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            39
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbfB4caHFYvu",
-        "Match Score": 38,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 53,
-          "maxPossible": 99,
-          "breakdown": {
-            "roles": 0,
-            "skills": 36,
-            "seniority": 17,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Qa tester checkup",
-          "jobRoles": [
-            535
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            101
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            1
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            39
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jblkWa7G-mc0",
-        "Match Score": 38,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 53,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 17,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Manual QA Engineer",
-          "jobRoles": [
-            115
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            1200
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            1
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            314,
-            304
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbT7hjeEbL8b",
-        "Match Score": 38,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 53,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 17,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Software Engineer for automation team",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            426
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            1
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            162
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbc0jYbDhdEX",
-        "Match Score": 38,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 53,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 17,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "QA Engineer",
-          "jobRoles": [
-            115
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            144,
-            1653
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            1
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            321
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jb-eylh7cKVM",
-        "Match Score": 31.5,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 54,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 18,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Test automation engineer",
-          "jobRoles": [
-            235,
-            115
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            101,
-            172
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            304
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbPmqDqmFs8M",
-        "Match Score": 31.5,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 54,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 18,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Automation Tech Lead",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            101,
-            380
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            2
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            312
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbfy6nQnVltK",
-        "Match Score": 31.5,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 54,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 18,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Sr. Manager, QA Automation",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            426,
-            101
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            2
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            39
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jby1SPfubhly",
-        "Match Score": 28,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 48,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 12,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Automation Lead",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            101,
-            426,
-            414
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            39
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbtZWrH5p5Zn",
-        "Match Score": 28,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 48,
-          "maxPossible": 99,
-          "breakdown": {
-            "roles": 36,
-            "skills": 12,
-            "seniority": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "QA Web Testing Engineer",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            101,
-            414,
-            1653
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            312
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbRLvCJ17iiW",
-        "Match Score": 28,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 48,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 12,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "SW Automation Engineer ",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            380,
-            101,
-            545
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            276
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jb_geY48Zenz",
-        "Match Score": 28,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 48,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 12,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "QA Engineer",
-          "jobRoles": [
-            115,
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            426,
-            101,
-            380
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            294,
-            279
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbWt9H4Msrx4",
-        "Match Score": 28,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 48,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 12,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "QA ",
-          "jobRoles": [
-            235,
-            115
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            101,
-            144,
-            374
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            279,
-            304
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbxxQu9Oe2Xo",
-        "Match Score": 28,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 48,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 12,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "QA Automation Engineer",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            172,
-            101,
-            426
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            30
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jb4I68KrPPEP",
-        "Match Score": 27.5,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 35,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 0,
-            "skills": 18,
-            "seniority": 17,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Qa manual tester",
-          "jobRoles": [
-            535
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            426,
-            101
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            1
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            39
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jb-kBqWbnVce",
-        "Match Score": 27.5,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 35,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 0,
-            "skills": 18,
-            "seniority": 17,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Software Engineer",
-          "jobRoles": [
-            251
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            101,
-            426
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            1
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            364
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbcOjsauhr4_",
-        "Match Score": 26.25,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 45,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 9,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "QA Automation Lead",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            2007,
-            414,
-            1781,
-            101
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            2
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            222
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbP7rcCYxZtb",
-        "Match Score": 26.25,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 45,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 9,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Automation developer",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            101,
-            374,
-            144,
-            414
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbyYDFiPrJqs",
-        "Match Score": 26.25,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 45,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 9,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Testing and Automation Lead",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            101,
-            105,
-            680,
-            1200
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            2
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            304
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbkf-vcK-SXq",
-        "Match Score": 26.25,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 45,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 9,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "QA Engineer",
-          "jobRoles": [
-            115
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            1416,
-            1200,
-            101,
-            380
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            162,
-            294
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbrgRDKM1t1j",
-        "Match Score": 26.25,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 45,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 9,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Automation Technical Leader ",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            1252,
-            426,
-            101,
-            1171
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            304,
-            149
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbembXKFskKi",
-        "Match Score": 26.25,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 45,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 9,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Automation Testing Team Lead",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            426,
-            380,
-            172,
-            101
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            2
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            279
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbBZvFCHdX2d",
-        "Match Score": 25.2,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 43,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 7,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "QA Architect",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            182,
-            431,
-            1549,
-            426,
-            101
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            162
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbYNWWvK5aab",
-        "Match Score": 25.2,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 43,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 7,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Senior Automation Engineer",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            101,
-            2233,
-            414,
-            1653,
-            1180
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            262
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbm8MzG-2-VW",
-        "Match Score": 25.2,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 43,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 7,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "QA Engineer",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            101,
-            380,
-            426,
-            182,
-            698
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            279,
-            304
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbT4vYOoPOjZ",
-        "Match Score": 25.2,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 43,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 7,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Experienced QA Engineer",
-          "jobRoles": [
-            115,
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            182,
-            101,
-            2087,
-            2587,
-            191
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            39
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jb1N6xV-FOYv",
-        "Match Score": 24.5,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 42,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 6,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Senior QA Automation Infrastructure Engineer",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            414,
-            688,
-            1543,
-            144,
-            426,
-            101
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            304
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbx_5K6kwScq",
-        "Match Score": 24,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 29,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 0,
-            "skills": 12,
-            "seniority": 17,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Full Stack Developer ",
-          "jobRoles": [
-            250
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            1775,
-            172,
-            101
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            1
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            304
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbSFUKj3yGXk",
-        "Match Score": 24,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 53,
-          "maxPossible": 99,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 17,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "מיחצן מסיבות סגירה באושוויה ",
-          "jobRoles": [
-            2,
-            4,
-            14,
-            19,
-            115,
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            1205,
-            698,
-            2201,
-            2233,
-            1775,
-            1073,
-            18
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            1
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            2
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jb6vONh151Wb",
-        "Match Score": 24,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 29,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 0,
-            "skills": 12,
-            "seniority": 17,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Android Developer",
-          "jobRoles": [
-            541
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            698,
-            101,
-            2968
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            1
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbRVAIEZbDW0",
-        "Match Score": 21.2,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 24,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 0,
-            "skills": 7,
-            "seniority": 17,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Backend Engineer",
-          "jobRoles": [
-            251
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            205,
-            1877,
-            2968,
-            101,
-            426
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            1
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            270,
-            304,
-            369,
-            292
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jb8guj71vNtV",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Automation QA Engineer ",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            172
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            305,
-            304
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jb_PWChYbhkN",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Automation Team Leader",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            2
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jby5KeSki2DD",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Automation Team Leader",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            2
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            304,
-            39
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbGNbz5Os2X_",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Automation technical lead",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            426
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            149
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbZVQ72_U1lP",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 0,
-            "skills": 36,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Backend Team Leader",
-          "jobRoles": [
-            251
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            101
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            2
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            369
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbN5sREdhFka",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Manual QA",
-          "jobRoles": [
-            115
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            1653,
-            545,
-            1200,
-            2175
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            304
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbjiRo62ggHv",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "score": 0
-      },
-      {
-        "Job Slug": "jb9OcXeRlsLz",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Data Automation QA",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            426,
-            1173,
-            374,
-            28,
-            1180,
-            1798
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            304
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbrlh47prA-N",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 0,
-            "skills": 36,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Backend Java Developer",
-          "jobRoles": [
-            251
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            101
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            304
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jb8nmUYRUMUT",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 0,
-            "skills": 36,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Java Developer",
-          "jobRoles": [
-            251
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            101
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            39
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbb2XNhsvoGs",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Experienced QA Engineer ",
-          "jobRoles": [
-            115
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            144,
-            612,
-            1689,
-            1798
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            312
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbM2FONpHGBi",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Manual QA Engineer",
-          "jobRoles": [
-            115
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            1180,
-            374,
-            1716,
-            144
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            304
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbVmhoBW2UQK",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Manual Software QA",
-          "jobRoles": [
-            115
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            1416
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            314,
-            327
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbTM3RIAX-RZ",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 0,
-            "skills": 36,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Java Engineer",
-          "jobRoles": [
-            251
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            101
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            304
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jb_M-kVlO-qM",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 0,
-            "skills": 36,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "JAVA Developer",
-          "jobRoles": [
-            251
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            101
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            149
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbJEpZ_IxfjT",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 0,
-            "skills": 36,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Java Back-End Developer",
-          "jobRoles": [
-            251
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            101
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            321
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbOufm2jYvrh",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 0,
-            "skills": 36,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Java Developer",
-          "jobRoles": [
-            251,
-            250,
-            134
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            101
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            373
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbDkR4Rkdbn8",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 0,
-            "skills": 36,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Backend Software Engineer",
-          "jobRoles": [
-            251
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            101
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            149
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jb-jL7aqI-XV",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 0,
-            "skills": 36,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Development & Integrations Manager",
-          "jobRoles": [
-            251
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            101
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            2
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbYwtNgvguKf",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "QA LINUX Networking ",
-          "jobRoles": [
-            115
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            182,
-            1252
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            7
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            294
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jb-FFmCKffY3",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 0,
-            "skills": 36,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Java Software Team Leader",
-          "jobRoles": [
-            251
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            101
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            2
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbBThYK0CHNJ",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Manual QA Engineer",
-          "jobRoles": [
-            115
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            1252,
-            612,
-            182
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            304
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jb2vflmgemZX",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Labview Automation Engineer",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            1356
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            162
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jxRcdZhLN7-T",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 89,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Manual QA Engineer ",
-          "jobRoles": [
-            368
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            "2275",
-            "2655",
-            "3076",
-            "3077"
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jb_BUFNhulZs",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "score": 0
-      },
-      {
-        "Job Slug": "jb0yWUU4SOXX",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "QA Automation Engineer",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            182,
-            426
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            369
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jber5BdKf6sY",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "QA",
-          "jobRoles": [
-            115
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            122,
-            1653,
-            545
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            323
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbdGERnQpeGc",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "QA automation engineer",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            380
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            304
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jb3AWhdy5fvD",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Senior QA Engineer",
-          "jobRoles": [
-            115
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            2215
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            304
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbzW66VIYvS8",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Junior QA Engineer",
-          "jobRoles": [
-            115
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            28,
-            762
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            294
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jb_DpxHs6sxR",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Mobile QA Enginee",
-          "jobRoles": [
-            115
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            545,
-            1180
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            363
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbWmbYQtj68c",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Software QA Engineer – Mobile",
-          "jobRoles": [
-            115
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            1180
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbldVB4Ol4Xs",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "QA ",
-          "jobRoles": [
-            115
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            1180,
-            1653
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jb7CSlbkEtnz",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Performance QA Engineer",
-          "jobRoles": [
-            115
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            182,
-            1854,
-            1171
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            39
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbPqg5JUwtqi",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "QA Automation Team Leader",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            1200
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            2
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            327,
-            314
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbHJzXkXosGS",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "QA Automation Engineer",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            161,
-            80,
-            426,
-            1171
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbYmoDkjNwP-",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Senior Automation Engineer",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            1135,
-            374,
-            1410,
-            426,
-            182,
-            1171,
-            731,
-            414,
-            1543
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            39
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbvwWoskhOt1",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "QA Manager",
-          "jobRoles": [
-            115
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            14
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            149
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbmYPrK8u4ZK",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "QA Automation Manager",
-          "jobRoles": [
-            235,
-            115
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            374,
-            2074,
-            762,
-            1212
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            2
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            304
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbn-ad_TdBJ5",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 0,
-            "skills": 36,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Senior Backend Developer / Architect",
-          "jobRoles": [
-            251
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            101
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            304
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbUh-2aDTm2c",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "QA Team Lead",
-          "jobRoles": [
-            115,
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            1180
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            2
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            304
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbpdfVRvBTvq",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "score": 0
-      },
-      {
-        "Job Slug": "jb54aw3l_yZ0",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "QA Automation Developer",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            426,
-            28
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            316
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbtll1DEj9Ce",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "score": 0
-      },
-      {
-        "Job Slug": "jb_v8B9pH8nJ",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "QA Automation",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            426,
-            182
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            304
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jb9LySebZn01",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "QA Engineer",
-          "jobRoles": [
-            115
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            182,
-            1252
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            369
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbrwf86slrci",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "QA Engineer",
-          "jobRoles": [
-            115,
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            144,
-            414,
-            374,
-            426
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            305,
-            312
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbmj9S2RJWMj",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Senior SW engineer for Tests and Automation team",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            1171
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            162
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbYOPQGCxBzX",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 99,
-          "breakdown": {
-            "roles": 0,
-            "skills": 36,
-            "seniority": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "New job for testing testing testing testing ",
-          "jobRoles": [
-            535
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            101
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            39
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbthP1za1oXn",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "QA Team Leader",
-          "jobRoles": [
-            235,
-            115
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            426,
-            182,
-            1252
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            2
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            149
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbsJfuUFEI48",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "QA Automation Engineer",
-          "jobRoles": [
-            115,
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            1821,
-            426,
-            1200
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            304
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbWkiWN1GS_z",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Senior Automation Engineer",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            426,
-            105
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            39,
-            304
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbDBqHqMb4ci",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "QA Tech Lead",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            426,
-            144
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            312
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "W4VwLFmCPCez",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 89,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Senior QA Engineer",
-          "jobRoles": [
-            368
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            "407",
-            "1410",
-            "1846",
-            "2338",
-            "3377"
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbsVVzejV6OP",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Software QA",
-          "jobRoles": [
-            115
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            1416
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            327,
-            314
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jb2hmNAPHxB0",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 0,
-            "skills": 36,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Senior Java Engineer",
-          "jobRoles": [
-            251
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            101
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            262
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbP3E2L-ZOsP",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 0,
-            "skills": 36,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Senior Java Developer",
-          "jobRoles": [
-            251
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            101
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbpveE7fOlKr",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Software QA Engineer",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            182,
-            380
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            279
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jb1mjCLP_y5G",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 0,
-            "skills": 36,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Software Architect",
-          "jobRoles": [
-            134
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            101
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            30
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbuV40WIi8wI",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Software QA Engineer for 3D printing",
-          "jobRoles": [
-            115
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            2230
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            30
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbtAHa6w5eLI",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "QA Engineer ",
-          "jobRoles": [
-            115,
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            1200,
-            144,
-            380,
-            1653,
-            1782,
-            414
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            304
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbiN4E7-KlQY",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "QA Engineer",
-          "jobRoles": [
-            115
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            904
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            7
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            30
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbUP3O5J_bR0",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 0,
-            "skills": 36,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "SENIOR JAVA DEVELOPER",
-          "jobRoles": [
-            251
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            101
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            9
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbe-hbxudcw2",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 99,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Software developer C++ Yoav test",
-          "jobRoles": [
-            115
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            698,
-            1775
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            308
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbcVy28CwxR_",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 0,
-            "skills": 36,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Senior Java Software Engineer",
-          "jobRoles": [
-            251
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            101
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            222
-          ],
-          "preferenceIndustries": []
-        }
-      },
-      {
-        "Job Slug": "jbAcxNySSoFp",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T15:45:23.228Z",
-        "scoreDetails": {
-          "raw": 36,
-          "maxPossible": 100,
-          "breakdown": {
-            "roles": 36,
-            "skills": 0,
-            "seniority": 0,
-            "companySize": 0,
-            "industries": 0
-          }
-        },
-        "debug": {
-          "jobTitle": "Software Integration and Test (SIT) Engineer",
-          "jobRoles": [
-            235
-          ],
-          "preferenceRoles": [
-            368,
-            235,
-            115
-          ],
-          "jobSkills": [
-            182,
-            426
-          ],
-          "preferenceSkills": [
-            101
-          ],
-          "jobSeniorityLevel": [
-            15
-          ],
-          "preferenceSeniorityLevel": [
-            1
-          ],
-          "jobIndustries": [
-            307
-          ],
-          "preferenceIndustries": []
-        }
       }
     ],
-    "topMatchedJobRecruiter": [
-      {
-        "Job Slug": "jbtmHTFu7nV0",
-        "Match Score": 38,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jblkWa7G-mc0",
-        "Match Score": 38,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbc0jYbDhdEX",
-        "Match Score": 38,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbT7hjeEbL8b",
-        "Match Score": 38,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbRbNxQPzwWi",
-        "Match Score": 27.5,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbSFUKj3yGXk",
-        "Match Score": 24,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbHPupt87_G5",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbOTxX2axs0_",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbP_EQ2gM3ks",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbWw7XJkI56p",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jby1SPfubhly",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbembXKFskKi",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jb8guj71vNtV",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbMax50Gmf_v",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jb_PWChYbhkN",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbjiRo62ggHv",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbGNbz5Os2X_",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbPmqDqmFs8M",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jby5KeSki2DD",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbVmhoBW2UQK",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbb2XNhsvoGs",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbT4vYOoPOjZ",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbxxQu9Oe2Xo",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jber5BdKf6sY",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbP7rcCYxZtb",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbHJzXkXosGS",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbrgRDKM1t1j",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbdGERnQpeGc",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbmYPrK8u4ZK",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbWmbYQtj68c",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jb2vflmgemZX",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbzW66VIYvS8",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbvwWoskhOt1",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jb9OcXeRlsLz",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jxRcdZhLN7-T",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbpdfVRvBTvq",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbiN4E7-KlQY",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jb_DpxHs6sxR",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbWUdaLvLURJ",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbPqg5JUwtqi",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbYmoDkjNwP-",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbZzJIdrWtaa",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbWXkntPTFbR",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jb1N6xV-FOYv",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jb9LySebZn01",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbldVB4Ol4Xs",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbm8MzG-2-VW",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbBZvFCHdX2d",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbsJfuUFEI48",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbF9smGDZu82",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jb_BUFNhulZs",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbBThYK0CHNJ",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbkf-vcK-SXq",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbfy6nQnVltK",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbIuTZdiFAGn",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbRnPNs8TcSV",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbK7FcJ9d0_r",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbK10xuWKc5k",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbM2FONpHGBi",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbUh-2aDTm2c",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbkPmVEVuJZL",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbRLvCJ17iiW",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbthP1za1oXn",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbN5sREdhFka",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jb7CSlbkEtnz",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbYNWWvK5aab",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbuV40WIi8wI",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbD1Umx9Augr",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbpveE7fOlKr",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbtll1DEj9Ce",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbtAHa6w5eLI",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbnSWF2QngXj",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbsMJufO_Ytx",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jb-eylh7cKVM",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbWkiWN1GS_z",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbi279bCU2hD",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbyYDFiPrJqs",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbJiyKh2uvdg",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbAcxNySSoFp",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbsVVzejV6OP",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jb3AWhdy5fvD",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jb_geY48Zenz",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbiF9SJOwevw",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbIOhHAsRoAG",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbWt9H4Msrx4",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbrwf86slrci",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbe-hbxudcw2",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jb_v8B9pH8nJ",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jb54aw3l_yZ0",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "W4VwLFmCPCez",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jb0yWUU4SOXX",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbmj9S2RJWMj",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbcOjsauhr4_",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbtZWrH5p5Zn",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbhLKFxPktNn",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbDBqHqMb4ci",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbYwtNgvguKf",
-        "Match Score": 21,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jba1F09tmt8B",
-        "Match Score": 17,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbJpSnsPXMbq",
-        "Match Score": 17,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      },
-      {
-        "Job Slug": "jbWyGQ9-gyTA",
-        "Match Score": 17,
-        "updatedAt": "2025-03-04T14:52:19.104Z"
-      }
-    ],
+    "topMatchedJobRecruiter": [],
     "topMatchedJobLinkedin": []
   },
   {
@@ -7615,11 +2964,12 @@
         "updatedAt": "2025-03-05T09:05:34.162Z",
         "scoreDetails": {
           "raw": 26,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 0,
             "skills": 9,
             "seniority": 17,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -8015,11 +3365,12 @@
         "updatedAt": "2025-03-05T09:05:34.162Z",
         "scoreDetails": {
           "raw": 36,
-          "maxPossible": 89,
+          "maxPossible": 90,
           "breakdown": {
             "roles": 36,
             "skills": 0,
-            "seniority": 0
+            "seniority": 0,
+            "companySize": 0
           }
         },
         "debug": {
@@ -11401,11 +6752,12 @@
         "updatedAt": "2025-03-14T07:54:05.671Z",
         "scoreDetails": {
           "raw": 63,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 0,
             "skills": 36,
             "seniority": 17,
+            "companySize": 0,
             "industries": 10
           }
         },
@@ -11771,11 +7123,12 @@
         "updatedAt": "2025-03-11T02:13:21.565Z",
         "scoreDetails": {
           "raw": 72,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 36,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -11817,11 +7170,12 @@
         "updatedAt": "2025-03-11T02:13:21.565Z",
         "scoreDetails": {
           "raw": 48,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 12,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -12585,11 +7939,12 @@
         "updatedAt": "2025-03-14T07:56:04.875Z",
         "scoreDetails": {
           "raw": 72,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 36,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -12637,11 +7992,12 @@
         "updatedAt": "2025-03-14T07:56:04.875Z",
         "scoreDetails": {
           "raw": 72,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 36,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -12689,11 +8045,12 @@
         "updatedAt": "2025-03-14T07:56:04.875Z",
         "scoreDetails": {
           "raw": 72,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 36,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -12740,11 +8097,12 @@
         "updatedAt": "2025-03-14T07:56:04.875Z",
         "scoreDetails": {
           "raw": 72,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 36,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -12791,11 +8149,12 @@
         "updatedAt": "2025-03-14T07:56:04.875Z",
         "scoreDetails": {
           "raw": 72,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 36,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -12842,11 +8201,12 @@
         "updatedAt": "2025-03-14T07:56:04.875Z",
         "scoreDetails": {
           "raw": 72,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 36,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -12893,11 +8253,12 @@
         "updatedAt": "2025-03-14T07:56:04.875Z",
         "scoreDetails": {
           "raw": 72,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 36,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -12944,11 +8305,12 @@
         "updatedAt": "2025-03-14T07:56:04.875Z",
         "scoreDetails": {
           "raw": 72,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 36,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -12996,11 +8358,12 @@
         "updatedAt": "2025-03-14T07:56:04.875Z",
         "scoreDetails": {
           "raw": 72,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 36,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -13047,11 +8410,12 @@
         "updatedAt": "2025-03-14T07:56:04.875Z",
         "scoreDetails": {
           "raw": 72,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 36,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -13098,11 +8462,12 @@
         "updatedAt": "2025-03-14T07:56:04.875Z",
         "scoreDetails": {
           "raw": 72,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 36,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -13153,11 +8518,12 @@
         "updatedAt": "2025-03-14T07:56:04.875Z",
         "scoreDetails": {
           "raw": 89,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 36,
             "seniority": 17,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -13210,11 +8576,12 @@
         "updatedAt": "2025-03-14T07:56:04.875Z",
         "scoreDetails": {
           "raw": 60,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 24,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -13268,11 +8635,12 @@
         "updatedAt": "2025-03-14T07:56:04.875Z",
         "scoreDetails": {
           "raw": 72,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 36,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -13326,11 +8694,12 @@
         "updatedAt": "2025-03-14T07:56:04.875Z",
         "scoreDetails": {
           "raw": 72,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 36,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -13383,11 +8752,12 @@
         "updatedAt": "2025-03-14T07:56:04.875Z",
         "scoreDetails": {
           "raw": 60,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 24,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -13440,11 +8810,12 @@
         "updatedAt": "2025-03-14T07:56:04.875Z",
         "scoreDetails": {
           "raw": 72,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 36,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -13495,11 +8866,12 @@
         "updatedAt": "2025-03-14T07:56:04.875Z",
         "scoreDetails": {
           "raw": 72,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 36,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -13552,11 +8924,12 @@
         "updatedAt": "2025-03-14T07:56:04.875Z",
         "scoreDetails": {
           "raw": 60,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 24,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -14102,11 +9475,12 @@
         "updatedAt": "2025-03-14T07:51:28.923Z",
         "scoreDetails": {
           "raw": 72,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 36,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -14148,11 +9522,12 @@
         "updatedAt": "2025-03-14T07:51:28.923Z",
         "scoreDetails": {
           "raw": 72,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 36,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -14197,11 +9572,12 @@
         "updatedAt": "2025-03-14T07:51:28.923Z",
         "scoreDetails": {
           "raw": 72,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 36,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -14243,11 +9619,12 @@
         "updatedAt": "2025-03-14T07:51:28.923Z",
         "scoreDetails": {
           "raw": 72,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 36,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -14293,11 +9670,12 @@
         "updatedAt": "2025-03-14T07:51:28.923Z",
         "scoreDetails": {
           "raw": 72,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 36,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -14340,11 +9718,12 @@
         "updatedAt": "2025-03-14T07:51:28.923Z",
         "scoreDetails": {
           "raw": 77,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 24,
             "seniority": 17,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -14392,11 +9771,12 @@
         "updatedAt": "2025-03-14T07:51:28.923Z",
         "scoreDetails": {
           "raw": 60,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 24,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -14442,11 +9822,12 @@
         "updatedAt": "2025-03-14T07:51:28.923Z",
         "scoreDetails": {
           "raw": 60,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 24,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -14494,11 +9875,12 @@
         "updatedAt": "2025-03-14T07:51:28.923Z",
         "scoreDetails": {
           "raw": 60,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 24,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -14546,11 +9928,12 @@
         "updatedAt": "2025-03-14T07:51:28.923Z",
         "scoreDetails": {
           "raw": 60,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 24,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -14598,11 +9981,12 @@
         "updatedAt": "2025-03-14T07:51:28.923Z",
         "scoreDetails": {
           "raw": 60,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 24,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -14651,11 +10035,12 @@
         "updatedAt": "2025-03-14T07:51:28.923Z",
         "scoreDetails": {
           "raw": 60,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 24,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -14703,11 +10088,12 @@
         "updatedAt": "2025-03-14T07:51:28.923Z",
         "scoreDetails": {
           "raw": 63,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 27,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -14755,11 +10141,12 @@
         "updatedAt": "2025-03-14T07:51:28.923Z",
         "scoreDetails": {
           "raw": 77,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 24,
             "seniority": 17,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -14804,11 +10191,12 @@
         "updatedAt": "2025-03-14T07:51:28.923Z",
         "scoreDetails": {
           "raw": 63,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 27,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -15604,13 +10992,13 @@
         "Match Score": 72,
         "updatedAt": "2025-03-14T07:49:51.636Z",
         "scoreDetails": {
-          "raw": 72,
+          "raw": 73,
           "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 36,
             "seniority": 0,
-            "companySize": 0,
+            "companySize": 1,
             "industries": 0
           }
         },
@@ -15648,13 +11036,13 @@
         "Match Score": 72,
         "updatedAt": "2025-03-14T07:49:51.636Z",
         "scoreDetails": {
-          "raw": 72,
+          "raw": 73,
           "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 36,
             "seniority": 0,
-            "companySize": 0,
+            "companySize": 1,
             "industries": 0
           }
         },
@@ -15737,13 +11125,13 @@
         "Match Score": 71,
         "updatedAt": "2025-03-14T07:49:51.636Z",
         "scoreDetails": {
-          "raw": 54,
+          "raw": 55,
           "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 18,
             "seniority": 0,
-            "companySize": 0,
+            "companySize": 1,
             "industries": 0
           }
         },
@@ -15782,13 +11170,13 @@
         "Match Score": 71,
         "updatedAt": "2025-03-14T07:49:51.636Z",
         "scoreDetails": {
-          "raw": 71,
+          "raw": 72,
           "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 18,
             "seniority": 17,
-            "companySize": 0,
+            "companySize": 1,
             "industries": 0
           }
         },
@@ -15827,13 +11215,13 @@
         "Match Score": 71,
         "updatedAt": "2025-03-14T07:49:51.636Z",
         "scoreDetails": {
-          "raw": 54,
+          "raw": 55,
           "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 18,
             "seniority": 0,
-            "companySize": 0,
+            "companySize": 1,
             "industries": 0
           }
         },
@@ -15917,13 +11305,13 @@
         "Match Score": 71,
         "updatedAt": "2025-03-14T07:49:51.636Z",
         "scoreDetails": {
-          "raw": 54,
+          "raw": 55,
           "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 18,
             "seniority": 0,
-            "companySize": 0,
+            "companySize": 1,
             "industries": 0
           }
         },
@@ -16006,13 +11394,13 @@
         "Match Score": 71,
         "updatedAt": "2025-03-14T07:49:51.636Z",
         "scoreDetails": {
-          "raw": 54,
+          "raw": 55,
           "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 18,
             "seniority": 0,
-            "companySize": 0,
+            "companySize": 1,
             "industries": 0
           }
         },
@@ -16049,13 +11437,13 @@
         "Match Score": 71,
         "updatedAt": "2025-03-14T07:49:51.636Z",
         "scoreDetails": {
-          "raw": 54,
+          "raw": 55,
           "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 18,
             "seniority": 0,
-            "companySize": 0,
+            "companySize": 1,
             "industries": 0
           }
         },
@@ -16460,13 +11848,13 @@
         "Match Score": 65,
         "updatedAt": "2025-03-14T07:49:51.636Z",
         "scoreDetails": {
-          "raw": 65,
+          "raw": 66,
           "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 12,
             "seniority": 17,
-            "companySize": 0,
+            "companySize": 1,
             "industries": 0
           }
         },
@@ -16597,13 +11985,13 @@
         "Match Score": 65,
         "updatedAt": "2025-03-14T07:49:51.636Z",
         "scoreDetails": {
-          "raw": 48,
+          "raw": 49,
           "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 12,
             "seniority": 0,
-            "companySize": 0,
+            "companySize": 1,
             "industries": 0
           }
         },
@@ -16642,13 +12030,13 @@
         "Match Score": 65,
         "updatedAt": "2025-03-14T07:49:51.636Z",
         "scoreDetails": {
-          "raw": 65,
+          "raw": 66,
           "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 12,
             "seniority": 17,
-            "companySize": 0,
+            "companySize": 1,
             "industries": 0
           }
         },
@@ -16732,13 +12120,13 @@
         "Match Score": 65,
         "updatedAt": "2025-03-14T07:49:51.636Z",
         "scoreDetails": {
-          "raw": 48,
+          "raw": 49,
           "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 12,
             "seniority": 0,
-            "companySize": 0,
+            "companySize": 1,
             "industries": 0
           }
         },
@@ -16823,13 +12211,13 @@
         "Match Score": 65,
         "updatedAt": "2025-03-14T07:49:51.636Z",
         "scoreDetails": {
-          "raw": 48,
+          "raw": 49,
           "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 12,
             "seniority": 0,
-            "companySize": 0,
+            "companySize": 1,
             "industries": 0
           }
         },
@@ -16958,13 +12346,13 @@
         "Match Score": 63,
         "updatedAt": "2025-03-14T07:49:51.636Z",
         "scoreDetails": {
-          "raw": 46,
+          "raw": 47,
           "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 0,
             "seniority": 0,
-            "companySize": 0,
+            "companySize": 1,
             "industries": 10
           }
         },
@@ -17003,13 +12391,13 @@
         "Match Score": 62,
         "updatedAt": "2025-03-14T07:49:51.636Z",
         "scoreDetails": {
-          "raw": 62,
+          "raw": 63,
           "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 9,
             "seniority": 17,
-            "companySize": 0,
+            "companySize": 1,
             "industries": 0
           }
         },
@@ -17048,13 +12436,13 @@
         "Match Score": 62,
         "updatedAt": "2025-03-14T07:49:51.636Z",
         "scoreDetails": {
-          "raw": 62,
+          "raw": 63,
           "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 9,
             "seniority": 17,
-            "companySize": 0,
+            "companySize": 1,
             "industries": 0
           }
         },
@@ -17858,11 +13246,12 @@
         "updatedAt": "2025-03-14T07:53:46.558Z",
         "scoreDetails": {
           "raw": 60,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 24,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -18061,11 +13450,12 @@
         "updatedAt": "2025-03-04T15:43:20.842Z",
         "scoreDetails": {
           "raw": 53,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 0,
             "skills": 36,
             "seniority": 17,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -18098,11 +13488,12 @@
         "updatedAt": "2025-03-04T15:43:20.842Z",
         "scoreDetails": {
           "raw": 53,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 0,
             "skills": 36,
             "seniority": 17,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -18342,11 +13733,12 @@
         "updatedAt": "2025-03-04T15:43:20.843Z",
         "scoreDetails": {
           "raw": 36,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 0,
             "skills": 36,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -18920,11 +14312,12 @@
         "updatedAt": "2025-03-04T15:43:20.843Z",
         "scoreDetails": {
           "raw": 36,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 0,
             "skills": 36,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -19553,11 +14946,12 @@
         "updatedAt": "2025-03-04T15:43:20.843Z",
         "scoreDetails": {
           "raw": 17,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 0,
             "skills": 0,
             "seniority": 17,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -20315,11 +15709,12 @@
         "updatedAt": "2025-03-04T15:43:20.843Z",
         "scoreDetails": {
           "raw": 17,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 0,
             "skills": 0,
             "seniority": 17,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -21325,11 +16720,12 @@
         "updatedAt": "2025-03-04T15:43:20.843Z",
         "scoreDetails": {
           "raw": 17,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 0,
             "skills": 0,
             "seniority": 17,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -21818,11 +17214,12 @@
         "updatedAt": "2025-03-04T15:43:20.843Z",
         "scoreDetails": {
           "raw": 17,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 0,
             "skills": 0,
             "seniority": 17,
+            "companySize": 0,
             "industries": 0
           }
         },
@@ -22407,11 +17804,12 @@
         "updatedAt": "2025-03-14T07:59:16.831Z",
         "scoreDetails": {
           "raw": 45,
-          "maxPossible": 99,
+          "maxPossible": 100,
           "breakdown": {
             "roles": 36,
             "skills": 9,
             "seniority": 0,
+            "companySize": 0,
             "industries": 0
           }
         },
