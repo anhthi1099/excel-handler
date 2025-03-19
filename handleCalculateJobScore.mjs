@@ -316,6 +316,7 @@ async function handleWishlistJob(wishlistProfile, talentDB, db) {
 
       return {
         ...matchedJob,
+        userSlug,
         scoreDetails: {
           raw: score,
           maxPossible: maxPossibleScore,
@@ -784,9 +785,10 @@ async function exportExcelReport(profiles) {
   // For each profile, create a dedicated sheet
   for (const profile of profiles) {
     const profileSlug = profile.slug;
+    const userSlug = profile.topMatchedJobWishlist[0]?.userSlug;
 
     if (!profileSlug) {
-      continue; // Skip profiles without a slug
+      continue; // Skip profiles without a slugs
     }
 
     // Add data to the summary sheet
@@ -851,6 +853,7 @@ async function exportExcelReport(profiles) {
 
     // Add profile header information
     profileSheet.addRow([`Profile: ${profileSlug}`]);
+    profileSheet.addRow([`UserSlug: ${userSlug}`]);
     profileSheet.addRow([`Name: ${profile.firstName || ''} ${profile.lastName || ''}`]);
     profileSheet.addRow([
       `Email: ${profile.email || profile.emails?.find((e) => e.isPrimary)?.email || 'Not available'}`,
